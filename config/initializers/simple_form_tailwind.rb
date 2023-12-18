@@ -12,8 +12,10 @@
 
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
+  config.form_class = 'mt-6'
+
   # Default class for buttons
-  config.button_class = 'my-2 px-5 py-2 md:ml-4 md:my-0 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80'
+  config.button_class = 'mt-3 px-5 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80'
 
   # Define the default class of the input wrapper of the boolean input.
   config.boolean_label_class = ''
@@ -56,7 +58,7 @@ SimpleForm.setup do |config|
     b.optional :min_max
     b.optional :readonly
     b.use :label, class: 'block text-sm text-gray-800 dark:text-gray-200'
-    b.use :input, class: 'block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-400 dark:focus:border-orange-300 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :input, class: 'block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-400 dark:focus:border-orange-300 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'invalid-feedback' }
     b.use :hint, wrap_with: { class: 'mt-3 text-sm leading-6 text-gray-600' }
   end
@@ -65,7 +67,7 @@ SimpleForm.setup do |config|
   config.wrappers :vertical_boolean, tag: 'fieldset', class: 'mb-3' do |b|
     b.use :html5
     b.optional :readonly
-    b.wrapper :form_check_wrapper, class: 'relative flex gap-x-3' do |bb|
+    b.wrapper :form_check_wrapper, class: 'relative flex gap-x-3 items-center' do |bb|
       bb.use :input, class: 'h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500', error_class: 'border-red-500', valid_class: 'border-green-500'
       bb.use :label, class: 'block text-sm text-gray-800 dark:text-gray-200'
       bb.use :full_error, wrap_with: { class: 'invalid-feedback' }
