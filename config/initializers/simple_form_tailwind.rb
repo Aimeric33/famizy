@@ -12,11 +12,13 @@
 
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
+  config.form_class = 'mt-6'
+
   # Default class for buttons
-  config.button_class = 'btn'
+  config.button_class = 'mt-3 px-5 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80'
 
   # Define the default class of the input wrapper of the boolean input.
-  config.boolean_label_class = 'form-check-label'
+  config.boolean_label_class = ''
 
   # How the label text should be generated altogether with the required text.
   config.label_text = lambda { |label, required, explicit_label| "#{label} #{required}" }
@@ -40,8 +42,8 @@ SimpleForm.setup do |config|
   config.error_method = :to_sentence
 
   # add validation classes to `input_field`
-  config.input_field_error_class = 'is-invalid'
-  config.input_field_valid_class = 'is-valid'
+  config.input_field_error_class = 'border-red-500'
+  config.input_field_valid_class = 'border-green-500'
 
 
   # vertical forms
@@ -55,21 +57,21 @@ SimpleForm.setup do |config|
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
-    b.use :label, class: 'form-label'
-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :label, class: 'block text-sm text-gray-800 dark:text-gray-200'
+    b.use :input, class: 'block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-orange-400 dark:focus:border-orange-300 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'invalid-feedback' }
-    b.use :hint, wrap_with: { class: 'form-text' }
+    b.use :hint, wrap_with: { class: 'mt-3 text-sm leading-6 text-gray-600' }
   end
 
   # vertical input for boolean
   config.wrappers :vertical_boolean, tag: 'fieldset', class: 'mb-3' do |b|
     b.use :html5
     b.optional :readonly
-    b.wrapper :form_check_wrapper, class: 'form-check' do |bb|
-      bb.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
-      bb.use :label, class: 'form-check-label'
+    b.wrapper :form_check_wrapper, class: 'relative flex gap-x-3 items-center' do |bb|
+      bb.use :input, class: 'h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500', error_class: 'border-red-500', valid_class: 'border-green-500'
+      bb.use :label, class: 'block text-sm text-gray-800 dark:text-gray-200'
       bb.use :full_error, wrap_with: { class: 'invalid-feedback' }
-      bb.use :hint, wrap_with: { class: 'form-text' }
+      bb.use :hint, wrap_with: { class: 'mt-3 text-sm leading-6 text-gray-600' }
     end
   end
 
