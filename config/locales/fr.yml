@@ -1,0 +1,9 @@
+fr:
+  homepage:
+    navbar:
+      links:
+        home: "Accueil"
+        features: "Fonctionnalités"
+        pricing: "Tarifs"
+        about: "À propos"
+      cta: "Commencer"

@@ -22,12 +22,12 @@
   <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     <div class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
       <div class="flex flex-col items-center md:flex-row">
-        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#">Home</a>
-        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#">Features</a>
-        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#">Pricing</a>
-        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#">About</a>
-        <a class="my-2 px-5 py-2 md:ml-4 md:my-0 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" href="/users/sign_in">
-          Get started
+        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#"><%= t('homepage.navbar.links.home') %></a>
+        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#"><%= t('homepage.navbar.links.features') %></a>
+        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#"><%= t('homepage.navbar.links.pricing') %></a>
+        <a class="my-2 text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-400 md:mx-4 md:my-0" href="#"><%= t('homepage.navbar.links.about') %></a>
+        <a class="my-2 px-5 py-2 md:ml-4 md:my-0 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" href="<%= new_user_session_path %>">
+          <%= t('homepage.navbar.cta') %>
         </a>
       </div>
     </div>
