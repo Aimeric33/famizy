@@ -1,2 +1,9 @@
 en:
-  
+  homepage:
+    navbar:
+      links:
+        home: "Home"
+        features: "Features"
+        pricing: "Pricing"
+        about: "About"
+      cta: "Get started"
