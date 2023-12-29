@@ -1,9 +1,24 @@
 en:
+  navbar:
+    links:
+      home: "Home"
+      features: "Features"
+      pricing: "Pricing"
+      about: "About"
+    cta: "Get started"
+  footer:
+    subtext: "Invite your family members and start organizing your daily life."
+    cta: "Get started"
+    copyright: "© Copyright 2024. All Rights Reserved."
+    links:
+      home: "Home"
+      features: "Features"
+      about: "About"
+      terms: "Terms & Privacy"
   homepage:
-    navbar:
-      links:
-        home: "Home"
-        features: "Features"
-        pricing: "Pricing"
-        about: "About"
-      cta: "Get started"
+    hero:
+      title: "Organizing your family with Famizy: it's now a child's play!"
+      subtitle: "Invite your family members and start organizing your family life.
+      Create groceries lists, track your expenses, save your favorite recipes, and more!"
+      cta: "Sign up for free"
+      hint: "No credit card required"
