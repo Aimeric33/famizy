@@ -15,7 +15,7 @@ SimpleForm.setup do |config|
   config.form_class = 'mt-6'
 
   # Default class for buttons
-  config.button_class = 'mt-3 px-5 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80'
+  config.button_class = 'mt-3 px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80'
 
   # Define the default class of the input wrapper of the boolean input.
   config.boolean_label_class = ''

@@ -5,11 +5,11 @@
         <img class="w-auto h-7" src="<%= image_path("famizy-logo.svg") %>" alt="Logo Famizy">
       </a>
 
-      <p class="max-w-lg mx-auto mt-4 text-gray-500 dark:text-gray-400">Invite your family members and start organizing your family life.</p>
+      <p class="mx-auto mt-4 text-gray-500 dark:text-gray-400"><%= t("footer.subtext") %></p>
 
       <div class="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center">
-        <a href="/users/sign_in" class="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-orange-500 rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80">
-          Get started
+        <a href="/users/sign_in" class="w-full px-5 py-2 text-sm tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80">
+          <%= t("footer.cta") %>
         </a>
       </div>
     </div>
@@ -17,14 +17,14 @@
     <hr class="my-10 border-gray-200 dark:border-gray-700" />
 
     <div class="flex flex-col items-center sm:flex-row sm:justify-between">
-      <p class="text-sm text-gray-500">© Copyright 2024. All Rights Reserved.</p>
+      <p class="text-sm text-gray-500"><%= t("footer.copyright") %></p>
 
       <div class="flex mt-3 -mx-2 sm:mt-0">
-        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Features"> Features </a>
-
-        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Pricing"> Pricing </a>
-
-        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="About"> About </a>
+        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Home"><%= t("footer.links.home") %></a>
+        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Features"><%= t("footer.links.features") %></a>
+        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Pricing"><%= t("footer.links.pricing") %></a>
+        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="About"><%= t("footer.links.about") %></a>
+        <a href="#" class="mx-2 text-sm text-gray-500 transition-colors duration-300 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Terms and Privacy"><%= t("footer.links.terms") %></a>
       </div>
     </div>
   </div>
