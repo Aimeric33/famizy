@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Famizy</title>
+    <title>App Famizy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,13 +12,16 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" if controller_name == "pages" %>
-
-    <main class="relative">
-      <%= render "shared/flashes" %>
-      <%= yield %>
-    </main>
-
-    <%= render "shared/footer" if controller_name == "pages" %>
+    <%= render "shared/dashboard_navbar" %>
+    <div class="flex pt-16 h-screen bg-gray-100">
+      <%= render "shared/dashboard_sidebar" %>
+      <div class="w-full flex flex-col">
+        <main class="relative flex-1 p-5">
+          <%= render "shared/flashes" %>
+          <%= yield %>
+        </main>
+        <%= render "shared/dashboard_footer" %>
+      </div>
+    </div>
   </body>
 </html>
