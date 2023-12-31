@@ -15,6 +15,8 @@ fr:
       features: "Fonctionnalités"
       about: "À propos"
       terms: "Mentions légales & Confidentialité"
+  dashboard-footer:
+    text: "© Copyright 2024. Tous droits réservés."
   homepage:
     hero:
       title: "Organiser sa famille avec Famizy : c'est un jeu d'enfant !"
