@@ -1,6 +1,6 @@
 <header class="fixed z-30 h-16 w-full bg-white shadow dark:bg-gray-800">
   <div class="px-6 py-4 mx-auto h-full flex items-center gap-4">
-    <button data-action="click->menu#toggle" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+    <button data-action="click->menu#toggle" type="button" class="text-gray-500 md:hidden dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
       <svg data-menu-target="burger" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
       </svg>
@@ -16,7 +16,7 @@
       <div data-controller="dropdown" data-action="click->dropdown#toggle click@window->dropdown#hide">
         <div id="dropdown-button" class="relative inline-block">
           <div role="button" tabindex="0" data-dropdown-target="button" class="select-none">
-            <div class="w-8 h-8 overflow-hidden border-2 border-gray-400 rounded-full">
+            <div class="w-8 h-8 overflow-hidden rounded-full">
               <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" class="object-cover w-full h-full" alt="avatar">
             </div>
           </div>

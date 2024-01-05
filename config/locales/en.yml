@@ -24,3 +24,12 @@ en:
       Create groceries lists, track your expenses, save your favorite recipes, and more!"
       cta: "Sign up for free"
       hint: "No credit card required"
+  families:
+    index:
+      title: "My families"
+      btn-new: "Create a new family"
+    new:
+      title: "Create a new family"
+      form:
+        name: "Family name"
+        submit: "Confirm"
