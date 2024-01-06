@@ -8,6 +8,9 @@ fr:
             dépendant(e) existe
           has_many: Vous ne pouvez pas supprimer l'enregistrement parce que les %{record}
             dépendants existent
+    models:
+      user: Utilisateur
+      family: Famille
     attributes:
       user:
         email: Adresse email

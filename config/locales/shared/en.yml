@@ -1,0 +1,19 @@
+en:
+  navbar:
+    links:
+      home: "Home"
+      features: "Features"
+      pricing: "Pricing"
+      about: "About"
+    cta: "Get started"
+  footer:
+    subtext: "Invite your family members and start organizing your daily life."
+    cta: "Get started"
+    copyright: "© Copyright 2024. All Rights Reserved."
+    links:
+      home: "Home"
+      features: "Features"
+      about: "About"
+      terms: "Terms & Privacy"
+  dashboard-footer:
+    text: "© Copyright 2024. All Rights Reserved."
