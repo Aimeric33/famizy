@@ -1,0 +1,19 @@
+fr:
+  navbar:
+    links:
+      home: "Accueil"
+      features: "Fonctionnalités"
+      pricing: "Tarifs"
+      about: "À propos"
+    cta: "Commencer"
+  footer:
+    subtext: "Invite les membres de votre famille et commencez à organiser votre quotidien"
+    cta: "Commencer"
+    copyright: "© Copyright 2024. Tous droits réservés."
+    links:
+      home: "Accueil"
+      features: "Fonctionnalités"
+      about: "À propos"
+      terms: "Mentions légales & Confidentialité"
+  dashboard-footer:
+    text: "© Copyright 2024. Tous droits réservés."

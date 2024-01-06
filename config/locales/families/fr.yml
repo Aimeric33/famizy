@@ -1,0 +1,10 @@
+fr:
+  families:
+    index:
+      title: "Mes familles"
+      btn-new: "Créer une nouvelle famille"
+    new:
+      title: "Créer une nouvelle famille"
+      form:
+        name: "Nom de la famille"
+        submit: "Confirmer"
