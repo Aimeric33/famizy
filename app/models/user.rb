@@ -7,5 +7,17 @@ class User < ApplicationRecord
   has_many :family_members
   has_many :families, through: :family_members
 
-  has_one_attached :avatar
+  has_one_attached :avatar, dependent: :purge
+
+  validates :name, presence: true, length: { minimum: 5 }
+  validates :email, presence: true, uniqueness: true
+  validates :password, presence: true, length: { minimum: 8 }
+  validates :birth_date, presence: true
+
+  after_create :generate_color
+
+  def generate_color
+    colors = %w[red orange yellow green teal blue indigo purple pink]
+    self.update(color: colors.sample)
+  end
 end
