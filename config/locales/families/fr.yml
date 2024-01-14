@@ -1,8 +1,8 @@
 fr:
   families:
     index:
-      title: "Mes familles"
-      btn-new: "Créer une nouvelle famille"
+      title: "Bienvenue"
+      btn-new: "Nouvelle famille"
     new:
       title: "Créer une nouvelle famille"
       form:
