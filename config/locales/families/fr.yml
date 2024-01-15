@@ -3,7 +3,9 @@ fr:
     index:
       title: "Bienvenue"
       subtitle: "Choisissez une famille ou créez en une nouvelle."
-      btn-new: "Nouvelle famille"
+      btn-primary: "Nouvelle famille"
+      show: "Entrer"
+      invite: "Inviter"
     new:
       title: "Créer une nouvelle famille"
       subtitle: "Choisissez un nom pour votre famille."
