@@ -4,6 +4,8 @@ en:
       title: "Welcome"
       subtitle: "Choose a family or create a new one."
       btn-primary: "New family"
+      show: "Enter"
+      invite: "Invite"
     new:
       title: "Create a new family"
       subtitle: "Choose a name for your family."
