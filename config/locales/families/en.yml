@@ -1,17 +1,13 @@
 en:
   families:
     index:
-      title: "Welcome"
-      subtitle: "Choose a family or create a new one."
+      title: "My families"
       btn-primary: "New family"
       show: "Enter"
       invite: "Invite"
     new:
       title: "Create a new family"
-      subtitle: "Choose a name for your family."
     edit:
       title: "Edit family"
-      subtitle: "Change the name of your family."
     show:
-      subtitle: "Overview of your family."
       btn-primary: "Settings"

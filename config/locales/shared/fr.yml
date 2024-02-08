@@ -15,5 +15,12 @@ fr:
       features: "Fonctionnalités"
       about: "À propos"
       terms: "Mentions légales & Confidentialité"
+  dashboard-sidebar:
+    links:
+      change_family: "Changer de famille"
+      overview: "Vue d'ensemble"
+      lists: "Listes"
+      expenses: "Dépenses"
+      recipes: "Recettes"
   dashboard-footer:
     text: "© Copyright 2024. Tous droits réservés."
