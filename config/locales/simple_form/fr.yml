@@ -1,0 +1,43 @@
+fr:
+  simple_form:
+    "yes": 'Oui'
+    "no": 'Non'
+    required:
+      text: 'obligatoire'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      html: '<span title="required">(obligatoire)</span>'
+    error_notification:
+      default_message: "Veuillez vérifier les erreurs ci-dessous :"
+    # Examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   list:
+    #     name: 'Name'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    # include_blanks:
+    #   defaults:
+    #     age: 'Rather not say'
+    # prompts:
+    #   defaults:
+    #     age: 'Select your age'
+    options:
+      list:
+        list_type:
+          groceries: 'Courses'
+          to_do: 'To Do'
+  helpers:
+    submit:
+      family:
+        create: 'Créer une famille'
+        update: 'Mettre à jour la famille'
+        submit: 'Enregistrer les modifications'
+      list:
+        create: 'Créer une liste'
+        update: 'Mettre à jour la liste'
+        submit: 'Enregistrer les modifications'

@@ -4,7 +4,7 @@ class ListPolicy < ApplicationPolicy
   end
 
   def create?
-    user.families.include?(params[:family_id])
+    user.families.include?(record.family)
   end
 
   def new?

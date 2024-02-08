@@ -3,6 +3,11 @@ en:
     index:
       title: "My lists"
       btn-primary: "New list"
+      table:
+        header:
+          first: "Name"
+          second: "Type"
+          third: "Progress"
     new:
       title: "Create a new list"
     edit:

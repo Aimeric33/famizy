@@ -7,18 +7,15 @@ en:
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
-      # html: '<abbr title="required">*</abbr>'
+      html: '<span title="required">(required)</span>'
     error_notification:
       default_message: "Please review the problems below:"
     # Examples
     # labels:
     #   defaults:
     #     password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail to sign in.'
-    #     edit:
-    #       email: 'E-mail.'
+    #   list:
+    #     name: 'Name'
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
@@ -29,3 +26,18 @@ en:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+    options:
+      list:
+        list_type:
+          groceries: 'Groceries'
+          to_do: 'To Do'
+  helpers:
+    submit:
+      family:
+        create: 'Create family'
+        update: 'Update family'
+        submit: 'Save changes'
+      list:
+        create: 'Create list'
+        update: 'Update list'
+        submit: 'Save changes'

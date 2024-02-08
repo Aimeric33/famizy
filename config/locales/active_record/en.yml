@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    attributes:
+      user:
+        email: Email address
+        password: Password
+        name: Name
+      family:
+        name: Name
+      list:
+        name: Name
+        list_type: List type
+      list/list_type:
+        groceries: Groceries
+        to_do: To do
