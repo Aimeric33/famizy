@@ -11,3 +11,5 @@ en:
       title: "Edit family"
     show:
       btn-primary: "Settings"
+      cards:
+        lists: "Lists"

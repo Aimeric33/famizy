@@ -1,0 +1,13 @@
+en:
+  lists:
+    index:
+      title: "My lists"
+      btn-primary: "New list"
+    new:
+      title: "Create a new list"
+    edit:
+      title: "Edit list"
+    show:
+      btn-primary: "Settings"
+      cards:
+        items: "Items"

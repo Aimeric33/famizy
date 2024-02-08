@@ -11,6 +11,9 @@ Rails.application.routes.draw do
 
     resources :families do
       resources :family_members, only: %i[create destroy]
+      resources :lists, only: %i[index new create]
     end
+
+    resources :lists, only: %i[show]
   end
 end
