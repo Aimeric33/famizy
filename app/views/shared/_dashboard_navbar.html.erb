@@ -14,7 +14,7 @@
       <img class="w-auto h-6 sm:h-7" src="<%= image_path("famizy-logo.svg") %>" alt="Logo Famizy">
 
       <div class="relative flex items-center" data-controller="dropdown" data-action="click->dropdown#toggle click@window->dropdown#hide">
-        <p class="mr-2"><%= current_user.name %></p>
+        <p class="hidden md:block mr-2"><%= current_user.name %></p>
         <div role="button" tabindex="0" data-dropdown-target="button" class="select-none">
           <div class="w-8 h-8 rounded-full overflow-hidden">
             <%= user_avatar(current_user) %>

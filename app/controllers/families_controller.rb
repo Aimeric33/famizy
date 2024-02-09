@@ -7,6 +7,7 @@ class FamiliesController < ApplicationController
 
   def show
     @family = Family.find(params[:id])
+    session[:current_family_id] = @family.id
     authorize @family
   end
 
@@ -18,7 +19,7 @@ class FamiliesController < ApplicationController
   def create
     @family = Family.new(family_params)
     authorize @family
-    
+
     if @family.save
       @family.family_members.create(user: current_user)
       redirect_to @family, notice: 'Family was successfully created.'
