@@ -5,3 +5,16 @@
     <%= link_to t('.btn-primary'), '#', class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
   </div>
 </div>
+
+<div class="grid grid-cols-1 gap-y-4 md:grid-cols-4 md:gap-8 mt-8">
+  <%= link_to family_lists_path(@family) do %>
+    <div class="flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg">
+      <div class="w-1/2 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1599008633840-052c7f756385?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+
+      <div class="w-1/2 p-4 md:p-4">
+        <p class="text-2xl font-semibold text-gray-800 md:text-4xl"><%= @family.lists.count %></p>
+        <h2 class="mt-4 text-xl font-bold text-orange-500"><%= t('.cards.lists') %></h2>
+      </div>
+    </div>
+  <% end %>
+</div>

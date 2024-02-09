@@ -11,3 +11,5 @@ fr:
       title: "Modifier la famille"
     show:
       btn-primary: "Paramètres"
+      cards:
+        lists: "Listes"

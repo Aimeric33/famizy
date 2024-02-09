@@ -1,0 +1,13 @@
+fr:
+  lists:
+    index:
+      title: "Mes listes"
+      btn-primary: "Nouvelle liste"
+    new:
+      title: "Créer une nouvelle liste"
+    edit:
+      title: "Modifier la liste"
+    show:
+      btn-primary: "Paramètres"
+      cards:
+        items: "Articles"
