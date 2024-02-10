@@ -2,6 +2,59 @@
   <%= render partial: 'shared/page_name', locals: { title: t('.title') } %>
 
   <div class="mt-4 md:mt-0">
-    <%= link_to t('.btn-primary'), '#', class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+    <%= link_to t('.btn-primary'), new_family_list_path(params[:family_id]), class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+  </div>
+</div>
+
+<div class="flex flex-col mt-8">
+  <div class="border border-gray-200">
+
+    <table class="min-w-full">
+      <thead class="bg-white">
+        <tr>
+          <th scope="col" class="py-4 px-4 text-sm font-normal text-left rtl:text-right text-gray-500">
+            <%= t('.table.header.first') %>
+          </th>
+
+          <th scope="col" class="px-4 py-4 text-sm font-normal text-left rtl:text-right text-gray-500">
+            <%= t('.table.header.second') %>
+          </th>
+
+          <th scope="col" class="px-4 py-4 text-sm font-normal text-left rtl:text-right text-gray-500">
+            <%= t('.table.header.third') %>
+          </th>
+
+          <th scope="col" class="relative py-4 px-4">
+            <%# <span class="sr-only">Edit</span> %>
+          </th>
+        </tr>
+      </thead>
+      <tbody class="bg-white">
+        <% @lists.each do |list| %>
+          <tr>
+            <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+              <%= link_to list_path(list) do %>
+                <h2 class="font-medium text-gray-800 dark:text-white "><%= list.name %></h2>
+              <% end %>
+            </td>
+            <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+              <div class="inline px-3 py-1 text-sm font-normal rounded-full text-orange-500 gap-x-2 bg-orange-100">
+                <%= List.human_attribute_name("list_type.#{list.list_type}") %>
+              </div>
+            </td>
+            <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">
+              <%= "1/10" %>
+            </td>
+            <td class="px-4 py-4 text-sm whitespace-nowrap">
+              <button class="px-1 py-1 text-gray-500 transition-colors duration-200 rounded-lg dark:text-gray-300 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+                </svg>
+              </button>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>

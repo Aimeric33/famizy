@@ -1,0 +1,5 @@
+<%= simple_form_for [@list.family, @list] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :list_type, as: :radio_buttons, collection: [:groceries, :to_do] %>
+  <%= f.button :submit %>
+<% end %>

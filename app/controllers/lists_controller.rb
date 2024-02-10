@@ -12,6 +12,7 @@ class ListsController < ApplicationController
 
   def new
     @list = List.new
+    @list.family = Family.find(params[:family_id])
     authorize @list
   end
 
@@ -30,6 +31,6 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name, :type)
+    params.require(:list).permit(:name, :list_type)
   end
 end

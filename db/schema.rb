@@ -69,7 +69,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_08_101949) do
 
   create_table "lists", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.integer "list_type"
     t.bigint "family_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

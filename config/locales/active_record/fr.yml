@@ -11,6 +11,7 @@ fr:
     models:
       user: Utilisateur
       family: Famille
+      list: Liste
     attributes:
       user:
         email: Adresse email
@@ -18,6 +19,12 @@ fr:
         name: Nom
       family:
         name: Nom
+      list:
+        name: Nom
+        list_type: Type de liste
+      list/list_type:
+        groceries: Courses
+        to_do: À faire
   date:
     abbr_day_names:
     - dim
@@ -158,13 +165,6 @@ fr:
       header:
         one: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreur'
         other: 'Impossible d''enregistrer ce(tte) %{model} : %{count} erreurs'
-  helpers:
-    select:
-      prompt: Veuillez sélectionner
-    submit:
-      create: Créer un(e) %{model}
-      submit: Enregistrer ce(tte) %{model}
-      update: Modifier ce(tte) %{model}
   number:
     currency:
       format:
