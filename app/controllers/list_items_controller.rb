@@ -5,7 +5,7 @@ class ListItemsController < ApplicationController
     authorize @list_item
 
     @list_item.save
-    # redirect_to list_path(@list)
+    redirect_to list_path(@list)
   end
 
   private
