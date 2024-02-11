@@ -16,6 +16,14 @@ class ListItemsController < ApplicationController
     redirect_to list_path(@list_item.list), status: :see_other
   end
 
+  def destroy
+    @list_item = ListItem.find(params[:id])
+    authorize @list_item
+
+    @list_item.destroy
+    redirect_to list_path(@list_item.list), status: :see_other
+  end
+
   private
 
   def list_item_params

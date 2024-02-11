@@ -7,6 +7,10 @@ class ListItemPolicy < ApplicationPolicy
     user.families.include?(record.list.family)
   end
 
+  def destroy?
+    user.families.include?(record.list.family)
+  end
+
   class Scope < Scope
   end
 end
