@@ -10,6 +10,7 @@ en:
     edit:
       title: "Edit family"
     show:
-      btn-primary: "Settings"
+      btn-settings: "Settings"
+      btn-invite: "Invite"
       cards:
         lists: "Lists"
