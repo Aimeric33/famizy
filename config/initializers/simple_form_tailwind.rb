@@ -12,7 +12,7 @@
 
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
-  config.form_class = 'mt-6'
+  config.form_class = ''
 
   # Default class for buttons
   config.button_class = 'mt-3 px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80'
@@ -271,9 +271,9 @@ SimpleForm.setup do |config|
     b.optional :pattern
     b.optional :min_max
     b.optional :readonly
-    b.use :label, class: 'visually-hidden'
+    b.use :label, class: 'hidden'
 
-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
+    b.use :input, class: 'block mx-4 p-0 text-gray-800 outline-none border-0 focus:ring-0 focus:border-0 focus:outline-none'
     b.use :error, wrap_with: { class: 'invalid-feedback' }
     b.optional :hint, wrap_with: { class: 'form-text' }
   end
