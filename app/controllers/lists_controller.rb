@@ -23,10 +23,18 @@ class ListsController < ApplicationController
     authorize @list
 
     if @list.save
-      redirect_to @list, notice: 'List was successfully created.'
+      redirect_to @list, notice: t('list.created')
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @list = List.find(params[:id])
+    authorize @list
+
+    @list.destroy
+    redirect_to family_lists_path(@list.family), notice: t('list.destroyed')
   end
 
   private

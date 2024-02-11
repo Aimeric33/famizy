@@ -11,6 +11,10 @@ class ListPolicy < ApplicationPolicy
     create?
   end
 
+  def destroy?
+    user.families.include?(record.family)
+  end
+
   class Scope < Scope
     def resolve
       scope.where(family_id: user.families)

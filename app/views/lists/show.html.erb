@@ -9,7 +9,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
     </svg>
     <%= simple_form_for [@list, @list_item] do |f| %>
-      <%= f.input :name, label: false, wrapper: :inline_form, placeholder: 'Ajouter' %>
+      <%= f.input :name, label: false, wrapper: :inline_form, placeholder: t('.add-placeholder') %>
     <% end %>
   </div>
 
