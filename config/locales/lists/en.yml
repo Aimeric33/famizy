@@ -1,4 +1,8 @@
 en:
+  list:
+    created: "List was successfully created."
+    updated: "List was successfully updated."
+    destroyed: "List was successfully destroyed."
   lists:
     index:
       title: "My lists"
@@ -14,5 +18,4 @@ en:
       title: "Edit list"
     show:
       btn-primary: "Settings"
-      cards:
-        items: "Items"
+      add-placeholder: "Add a new item"

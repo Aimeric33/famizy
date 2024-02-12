@@ -1,4 +1,8 @@
 fr:
+  list:
+    created: "La liste a été créée avec succès."
+    updated: "La liste a été mise à jour avec succès."
+    destroyed: "La liste a été supprimée avec succès."
   lists:
     index:
       title: "Mes listes"
@@ -14,5 +18,4 @@ fr:
       title: "Modifier la liste"
     show:
       btn-primary: "Paramètres"
-      cards:
-        items: "Articles"
+      add-placeholder: "Ajouter un nouvel élément"

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
       resources :lists, only: %i[index new create]
     end
 
-    resources :lists, only: %i[show] do
+    resources :lists, only: %i[show destroy] do
       resources :list_items, only: %i[create]
     end
 
