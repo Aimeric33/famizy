@@ -18,6 +18,6 @@ Rails.application.routes.draw do
       resources :list_items, only: %i[create]
     end
 
-    resources :list_items, only: %i[update]
+    resources :list_items, only: %i[update destroy]
   end
 end
