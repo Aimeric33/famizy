@@ -1,6 +1,6 @@
-<header class="fixed z-30 h-16 w-full bg-white shadow dark:bg-gray-800">
-  <div class="px-6 py-4 mx-auto h-full flex items-center gap-4">
-    <button data-action="click->menu#toggle" type="button" class="text-gray-500 md:hidden dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+<header class="fixed z-30 w-full bg-white shadow-xs">
+  <div class="px-4 py-4 h-full flex items-center gap-4">
+    <button data-action="click->menu#toggle" type="button" class="text-gray-800 md:hidden focus:outline-none" aria-label="toggle menu">
       <svg data-menu-target="burger" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
       </svg>
@@ -11,7 +11,7 @@
     </button>
 
     <div class="flex items-center justify-between w-full">
-      <img class="w-auto h-6 sm:h-7" src="<%= image_path("famizy-logo.svg") %>" alt="Logo Famizy">
+      <img class="w-auto h-6" src="<%= image_path("famizy-logo.svg") %>" alt="Logo Famizy">
 
       <div class="relative flex items-center" data-controller="dropdown" data-action="click->dropdown#toggle click@window->dropdown#hide">
         <p class="hidden md:block mr-2"><%= current_user.name %></p>
@@ -27,11 +27,11 @@
               data-transition-leave="transition ease-in duration-150"
               data-transition-leave-from="opacity-100 translate-y-0"
               data-transition-leave-to="opacity-0 translate-y-1"
-              class="hidden absolute top-4 right-0 z-10 mt-5 flex w-screen max-w-max">
-          <div class="text-sm bg-white shadow rounded border overflow-hidden w-32">
-            <a href="#" class='no-underline block pl-4 py-2 text-gray-800 bg-white hover:bg-gray-100 whitespace-no-wrap'>Account</a>
-            <a href="#" class='no-underline block pl-4 py-2 text-gray-800 bg-white hover:bg-gray-100 whitespace-no-wrap'>Billing</a>
-            <%= link_to 'Log out', destroy_user_session_path, data: { turbo_method: :delete }, class: "no-underline block pl-4 py-2 text-gray-900 bg-white hover:bg-gray-100 whitespace-no-wrap" %>
+              class="hidden absolute top-4 right-0 z-10 mt-5 flex max-w-max">
+          <div class="bg-white shadow-xs overflow-hidden">
+            <a href="#" class="block px-4 py-2 text-gray-800 bg-white hover:bg-gray-100">Account</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 bg-white hover:bg-gray-100">Billing</a>
+            <%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "block px-4 py-2 text-gray-800 bg-white hover:bg-gray-100" %>
           </div>
         </div>
       </div>

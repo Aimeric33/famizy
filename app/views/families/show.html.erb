@@ -1,8 +1,9 @@
 <div class="flex flex-col justify-between md:flex-row md:items-center">
   <%= render partial: 'shared/page_name', locals: { title: @family.name } %>
 
-  <div class="mt-4 md:mt-0">
-    <%= link_to t('.btn-primary'), '#', class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+  <div class="mt-4 flex flex-col items-start gap-4 md:mt-0 md:flex-row">
+    <%= link_to t('.btn-settings'), '#', class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg border-1 border-orange-500 hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+    <%= link_to t('.btn-invite'), '#', class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-orange-500 transition-colors duration-300 transform bg-white rounded-lg border-1 border-gray-200 hover:bg-gray-200 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
   </div>
 </div>
 

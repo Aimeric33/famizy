@@ -9,7 +9,7 @@ fr:
   footer:
     subtext: "Invite les membres de votre famille et commencez à organiser votre quotidien"
     cta: "Commencer"
-    copyright: "© Copyright 2024. Tous droits réservés."
+    copyright: "Fait avec amour par Aimeric Marchau."
     links:
       home: "Accueil"
       features: "Fonctionnalités"
@@ -23,4 +23,4 @@ fr:
       expenses: "Dépenses"
       recipes: "Recettes"
   dashboard-footer:
-    text: "© Copyright 2024. Tous droits réservés."
+    text: "Fait avec amour par Aimeric Marchau."
