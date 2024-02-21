@@ -6,12 +6,20 @@ module.exports = {
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}',
+    './app/views/**/*.html.erb',
     './config/initializers/simple_form_tailwind.rb'
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem',
+    },
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['Lato', ...defaultTheme.fontFamily.sans],
+      },
+      boxShadow: {
+        'xs': '0 0 4px 0 rgba(0, 0, 0, 0.15)',
       },
     },
   },
