@@ -3,7 +3,7 @@
   <%= render partial: 'shared/page_name', locals: { title: t('.title') } %>
 
   <div class="mt-4 md:mt-0">
-    <%= link_to t('.btn-primary'), new_family_path, class: "px-4 py-2 font-bold text-white bg-orange-500 rounded-lg transition-colors duration-300 transform hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+    <%= link_to t('.btn-primary'), new_family_path, class: "inline-block px-4 py-2 font-bold text-white bg-orange-500 rounded-lg transition-colors duration-300 transform hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
   </div>
 </div>
 
@@ -22,12 +22,19 @@
         </button>
       </div>
 
-        <div class="mt-4 flex items-center justify-center ">
+      <div>
+        <p class="my-5 text-gray-500">
+          <%= family.description %>
+        </p>
+      </div>
+
+      <div class="flex items-end justify-between">
+        <div class="flex">
           <% family.users.each do |user| %>
             <% if user.avatar.attached? %>
-              <%= cl_image_tag user.avatar.key, class: "object-cover w-8 h-8 -mx-1 overflow-hidden rounded-full ring ring-white dark:ring-gray-900" %>
+              <%= cl_image_tag user.avatar.key, class: "object-cover w-10 h-10 -mx-1 overflow-hidden rounded-full ring ring-white dark:ring-gray-900" %>
             <% else %>
-              <div class="object-cover w-10 h-10 -mx-1.5 overflow-hidden rounded-full ring ring-white dark:ring-gray-900">
+              <div class="object-cover w-10 h-10 -mr-1 overflow-hidden rounded-full ring ring-white">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 40 40">
                   <rect width="100%" height="100%" fill="<%= user.color %>"/>
                   <text fill="#fff" font-family="Helvetica,Arial,sans-serif" font-size="24" font-weight="500" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle">
@@ -38,10 +45,10 @@
             <% end %>
           <% end %>
         </div>
-
-      <div class="mt-4 sm:mt-6 sm:flex sm:items-center sm:-mx-2">
-        <%= link_to t('.invite'), '#', class:"w-full px-5 py-2 text-sm font-medium tracking-wide text-gray-700 capitalize transition-colors duration-300 transform border border-gray-200 rounded-md sm:w-1/2 sm:mx-2 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40" %>
-        <%= link_to t('.show'), family_path(family), class:"w-full px-5 py-2 mt-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform border bg-orange-500 border-orange-500 rounded-md sm:mt-0 sm:w-1/2 sm:mx-2 hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-40" %>
+        <div>
+          <%= link_to t('.show'), family_path(family), class:"inline-block px-4 py-2 font-bold text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+        </div>
       </div>
+
   <% end %>
 </div>

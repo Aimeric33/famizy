@@ -3,8 +3,7 @@ fr:
     index:
       title: "Mes familles"
       btn-primary: "Nouvelle famille"
-      show: "Entrer"
-      invite: "Inviter"
+      show: "Choisir"
     new:
       title: "Créer une nouvelle famille"
     edit:
