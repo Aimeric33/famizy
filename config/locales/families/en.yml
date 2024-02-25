@@ -4,6 +4,7 @@ en:
       title: "My families"
       btn-primary: "New family"
       show: "Choose"
+      no-families: "You don't have any family yet."
     new:
       title: "Create a new family"
     edit:

@@ -31,6 +31,6 @@ class FamiliesController < ApplicationController
   private
 
   def family_params
-    params.require(:family).permit(:name)
+    params.require(:family).permit(:name, :description)
   end
 end

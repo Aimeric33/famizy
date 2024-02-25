@@ -7,6 +7,7 @@ fr:
     index:
       title: "Mes listes"
       btn-primary: "Nouvelle liste"
+      no-lists: "Vous n'avez pas encore de listes."
       item:
         last-modified: "Dernière modification le"
     new:
