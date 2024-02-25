@@ -12,4 +12,8 @@ en:
       btn-settings: "Settings"
       btn-invite: "Invite"
       cards:
-        lists: "Lists"
+        lists:
+          title: "Lists"
+          description: "Create groceries lists or to-do lists for you or your family"
+          count: "List(s) in progress"
+        btn: "See more"

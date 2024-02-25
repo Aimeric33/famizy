@@ -12,4 +12,8 @@ fr:
       btn-settings: "Paramètres"
       btn-invite: "Inviter"
       cards:
-        lists: "Listes"
+        lists:
+          title: "Listes"
+          description: "Créez des listes de courses ou des listes de tâches pour vous ou votre famille"
+          count: "Liste(s) en cours"
+        btn: "Tout voir"

@@ -2,20 +2,32 @@
   <%= render partial: 'shared/page_name', locals: { title: @family.name } %>
 
   <div class="mt-4 flex flex-col items-start gap-4 md:mt-0 md:flex-row">
-    <%= link_to t('.btn-settings'), '#', class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-white transition-colors duration-300 transform bg-orange-500 rounded-lg border-1 border-orange-500 hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
-    <%= link_to t('.btn-invite'), '#', class: "inline-flex items-center px-5 py-2 font-medium tracking-wide text-orange-500 transition-colors duration-300 transform bg-white rounded-lg border-1 border-gray-200 hover:bg-gray-200 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+    <%= link_to t('.btn-invite'), '#', class: "inline-block px-4 py-2 font-bold text-white bg-orange-500 rounded-lg transition-colors duration-300 transform hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+    <%= link_to t('.btn-settings'), '#', class: "inline-block px-4 py-2 font-bold text-orange-500 bg-white rounded-lg border border-orange-500 transition-colors duration-300 transform hover:bg-gray-100 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
   </div>
 </div>
 
-<div class="grid grid-cols-1 gap-y-4 md:grid-cols-4 md:gap-8 mt-8">
-  <%= link_to family_lists_path(@family) do %>
-    <div class="flex max-w-md overflow-hidden bg-white rounded-lg shadow-lg">
-      <div class="w-1/2 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1599008633840-052c7f756385?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')"></div>
+<div class="mt-8 grid grid-cols-1 gap-y-4 md:grid-cols-3 md:gap-8">
+  <div class="p-5 bg-white rounded-lg shadow-xs">
+    <h3 class="pr-8 text-xl font-semibold text-gray-800 md:text-2xl">
+      <%= t('.cards.lists.title') %>
+    </h3>
+    <div>
+      <p class="my-5 text-gray-500">
+        <%= t('.cards.lists.description') %>
+      </p>
+    </div>
 
-      <div class="w-1/2 p-4 md:p-4">
-        <p class="text-2xl font-semibold text-gray-800 md:text-4xl"><%= @family.lists.count %></p>
-        <h2 class="mt-4 text-xl font-bold text-orange-500"><%= t('.cards.lists') %></h2>
+    <div class="flex items-end justify-between">
+      <div>
+        <p class="text-sm">
+          <span class="mr-2 font-bold text-base"><%= @family.lists.count %></span>
+          <%= t('.cards.lists.count') %>
+        </p>
+      </div>
+      <div>
+        <%= link_to t('.cards.btn'), family_lists_path(@family), class:"inline-block px-4 py-2 font-bold text-white bg-orange-500 rounded-lg transition-colors duration-300 transform hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>
