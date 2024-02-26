@@ -17,7 +17,9 @@ fr:
         email: Adresse email
         password: Mot de passe
         password_confirmation: Confirmation du mot de passe
+        current_password: Mot de passe actuel
         name: Nom
+        birth_date: Date de naissance
       family:
         name: Nom
       list:

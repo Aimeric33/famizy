@@ -6,6 +6,7 @@ en:
         password: Password
         password_confirmation: Confirm password
         name: Name
+        birth_date: Birth date
       family:
         name: Name
       list:
