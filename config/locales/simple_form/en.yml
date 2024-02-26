@@ -10,22 +10,12 @@ en:
       html: '<span title="required">(required)</span>'
     error_notification:
       default_message: "Please review the problems below:"
-    # Examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
-    #   list:
-    #     name: 'Name'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
-    # include_blanks:
-    #   defaults:
-    #     age: 'Rather not say'
-    # prompts:
-    #   defaults:
-    #     age: 'Select your age'
+    placeholders:
+      family:
+        name: 'My family'
+        description: 'A sentence to describe your family'
+      list:
+        name: 'My list'
     options:
       list:
         list_type:

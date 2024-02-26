@@ -10,9 +10,9 @@
       <% end %>
 
       <% if session[:current_family_id] %>
-        <label class="mt-4 px-4 text-xs text-gray-500 uppercase"><%= Family.find(session[:current_family_id]).name %></label>
+        <label class="mt-4 px-4 text-sm font-bold text-gray-500 uppercase"><%= Family.find(session[:current_family_id]).name %></label>
       <% else %>
-        <label class="mt-4 px-4 text-xs text-gray-500 uppercase"><%= Family.first.name %></label>
+        <label class="mt-4 px-4 text-sm font-bold text-gray-500 uppercase"><%= Family.first.name %></label>
       <% end %>
 
       <%= link_to family_path(session[:current_family_id] || Family.first), class: "flex items-center px-4 py-2 text-gray-800 rounded-lg transition-colors duration-300 transform hover:bg-gray-100" do %>

@@ -4,6 +4,7 @@ fr:
       title: "Mes familles"
       btn-primary: "Nouvelle famille"
       show: "Choisir"
+      no-families: "Vous n'avez pas encore de famille."
     new:
       title: "Créer une nouvelle famille"
     edit:
@@ -12,4 +13,8 @@ fr:
       btn-settings: "Paramètres"
       btn-invite: "Inviter"
       cards:
-        lists: "Listes"
+        lists:
+          title: "Listes"
+          description: "Créez des listes de courses ou des listes de tâches pour vous ou votre famille"
+          count: "Liste(s) en cours"
+        btn: "Tout voir"

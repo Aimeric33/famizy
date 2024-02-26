@@ -7,11 +7,9 @@ fr:
     index:
       title: "Mes listes"
       btn-primary: "Nouvelle liste"
-      table:
-        header:
-          first: "Nom"
-          second: "Type"
-          third: "Progression"
+      no-lists: "Vous n'avez pas encore de listes."
+      item:
+        last-modified: "Dernière modification le"
     new:
       title: "Créer une nouvelle liste"
     edit:

@@ -34,6 +34,15 @@ fr:
       send_paranoid_instructions: "Si votre e-mail existe dans notre base de données, vous allez recevoir un lien de réinitialisation par e-mail."
       updated: "Votre mot de passe a été édité avec succès, vous êtes maintenant connecté."
       updated_not_active: "Votre mot de passe a été changé avec succès."
+      new:
+        title: "Mot de passe oublié ?"
+        btn: "Demander un nouveau mot de passe"
+      edit:
+        title: "Changer votre mot de passe"
+        label_new_password: "Nouveau mot de passe"
+        label_password_confirmation: "Confirmez votre nouveau mot de passe"
+        min_password_length: "caractères minim"
+        btn: "Changer mon mot de passe"
     registrations:
       destroyed: "Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt."
       signed_up: "Bienvenue, vous êtes connecté."
@@ -43,10 +52,28 @@ fr:
       update_needs_confirmation: "Votre compte a bien été mis à jour mais nous devons vérifier votre nouvelle adresse email. Merci de vérifier vos emails et de cliquer sur le lien de confirmation pour finaliser la validation de votre nouvelle adresse."
       updated: "Votre compte a été modifié avec succès."
       updated_but_not_signed_in: "Votre compte a été modifié avec succès. Merci de vous reconnecter."
+      new:
+        title: "Inscrivez-vous pour continuer"
+        min_password_length: "caractères minimum"
+        btn: "Inscription"
+      edit:
+        title: "Modifier votre compte"
+        hint_new_password: "Laissez vide si vous ne souhaitez pas changer de mot de passe"
+        hint_current_password: "Nous avons besoin de votre mot de passe actuel pour confirmer le changement"
+        btn: "Modifier mon compte"
+        delete: "Supprimer mon compte"
     sessions:
-      signed_in: "Connecté."
-      signed_out: "Déconnecté."
-      already_signed_out: "Déconnecté."
+      signed_in: "Vous êtes connecté."
+      signed_out: "Vous êtes déconnecté."
+      already_signed_out: "Vous êtes déconnecté."
+      new:
+        title: "Connectez-vous pour continuer"
+        btn: "Connexion"
+    shared:
+      links:
+        log_in: "Vous avez déjà un compte ? Connectez-vous"
+        forgot_your_password: "Mot de passe oublié ?"
+        sign_up: "Vous n'avez pas de compte ? Inscrivez-vous"
     unlocks:
       send_instructions: "Vous allez recevoir les instructions nécessaires au déverrouillage de votre compte dans quelques instants."
       send_paranoid_instructions: "Si votre compte existe, vous allez bientôt recevoir un email contenant les instructions pour le déverrouiller."
