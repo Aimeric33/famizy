@@ -28,6 +28,18 @@ class FamiliesController < ApplicationController
     end
   end
 
+  def destroy
+    @family = Family.find(params[:id])
+    authorize @family
+    @family.destroy
+    redirect_to families_url, notice: 'Family was successfully destroyed.'
+  end
+
+  def invite
+    @family = Family.find(params[:family_id])
+    authorize @family
+  end
+
   private
 
   def family_params
