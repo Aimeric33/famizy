@@ -23,6 +23,10 @@ class FamilyPolicy < ApplicationPolicy
     show?
   end
 
+  def invite?
+    show?
+  end
+
   class Scope < Scope
     def resolve
       scope.where(id: user.families)
