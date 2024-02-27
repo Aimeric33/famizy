@@ -18,3 +18,6 @@ fr:
           description: "Créez des listes de courses ou des listes de tâches pour vous ou votre famille"
           count: "Liste(s) en cours"
         btn: "Tout voir"
+    invite:
+      title: "Inviter quelqu'un dans votre famille"
+      form_title: "Entrez ci-dessous les informations de la personne que vous souhaitez inviter"

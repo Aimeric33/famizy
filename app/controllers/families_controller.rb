@@ -36,6 +36,7 @@ class FamiliesController < ApplicationController
   end
 
   def invite
+    @user = User.new
     @family = Family.find(params[:family_id])
     authorize @family
   end
