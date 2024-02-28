@@ -1,7 +1,5 @@
-<div class="max-w-2xl p-5 bg-white shadow-xs rounded-lg">
-  <%= simple_form_for @family do |f| %>
-    <%= f.input :name %>
-    <%= f.input :description, as: :text %>
-    <%= f.button :submit %>
-  <% end %>
-</div>
+<%= simple_form_for @family do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description, as: :text %>
+  <%= f.button :submit %>
+<% end %>

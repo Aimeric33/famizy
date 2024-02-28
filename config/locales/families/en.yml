@@ -8,14 +8,18 @@ en:
     new:
       title: "Create a new family"
     edit:
-      title: "Edit family"
+      title: "Settings"
+      form_title: "Edit the information of your family"
+      delete: "Delete your family"
+      delete_btn: "Delete"
+      delete_confirm: "Are you sure you want to delete your family?"
     show:
       btn-settings: "Settings"
       btn-invite: "Invite"
       cards:
         lists:
           title: "Lists"
-          description: "Create groceries lists or to-do lists for you or your family"
+          description: "Create groceries lists or to-do lists for you or your family."
           count: "List(s) in progress"
         btn: "See more"
     invite:
