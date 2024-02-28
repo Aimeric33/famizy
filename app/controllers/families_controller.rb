@@ -1,12 +1,13 @@
 class FamiliesController < ApplicationController
   layout 'dashboard'
 
+  before_action :set_family, only: %i[show edit update destroy]
+
   def index
     @families = policy_scope(Family)
   end
 
   def show
-    @family = Family.find(params[:id])
     session[:current_family_id] = @family.id
     authorize @family
   end
@@ -28,8 +29,21 @@ class FamiliesController < ApplicationController
     end
   end
 
+  def edit
+    authorize @family
+  end
+
+  def update
+    authorize @family
+
+    if @family.update(family_params)
+      redirect_to edit_family_path(@family), notice: 'Family was successfully updated.'
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def destroy
-    @family = Family.find(params[:id])
     authorize @family
     @family.destroy
     redirect_to families_url, notice: 'Family was successfully destroyed.'
@@ -42,6 +56,10 @@ class FamiliesController < ApplicationController
   end
 
   private
+
+  def set_family
+    @family = Family.find(params[:id])
+  end
 
   def family_params
     params.require(:family).permit(:name, :description)

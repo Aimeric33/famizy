@@ -8,14 +8,18 @@ fr:
     new:
       title: "Créer une nouvelle famille"
     edit:
-      title: "Modifier la famille"
+      title: "Paramètres"
+      form_title: "Modifiez les informations de votre famille"
+      delete: "Supprimer votre famille"
+      delete_btn: "Supprimer"
+      delete_confirm: "Êtes-vous sûr de vouloir supprimer votre famille ?"
     show:
       btn-settings: "Paramètres"
       btn-invite: "Inviter"
       cards:
         lists:
           title: "Listes"
-          description: "Créez des listes de courses ou des listes de tâches pour vous ou votre famille"
+          description: "Créez des listes de courses ou des listes de tâches pour vous ou votre famille."
           count: "Liste(s) en cours"
         btn: "Tout voir"
     invite:

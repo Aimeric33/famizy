@@ -34,7 +34,7 @@ SimpleForm.setup do |config|
   config.include_default_input_wrapper_class = false
 
   # CSS class to add for error notification helper.
-  config.error_notification_class = 'alert alert-danger'
+  config.error_notification_class = 'text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-400'
 
   # Method used to tidy up errors. Specify any Rails Array method.
   # :first lists the first message for each field.
@@ -49,7 +49,7 @@ SimpleForm.setup do |config|
   # vertical forms
   #
   # vertical default_wrapper
-  config.wrappers :vertical_form, class: 'mb-5' do |b|
+  config.wrappers :vertical_form, class: 'mb-6' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -58,33 +58,33 @@ SimpleForm.setup do |config|
     b.optional :min_max
     b.optional :readonly
     b.use :label, class: 'block font-bold text-orange-500'
-    b.use :input, class: 'block w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
-    b.use :full_error, wrap_with: { class: 'invalid-feedback' }
-    b.use :hint, wrap_with: { class: 'mt-3 text-sm leading-6 text-gray-600' }
+    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 bg-gray-100 border border-gray-300 rounded-lg focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-600' }
   end
 
   # vertical input for boolean
-  config.wrappers :vertical_boolean, tag: 'fieldset', class: 'mb-5' do |b|
+  config.wrappers :vertical_boolean, tag: 'fieldset', class: 'mb-6' do |b|
     b.use :html5
     b.optional :readonly
     b.wrapper :form_check_wrapper, class: 'relative flex gap-x-3 items-center' do |bb|
-      bb.use :input, class: 'h-4 w-4 rounded border-gray-300 text-orange-500 focus:ring-orange-500', error_class: 'border-red-500', valid_class: 'border-green-500'
-      bb.use :label, class: 'block text-sm text-gray-800 dark:text-gray-200'
-      bb.use :full_error, wrap_with: { class: 'invalid-feedback' }
-      bb.use :hint, wrap_with: { class: 'mt-3 text-sm leading-6 text-gray-600' }
+      bb.use :input, class: 'h-4 w-4 rounded border-gray-300 text-gray-800 focus:ring-orange-500', error_class: 'border-red-500', valid_class: 'border-green-500'
+      bb.use :label, class: 'block text-orange-500', error_class: 'text-red-500', valid_class: 'text-green-500'
+      bb.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
+      bb.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-600' }
     end
   end
 
   # vertical input for radio buttons and check boxes
-  config.wrappers :vertical_collection, item_wrapper_class: 'flex items-center', item_label_class: 'ml-2', tag: 'fieldset', class: 'mb-5' do |b|
+  config.wrappers :vertical_collection, item_wrapper_class: 'flex items-center', item_label_class: 'ml-2 text-gray-800', tag: 'fieldset', class: 'mb-6' do |b|
     b.use :html5
     b.optional :readonly
     b.wrapper :legend_tag, tag: 'legend', class: 'block mb-2 font-bold text-orange-500' do |ba|
       ba.use :label_text
     end
-    b.use :input, class: 'bg-gray-100 text-orange-500 focus:ring focus:ring-orange-300 focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
-    b.use :full_error, wrap_with: { class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { class: 'mt-3 text-sm leading-6 text-gray-600' }
+    b.use :input, class: 'bg-gray-100 border-gray-300 text-orange-500 focus:ring focus:ring-orange-300 focus:ring-opacity-40', error_class: 'border-red-500'
+    b.use :full_error, wrap_with: { class: 'mt-2 block text-sm text-red-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-600' }
   end
 
   # vertical input for inline radio buttons and check boxes
@@ -100,50 +100,50 @@ SimpleForm.setup do |config|
   end
 
   # vertical file input
-  config.wrappers :vertical_file, class: 'mb-3' do |b|
+  config.wrappers :vertical_file, class: 'mb-6' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
     b.optional :minlength
     b.optional :readonly
-    b.use :label, class: 'form-label'
-    b.use :input, class: 'form-control', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { class: 'invalid-feedback' }
-    b.use :hint, wrap_with: { class: 'form-text' }
+    b.use :label, class: 'block font-bold text-orange-500'
+    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 bg-gray-100 border border-gray-300 rounded-lg focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-600' }
   end
 
   # vertical select input
-  config.wrappers :vertical_select, class: 'mb-3' do |b|
+  config.wrappers :vertical_select, class: 'mb-6' do |b|
     b.use :html5
     b.optional :readonly
-    b.use :label, class: 'form-label'
-    b.use :input, class: 'form-select', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { class: 'invalid-feedback' }
-    b.use :hint, wrap_with: { class: 'form-text' }
+    b.use :label, class: 'block font-bold text-orange-500'
+    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 bg-gray-100 border border-gray-300 rounded-lg focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-600' }
   end
 
   # vertical multi select
-  config.wrappers :vertical_multi_select, class: 'mb-3' do |b|
+  config.wrappers :vertical_multi_select, class: 'mb-6' do |b|
     b.use :html5
     b.optional :readonly
-    b.use :label, class: 'form-label'
+    b.use :label, class: 'block font-bold text-orange-500'
     b.wrapper class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
-      ba.use :input, class: 'form-select mx-1', error_class: 'is-invalid', valid_class: 'is-valid'
+      ba.use :input, class: 'block mt-2 px-4 py-2 text-gray-800 bg-gray-100 border border-gray-300 rounded-lg focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     end
-    b.use :full_error, wrap_with: { class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { class: 'form-text' }
+    b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-600' }
   end
 
   # vertical range input
-  config.wrappers :vertical_range, class: 'mb-3' do |b|
+  config.wrappers :vertical_range, class: 'mb-6' do |b|
     b.use :html5
     b.use :placeholder
     b.optional :readonly
     b.optional :step
-    b.use :label, class: 'form-label'
-    b.use :input, class: 'form-range', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { class: 'invalid-feedback' }
-    b.use :hint, wrap_with: { class: 'form-text' }
+    b.use :label, class: 'block font-bold text-orange-500'
+    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 bg-gray-100 border border-gray-300 rounded-lg focus:border-orange-400 focus:ring-orange-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-600' }
   end
 
 
