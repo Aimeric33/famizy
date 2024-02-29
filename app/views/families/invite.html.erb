@@ -16,7 +16,7 @@
                   html5: true,
                   input_html: { autocomplete: "birth_date" } %>
       <div class="hidden">
-        <%= f.association :families, as: :radio_buttons, checked: @family.id %>
+        <%= f.association :families, as: :radio_buttons, checked: session[:current_family_id] %>
       </div>
       <% @user.class.invite_key_fields.each do |field| -%>
         <%= f.input field %>
