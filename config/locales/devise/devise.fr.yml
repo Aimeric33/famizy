@@ -14,6 +14,11 @@ fr:
       timeout: "Votre session est expirée. Veuillez vous reconnecter pour continuer."
       unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
       unconfirmed: "Vous devez valider votre compte pour continuer."
+    invitations:
+      send_instructions: "Un e-mail d'invitation a été envoyé à %{email}."
+      edit:
+        title: "Acceptez l'invitation et créez votre compte"
+        submit: "Accepter l'invitation"
     mailer:
       confirmation_instructions:
         subject: "Instructions de confirmation"

@@ -51,7 +51,7 @@ class FamiliesController < ApplicationController
 
   def invite
     @user = User.new
-    @family = Family.find(params[:family_id])
+    @family = Family.find(session[:current_family_id])
     authorize @family
   end
 

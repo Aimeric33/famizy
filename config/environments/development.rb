@@ -1,8 +1,21 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "gmail.com",
+    user_name: "noreply.famizy@gmail.com",
+    password: "hfxzmdhvbnxyfzui",
+    authentication: "plain",
+    enable_starttls_auto: true
+  }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = { from: "noreply.famizy@gmail.com" }
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
