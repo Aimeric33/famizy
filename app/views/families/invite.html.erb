@@ -6,17 +6,8 @@
   <div class="max-w-2xl p-5 bg-white shadow-xs rounded-lg">
     <p class="mb-4 font-bold text-lg text-gray-800"><%= t('.form_title') %></p>
     <%= simple_form_for(@user, url: invitation_path(@user), html: { method: :post }) do |f| %>
-      <%= f.input :name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "name" } %>
-      <%= f.input :birth_date,
-                  required: true,
-                  as: :date,
-                  html5: true,
-                  input_html: { autocomplete: "birth_date" } %>
       <div class="hidden">
-        <%= f.association :families, as: :radio_buttons, checked: @family.id %>
+        <%= f.association :families, as: :radio_buttons, checked: session[:current_family_id] %>
       </div>
       <% @user.class.invite_key_fields.each do |field| -%>
         <%= f.input field %>

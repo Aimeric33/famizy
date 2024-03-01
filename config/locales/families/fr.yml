@@ -24,4 +24,4 @@ fr:
         btn: "Tout voir"
     invite:
       title: "Inviter quelqu'un dans votre famille"
-      form_title: "Entrez ci-dessous les informations de la personne que vous souhaitez inviter"
+      form_title: "Entrez l'adresse email de la personne que vous souhaitez inviter. Si elle n'a pas de compte, elle sera invitée à en créer un."

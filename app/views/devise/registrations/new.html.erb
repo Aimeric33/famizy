@@ -1,4 +1,4 @@
-<div class="h-screen p-4 flex justify-center items-center">
+<div class="min-h-screen p-4 flex justify-center items-center">
   <div class="w-full max-w-md p-6 bg-white rounded-lg shadow-xs">
     <div class="flex justify-center">
       <img class="w-auto h-6" src="<%= image_path("famizy-logo.svg") %>" alt="Logo Famizy">
@@ -12,6 +12,8 @@
                   autofocus: true,
                   input_html: { autocomplete: "name" } %>
       <%= f.input :birth_date,
+                  as: :date,
+                  html5: true,
                   required: true,
                   input_html: { autocomplete: "birth_date" } %>
       <%= f.input :email,
