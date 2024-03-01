@@ -24,4 +24,4 @@ en:
         btn: "See more"
     invite:
       title: "Invite someone to your family"
-      form_title: "Enter below the information of the person you want to invite"
+      form_title: "Enter the email of whom you want to invite. If she/he doesn't have an account, she/he will be invited to create one."
