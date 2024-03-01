@@ -51,7 +51,7 @@ class Users::InvitationsController < Devise::InvitationsController
       @user
     else
       # invite! class method returns invitable var, which is a User instance
-      resource_class.invite!({ email: invite_params[:email], family_ids: invite_params[:family_ids] }, current_inviter, &block)
+      resource_class.invite!(invite_params, current_inviter, &block)
     end
   end
 end
