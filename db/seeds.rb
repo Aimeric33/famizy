@@ -9,7 +9,7 @@ user2 = User.create!(name: "Aimeric Two", email: "aimerictest2@famizy.fr", passw
 puts "✅ Users created!"
 
 puts "👪 Creating families..."
-family1 = Family.create!(name: "La maison du bonheur")
+family1 = Family.create!(name: "La maison du bonheur", description: "On teste une famille pour voir si tout fonctionne bien")
 family_member1 = FamilyMember.create!(family: family1, user: user1, role: "parent")
 family_member2 = FamilyMember.create!(family: family1, user: user2, role: "child")
 puts "✅ Families created!"
