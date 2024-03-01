@@ -15,6 +15,11 @@ class User < ApplicationRecord
   validates :birth_date, presence: true
 
   after_create :generate_color
+  after_update :generate_color, if: :color_nil?
+
+  def color_nil?
+    self.color.nil?
+  end
 
   def generate_color
     colors = %w[red orange yellow green teal blue indigo purple pink]

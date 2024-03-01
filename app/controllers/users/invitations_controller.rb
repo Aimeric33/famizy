@@ -25,6 +25,10 @@ class Users::InvitationsController < Devise::InvitationsController
     family_invite_path(params[:locale])
   end
 
+  def after_accept_path_for(resource)
+    families_path(params[:locale])
+  end
+
   protected
 
   # invite_resource is called when creating invitation
@@ -37,6 +41,7 @@ class Users::InvitationsController < Devise::InvitationsController
 
   def invite_resource(&block)
     @user = User.find_by(email: invite_params[:email])
+
     # @user is an instance or nil
     if @user && @user.email != current_user.email
       @user.families << Family.find(invite_params[:family_ids].to_i) unless @user.families.include?(Family.find(invite_params[:family_ids].to_i))
