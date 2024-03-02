@@ -14,15 +14,11 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 8 }
   validates :birth_date, presence: true
 
-  after_create :generate_color
-  # after_update :generate_color, if: :color_nil?
-
-  def color_nil?
-    self.color.nil?
-  end
+  after_create :generate_color, if: -> { !self.invited_to_sign_up? }
+  after_invitation_accepted :generate_color
 
   def generate_color
-    colors = %w[red orange yellow green teal blue indigo purple pink]
+    colors = %w[red orange yellow green teal blue indigo purple]
     self.update(color: colors.sample)
   end
 end
