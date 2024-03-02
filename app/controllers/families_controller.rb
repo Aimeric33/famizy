@@ -4,7 +4,7 @@ class FamiliesController < ApplicationController
   before_action :set_family, only: %i[show edit update destroy]
 
   def index
-    @families = policy_scope(Family)
+    @families = policy_scope(Family).includes(:users).where.not(users: { name: nil })
   end
 
   def show

@@ -4,7 +4,10 @@ fr:
       title: "Mes familles"
       btn-primary: "Nouvelle famille"
       show: "Choisir"
-      no-families: "Vous n'avez pas encore de famille."
+      and_more: "et plus"
+      no-families:
+        text: "Vous n'avez pas encore de famille."
+        instructions: "Créez-en une ou demandez à quelqu'un de vous inviter à rejoindre sa famille."
     new:
       title: "Créer une nouvelle famille"
     edit:

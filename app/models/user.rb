@@ -17,6 +17,8 @@ class User < ApplicationRecord
   after_create :generate_color, if: -> { !self.invited_to_sign_up? }
   after_invitation_accepted :generate_color
 
+  private
+
   def generate_color
     colors = %w[red orange yellow green teal blue indigo purple]
     self.update(color: colors.sample)
