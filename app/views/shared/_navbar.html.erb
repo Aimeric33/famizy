@@ -20,7 +20,11 @@
     </div>
 
   <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
-    <div data-menu-target="menu" class="hidden absolute shadow inset-x-0 z-20 w-full p-4 bg-white md:p-0 md:relative md:bg-transparent md:shadow-none md:w-auto md:block">
+    <div data-menu-target="menu" class="hidden absolute shadow inset-x-0 z-20 w-full p-4 bg-white text-center md:p-0 md:relative md:bg-transparent md:shadow-none md:w-auto md:flex md:items-center">
+      <div class="flex flex-col md:flex-row md:mx-6">
+        <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-orange-500 md:mx-4 md:my-0" href="#features"><%= t('navbar.links.features') %></a>
+        <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-orange-500 md:mx-4 md:my-0" href="#pricing"><%= t('navbar.links.pricing') %></a>
+      </div>
       <div class="flex flex-col items-center md:flex-row">
         <a class="inline-block my-2 px-4 py-2 md:my-0 font-bold text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" href="<%= families_path %>">
           <%= t('navbar.cta') %>
