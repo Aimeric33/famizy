@@ -1,9 +1,41 @@
 en:
-  homepage:
-    hero:
-      title: "Organizing your family with Famizy: it's now a child's play!"
-      subtitle: "Invite your family members and start organizing your family life.
-      Create groceries lists, track your expenses, save your favorite recipes, and more!"
-      cta: "Sign up for free"
-      hint: "No credit card required"
-  
+  pages:
+    home:
+      hero:
+        title: "Organizing your family with Famizy: it's now a child's play!"
+        subtitle: "Invite your family members and start organizing your family life.
+        Create groceries lists, track your expenses, save your favorite recipes, and more!"
+        cta: "Sign up for free"
+        hint: "No credit card required"
+      features:
+        title: "Discover our features"
+        available_now: "Available now"
+        coming_soon: "Coming soon"
+        lists:
+          title: "Create lists"
+          description: "Create lists for your groceries, your tasks or everything you want to list easily."
+        cookbook:
+          title: "Create your cookbook"
+          description: "Save your favorite recipes to cook them later and always have ideas for your meals."
+        meals:
+          title: "Schedule your meals"
+          description: "Plan your meals for the week and never ask yourself what you will eat tonight."
+        expenses:
+          title: "Track your expenses"
+          description: "Create expenses trackers for your family and see where your money goes."
+        calendar:
+          title: "Organize your calendar"
+          description: "Create a shared calendar for your family and never miss an event or a birthday."
+      pricing:
+        title: "Our pricing plan"
+        beta:
+          title: "Beta"
+          description: "Our platform is currently under development. You can use it for free and we will be happy to receive your feedback."
+          price: "Free"
+          cta: "Start now"
+          included:
+            title: "What's included:"
+            families: "Unlimited families"
+            members: "Unlimited members"
+            lists: "Unlimited lists"
+            coming_soon: "More features coming soon"

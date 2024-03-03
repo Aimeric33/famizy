@@ -1,8 +1,41 @@
 fr:
-  homepage:
-    hero:
-      title: "Organiser sa famille avec Famizy : c'est un jeu d'enfant !"
-      subtitle: "Invitez les membres de votre famille et commencez à organiser votre famille.
-      Créez des listes de courses, suivez vos dépenses, sauvegarder vos recettes favorites, et bien plus !"
-      cta: "Créez un compte gratuitement"
-      hint: "Aucune carte de crédit requise"
+  pages:
+    home:
+      hero:
+        title: "Organiser sa famille avec Famizy : c'est un jeu d'enfant !"
+        subtitle: "Invitez les membres de votre famille et commencez à organiser votre famille.
+        Créez des listes de courses, suivez vos dépenses, sauvegarder vos recettes favorites, et bien plus !"
+        cta: "Créez un compte gratuitement"
+        hint: "Aucune carte de crédit requise"
+      features:
+        title: "Découvrez nos fonctionnalités"
+        available_now: "Disponible maintenant"
+        coming_soon: "Bientôt disponible"
+        lists:
+          title: "Créez des listes"
+          description: "Créez des listes pour vos courses, vos tâches ou tout ce que vous voulez lister facilement."
+        cookbook:
+          title: "Créez votre livre de recettes"
+          description: "Sauvegardez vos recettes favorites pour les cuisiner plus tard et toujours avoir des idées."
+        meals:
+          title: "Planifiez vos repas"
+          description: "Planifiez vos repas pour la semaine et ne vous demandez plus ce que vous allez manger ce soir."
+        expenses:
+          title: "Suivez vos dépenses"
+          description: "Créez des suivis de dépenses pour votre famille et voyez où va votre argent."
+        calendar:
+          title: "Organisez votre calendrier"
+          description: "Créez un calendrier partagé pour votre famille et ne ratez plus un événement ou un anniversaire."
+      pricing:
+        title: "Notre plan de tarification"
+        beta:
+          title: "Bêta"
+          description: "Notre plateforme est actuellement en développement. Vous pouvez l'utiliser gratuitement et nous serons ravis de recevoir vos retours."
+          price: "Gratuit"
+          cta: "Commencez maintenant"
+          included:
+            title: "Ce qui est inclus :"
+            families: "Familles illimitées"
+            members: "Membres illimités"
+            lists: "Listes illimitées"
+            coming_soon: "Futures fonctionnalités"
