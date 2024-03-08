@@ -1,0 +1,10 @@
+fr:
+  recipe:
+    created: "La recette a été créée avec succès."
+    destroyed: "La recette a été supprimée avec succès."
+  recipes:
+    index:
+      title: "Nos recettes"
+      no-recipes: "Vous n'avez pas encore de recettes."
+    new:
+      title: "Créer une nouvelle recette"

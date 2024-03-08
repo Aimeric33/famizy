@@ -31,3 +31,7 @@ en:
         create: 'Create list'
         update: 'Update list'
         submit: 'Save changes'
+      recipe:
+        create: 'Create recipe'
+        update: 'Update recipe'
+        submit: 'Save changes'

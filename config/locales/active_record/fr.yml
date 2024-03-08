@@ -12,6 +12,7 @@ fr:
       user: Utilisateur
       family: Famille
       list: Liste
+      recipe: Recette
     attributes:
       user:
         email: Adresse email
@@ -28,6 +29,10 @@ fr:
       list/list_type:
         groceries: Courses
         to_do: À faire
+      recipe:
+        name: Nom
+        description: Description
+        photo: Photo
   date:
     abbr_day_names:
     - dim

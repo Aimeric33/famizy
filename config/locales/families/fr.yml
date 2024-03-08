@@ -20,11 +20,15 @@ fr:
       btn-settings: "Paramètres"
       btn-invite: "Inviter"
       cards:
+        btn: "Tout voir"
         lists:
           title: "Listes"
           description: "Créez des listes de courses ou des listes de tâches pour vous ou votre famille."
           count: "Liste(s) en cours"
-        btn: "Tout voir"
+        recipes:
+          title: "Recettes"
+          description: "Créez et partagez vos recettes préférées avec votre famille. Vous pourrez les ajouter à votre menu hebdomadaire."
+          count: "Recette(s) enregistrée(s)"
     invite:
       title: "Inviter quelqu'un dans votre famille"
       form_title: "Entrez l'adresse email de la personne que vous souhaitez inviter. Si elle n'a pas de compte, elle sera invitée à en créer un."

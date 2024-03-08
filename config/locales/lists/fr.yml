@@ -5,8 +5,7 @@ fr:
     destroyed: "La liste a été supprimée avec succès."
   lists:
     index:
-      title: "Mes listes"
-      btn-primary: "Nouvelle liste"
+      title: "Nos listes"
       no-lists: "Vous n'avez pas encore de listes."
       item:
         last-modified: "Dernière modification le"

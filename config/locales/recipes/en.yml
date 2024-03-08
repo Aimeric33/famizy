@@ -1,0 +1,10 @@
+en:
+  recipe:
+    created: "Recipe was successfully created."
+    destroyed: "Recipe was successfully deleted."
+  recipes:
+    index:
+      title: "Our recipes"
+      no-recipes: "You don't have any recipes yet."
+    new:
+      title: "Create a new recipe"

@@ -20,11 +20,15 @@ en:
       btn-settings: "Settings"
       btn-invite: "Invite"
       cards:
+        btn: "See more"
         lists:
           title: "Lists"
           description: "Create groceries lists or to-do lists for you or your family."
           count: "List(s) in progress"
-        btn: "See more"
+        recipes:
+          title: "Recipes"
+          description: "Create and share your favorite recipes with your family. You'll be able to add them to your weekly menu."
+          count: "Recipe(s) saved"
     invite:
       title: "Invite someone to your family"
       form_title: "Enter the email of whom you want to invite. If she/he doesn't have an account, she/he will be invited to create one."
