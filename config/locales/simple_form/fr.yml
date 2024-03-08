@@ -31,3 +31,7 @@ fr:
         create: 'Créer une liste'
         update: 'Mettre à jour la liste'
         submit: 'Enregistrer les modifications'
+      recipe:
+        create: 'Créer une recette'
+        update: 'Mettre à jour la recette'
+        submit: 'Enregistrer les modifications'

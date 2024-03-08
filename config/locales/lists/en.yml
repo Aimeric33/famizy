@@ -2,11 +2,10 @@ en:
   list:
     created: "List was successfully created."
     updated: "List was successfully updated."
-    destroyed: "List was successfully destroyed."
+    destroyed: "List was successfully deleted."
   lists:
     index:
-      title: "My lists"
-      btn-primary: "New list"
+      title: "Our lists"
       no-lists: "You don't have any lists yet."
       item:
         last-modified: "Last modified on"

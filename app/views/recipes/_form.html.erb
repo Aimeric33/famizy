@@ -1,0 +1,8 @@
+<div class="max-w-2xl p-5 bg-white shadow-xs rounded-lg">
+  <%= simple_form_for [@recipe.family, @recipe] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

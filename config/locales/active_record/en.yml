@@ -15,3 +15,7 @@ en:
       list/list_type:
         groceries: Groceries
         to_do: To do
+      recipe:
+        name: Name
+        description: Description
+        photo: Photo
