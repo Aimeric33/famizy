@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :families do
       get '/invite', to: 'families#invite'
       resources :lists, only: %i[index new create]
-      resources :recipes, only: %i[index new create]
+      resources :recipes, only: %i[index new create edit update]
     end
 
     resources :lists, only: %i[show destroy] do
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
     end
     resources :list_items, only: %i[update destroy]
 
-    resources :recipes, only: %i[show edit update destroy] do
+    resources :recipes, only: %i[show destroy] do
       resources :categories, only: %i[new create]
     end
   end

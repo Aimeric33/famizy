@@ -1,6 +1,7 @@
 en:
   recipe:
     created: "Recipe was successfully created."
+    updated: "Recipe was successfully updated."
     destroyed: "Recipe was successfully deleted."
   recipes:
     index:
@@ -14,3 +15,5 @@ en:
       categories: "Categories"
       ingredients: "Ingredients"
       description: "Description"
+    edit:
+      title: "Edit recipe"
