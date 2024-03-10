@@ -1,6 +1,7 @@
 fr:
   recipe:
     created: "La recette a été créée avec succès."
+    updated: "La recette a été modifiée avec succès."
     destroyed: "La recette a été supprimée avec succès."
   recipes:
     index:
@@ -14,3 +15,5 @@ fr:
       categories: "Catégories"
       ingredients: "Ingrédients"
       description: "Description"
+    edit:
+      title: "Modifier la recette"

@@ -28,6 +28,22 @@ class RecipesController < ApplicationController
     end
   end
 
+  def edit
+    @recipe = Recipe.find(params[:id])
+    authorize @recipe
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+    authorize @recipe
+
+    if @recipe.update(recipe_params)
+      redirect_to @recipe, notice: t('recipe.updated')
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @recipe = Recipe.find(params[:id])
     authorize @recipe

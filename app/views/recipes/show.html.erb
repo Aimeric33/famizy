@@ -9,7 +9,7 @@
     <% else %>
       <%= image_tag "image-placeholder.svg", class: "w-full h-80 object-cover rounded-md" %>
     <% end %>
-    <%= link_to t('.edit_btn'), '#', class: "inline-block w-full my-2 px-4 py-2 md:my-0 text-center font-bold text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
+    <%= link_to t('.edit_btn'), edit_family_recipe_path(@recipe), class: "inline-block w-full my-2 px-4 py-2 md:my-0 text-center font-bold text-white transition-colors duration-300 transform bg-orange-500 rounded-lg hover:bg-orange-400 focus:outline-none focus:ring focus:ring-orange-300 focus:ring-opacity-80" %>
   </div>
   <div class="col-span-2 space-y-4">
     <div class="space-y-2">
