@@ -8,3 +8,9 @@ fr:
       no-recipes: "Vous n'avez pas encore de recettes."
     new:
       title: "Créer une nouvelle recette"
+      photo_hint: "Formats acceptés : jpg, jpeg, webp. Taille maximale : 5 Mo."
+    show:
+      edit_btn: "Modifier cette recette"
+      categories: "Catégories"
+      ingredients: "Ingrédients"
+      description: "Description"
