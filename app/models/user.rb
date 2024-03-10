@@ -13,6 +13,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true, length: { minimum: 8 }
   validates :birth_date, presence: true
+  validates :avatar, content_type: ['image/jpg', 'image/jpeg', 'image/webp'], size: { less_than: 5.megabytes }
 
   after_create :generate_color, if: -> { !self.invited_to_sign_up? }
   after_invitation_accepted :generate_color

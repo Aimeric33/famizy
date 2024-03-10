@@ -52,6 +52,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "cloudinary"
 gem "devise_invitable", "~> 2.0"
+gem "active_storage_validations"
 
 group :development, :test do
   gem "dotenv-rails"
