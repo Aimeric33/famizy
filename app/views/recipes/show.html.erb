@@ -27,11 +27,11 @@
       <h2 class="text-xl font-bold text-gray-800"><%= t('.ingredients') %></h2>
       <div class="flex gap-2">
         <ul class="list-disc list-inside">
-          <%# @recipe.ingredients.each do |ingredient| %>
+          <% @recipe.ingredients.each do |ingredient| %>
             <li class="text-gray-800">
-              <%= "Coming soon" %>
+              <%= "#{ingredient.name} - #{ingredient.quantity.round == ingredient.quantity ? ingredient.quantity.round : ingredient.quantity} #{ingredient.unit}" %>
             </li>
-          <%# end %>
+          <% end %>
         </ul>
       </div>
     </div>

@@ -19,3 +19,12 @@ en:
         name: Name
         description: Description
         photo: Photo
+        meal_type: Meal type
+      recipe/meal_type:
+        starter: Starter
+        main_course: Main course
+        dessert: Dessert
+      ingredient:
+        name: Name
+        quantity: Quantity
+        unit: Unit
