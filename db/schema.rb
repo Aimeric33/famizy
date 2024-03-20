@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_08_121336) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_20_154257) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -68,6 +68,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_08_121336) do
     t.index ["user_id"], name: "index_family_members_on_user_id"
   end
 
+  create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.float "quantity"
+    t.string "unit"
+    t.bigint "recipe_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_ingredients_on_recipe_id"
+  end
+
   create_table "list_items", force: :cascade do |t|
     t.string "name"
     t.boolean "done", default: false
@@ -92,6 +102,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_08_121336) do
     t.bigint "family_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "meal_type"
     t.index ["family_id"], name: "index_recipes_on_family_id"
   end
 
@@ -125,6 +136,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_08_121336) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "family_members", "families"
   add_foreign_key "family_members", "users"
+  add_foreign_key "ingredients", "recipes"
   add_foreign_key "list_items", "lists"
   add_foreign_key "lists", "families"
   add_foreign_key "recipes", "families"

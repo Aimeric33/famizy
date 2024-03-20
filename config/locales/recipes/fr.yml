@@ -10,10 +10,14 @@ fr:
     new:
       title: "Créer une nouvelle recette"
       photo_hint: "Formats acceptés : jpg, jpeg, webp. Taille maximale : 5 Mo."
+      add_ingredient_text: "Ajouter des ingrédients (facultatif)"
+      add_ingredient_button: "Ajouter un autre ingrédient"
     show:
       edit_btn: "Modifier cette recette"
-      categories: "Catégories"
+      meal_type: "Type de repas"
       ingredients: "Ingrédients"
+      no_ingredients: "Pas encore d'ingrédients."
       description: "Description"
+      no_description: "Pas encore de description."
     edit:
       title: "Modifier la recette"
