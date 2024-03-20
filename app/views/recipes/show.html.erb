@@ -13,36 +13,38 @@
   </div>
   <div class="col-span-2 space-y-4">
     <div class="space-y-2">
-      <h2 class="text-xl font-bold text-gray-800"><%= t('.categories') %></h2>
+      <h2 class="text-xl font-bold text-gray-800"><%= t('.meal_type') %></h2>
       <div class="flex gap-2">
-        <% @recipe.categories.each do |category| %>
-          <span class="px-3 py-1 text-sm text-orange-600 bg-orange-100 rounded-full">
-            <%= category.name %>
-          </span>
-        <% end %>
+        <span class="px-3 py-1 text-sm text-orange-600 bg-orange-100 rounded-full">
+          <%= Recipe.human_attribute_name("meal_type.#{@recipe.meal_type}") %>
+        </span>
       </div>
     </div>
 
     <div class="space-y-2">
       <h2 class="text-xl font-bold text-gray-800"><%= t('.ingredients') %></h2>
       <div class="flex gap-2">
-        <ul class="list-disc list-inside">
-          <% @recipe.ingredients.each do |ingredient| %>
-            <li class="text-gray-800">
-              <%= "#{ingredient.name} - #{ingredient.quantity.round == ingredient.quantity ? ingredient.quantity.round : ingredient.quantity} #{ingredient.unit}" %>
-            </li>
-          <% end %>
-        </ul>
+        <% if @recipe.ingredients.any? %>
+          <ul class="list-disc list-inside">
+            <% @recipe.ingredients.each do |ingredient| %>
+              <li class="text-gray-800">
+                <%= "#{ingredient.name} - #{ingredient.quantity.round == ingredient.quantity ? ingredient.quantity.round : ingredient.quantity} #{ingredient.unit}" %>
+              </li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p class="text-gray-600"><%= t('.no_ingredients') %></p>
+        <% end %>
       </div>
     </div>
 
     <div class="space-y-2">
       <h2 class="text-xl font-bold text-gray-800"><%= t('.description') %></h2>
-      <p class="text-gray-800">
+      <p class="text-gray-600">
         <% if @recipe.description.present? %>
           <%= @recipe.description %>
         <% else %>
-          <%= t('.no-description') %>
+          <%= t('.no_description') %>
         <% end %>
       </p>
     </div>

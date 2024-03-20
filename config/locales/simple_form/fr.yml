@@ -21,6 +21,11 @@ fr:
         list_type:
           groceries: 'Courses'
           to_do: 'To Do'
+      recipe:
+        meal_type:
+          starter: 'Entrée'
+          main_course: 'Plat principal'
+          dessert: 'Dessert'
   helpers:
     submit:
       family:

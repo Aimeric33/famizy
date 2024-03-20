@@ -10,10 +10,14 @@ en:
     new:
       title: "Create a new recipe"
       photo_hint: "Accepted formats: jpg, jpeg, webp. Maximum size: 5MB."
+      add_ingredient_text: "Add ingredients (optional)"
+      add_ingredient_button: "Add another ingredient"
     show:
       edit_btn: "Edit this recipe"
-      categories: "Categories"
+      meal-type: "Meal type"
       ingredients: "Ingredients"
+      no_ingredients: "No ingredients yet."
       description: "Description"
+      no_description: "No description yet."
     edit:
       title: "Edit recipe"

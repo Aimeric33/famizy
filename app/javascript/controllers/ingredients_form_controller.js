@@ -15,7 +15,15 @@ export default class extends Controller {
       .replace(/id="0"/g, `id="${newId}"`)
       .replace(/\[0\]/g, `[${newId}]`)
       .replace(/attributes_0/g, `attributes_${newId}`)
+    this.fieldsContainerTarget.insertAdjacentHTML("beforeend", newFieldset)
+    this.fieldsContainerTarget.lastElementChild.querySelectorAll("input").forEach(input => input.value = "")
+  }
 
-    this.fieldsContainerTarget.insertAdjacentHTML("beforeend", newFieldset);
+  deleteField(event) {
+    console.log("Deleting field");
+    event.preventDefault();
+    const fieldset = event.target.closest("fieldset")
+    fieldset.querySelector("input[name*='_destroy']").value = true
+    fieldset.style.display = "none"
   }
 }
