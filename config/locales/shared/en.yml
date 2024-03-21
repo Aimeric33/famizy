@@ -15,6 +15,9 @@ en:
       features: "Features"
       about: "About"
       terms: "Terms & Privacy"
+  dashboard-navbar:
+    links:
+      logout: "Logout"
   dashboard-sidebar:
     links:
       change_family: "Change Family"

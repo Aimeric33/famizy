@@ -15,6 +15,9 @@ fr:
       features: "Fonctionnalités"
       about: "À propos"
       terms: "Mentions légales & Confidentialité"
+  dashboard-navbar:
+    links:
+      logout: "Déconnexion"
   dashboard-sidebar:
     links:
       change_family: "Changer de famille"
