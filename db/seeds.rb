@@ -4,8 +4,13 @@ User.destroy_all
 puts "✅ All records destroyed!"
 
 puts "👤 Creating users..."
-user1 = User.create!(name: "Aimeric One", email: "aimerictest1@famizy.fr", password: "12345678", birth_date: "1996-09-06")
-user2 = User.create!(name: "Aimeric Two", email: "aimerictest2@famizy.fr", password: "12345678", birth_date: "1990-01-01")
+user1 = User.new(name: "Aimeric One", email: "aimerictest1@famizy.fr", password: "12345678", birth_date: "1996-09-06")
+user1.skip_confirmation!
+user1.save!
+
+user2 = User.new(name: "Aimeric Two", email: "aimerictest2@famizy.fr", password: "12345678", birth_date: "1990-01-01")
+user2.skip_confirmation!
+user2.save!
 puts "✅ Users created!"
 
 puts "👪 Creating families..."

@@ -1,6 +1,9 @@
 fr:
   devise:
     confirmations:
+      new:
+        title: "Renvoyer les instructions de confirmation"
+        btn: "Renvoyer les instructions de confirmation"
       confirmed: "Votre compte a été validé."
       send_instructions: "Vous allez recevoir les instructions nécessaires à la confirmation de votre compte dans quelques minutes."
       send_paranoid_instructions: "Si votre e-mail existe dans notre base de données, vous allez bientôt recevoir un e-mail contenant les instructions de confirmation de votre compte."
@@ -21,15 +24,35 @@ fr:
         submit: "Accepter l'invitation"
     mailer:
       confirmation_instructions:
-        subject: "Instructions de confirmation"
-      reset_password_instructions:
-        subject: "Instructions pour changer le mot de passe"
-      unlock_instructions:
-        subject: "Instructions pour déverrouiller le compte"
+        action: Confirmer mon email
+        greeting: Bienvenue %{recipient} !
+        instruction: 'Vous pouvez confirmer votre email grâce au lien ci-dessous :'
+        button: Confirmer mon email
+        subject: Instructions de confirmation
       email_changed:
-        subject: "Votre adresse e-mail a été modifiée avec succès"
+        greeting: Bonjour %{recipient} !
+        message: Nous vous contactons pour vous informer que votre email a été changé en %{email}.
+        message_unconfirmed: Nous vous contactons pour vous informer que votre email est en train d'être changé par %{email}.
+        subject: Email modifié
+      invitation_instructions:
+        subject: 'Vous avez reçu une invitation'
+        greeting: 'Bonjour %{recipient}'
+        someone_invited_you: "Vous avez été invité à rejoindre %{url}, vous pouvez accepter cette invitation via le lien ci-dessous."
+        accept: "Accepter l'invitation"
+        accept_until: "Cette invitation sera valable jusqu'au %{due_date}."
+        ignore: "Si vous ne souhaitez pas accepter cette invitation, veuillez ignorer cet e-mail. Votre compte ne sera pas créé tant que vous n'aurez pas cliqué sur le lien ci-dessous et défini votre mot de passe."
       password_change:
-        subject: "Votre mot de passe a été modifié avec succès"
+        greeting: Bonjour %{recipient} !
+        message: Nous vous contactons pour vous notifier que votre mot de passe a été modifié.
+        subject: Mot de passe modifié
+      reset_password_instructions:
+        action: Changer mon mot de passe
+        greeting: Bonjour %{recipient} !
+        button: Changer mon mot de passe
+        instruction: "Quelqu'un a demandé un lien pour changer votre mot de passe. Vous pouvez le faire grâce au lien ci-dessous."
+        instruction_2: Si vous n'avez pas émis cette demande, merci d'ignorer cet email.
+        instruction_3: Votre mot de passe ne changera pas tant que vous n'aurez pas cliqué sur ce lien et renseigné un nouveau mot de passe.
+        subject: Instructions pour changer le mot de passe
     omniauth_callbacks:
       failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
       success: "Authentifié avec succès via %{kind}."
@@ -93,3 +116,9 @@ fr:
       not_saved:
         one: "1 erreur a empêché ce(tte) %{resource} d'être sauvegardé(e) :"
         other: "%{count} erreurs ont empêché ce(tte) %{resource} d'être sauvegardé(e) :"
+  time:
+    formats:
+      devise:
+        mailer:
+          invitation_instructions:
+            accept_until_format: "%d %B %Y à %H:%M"
