@@ -13,14 +13,13 @@
 
   <body data-controller="menu">
     <%= render "shared/dashboard_navbar" %>
-    <div class="flex pt-16 min-h-screen bg-gray-100">
+    <div class="flex pt-16 min-h-screen bg-white">
       <%= render "shared/dashboard_sidebar" %>
       <div class="w-full flex flex-col">
         <main class="relative flex-1 p-4 md:p-6">
           <%= render "shared/flashes" %>
           <%= yield %>
         </main>
-        <%= render "shared/dashboard_footer" %>
       </div>
     </div>
   </body>
