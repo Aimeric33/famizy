@@ -2,8 +2,8 @@ en:
   families:
     index:
       title: "My families"
-      btn-primary: "New family"
-      show: "Choose"
+      btn-primary: "Create a family"
+      members: "%{count} member(s)"
       and_more: "and more"
       no-families:
         text: "You don't have any family yet."
@@ -12,13 +12,14 @@ en:
       title: "Create a new family"
     edit:
       title: "Settings"
-      form_title: "Edit the information of your family"
+      edit_form_title: "Edit the information of your family"
+      invite_form_title: "Invite someone to your family"
+      invite_form_subtitle: "Enter the email of whom you want to invite. If she/he doesn't have an account, she/he will be invited to create one."
       delete: "Delete your family"
       delete_btn: "Delete"
       delete_confirm: "Are you sure you want to delete your family?"
     show:
-      btn-settings: "Settings"
-      btn-invite: "Invite"
+      btn-settings: "Manage my family"
       cards:
         btn: "See more"
         lists:
@@ -29,6 +30,3 @@ en:
           title: "Recipes"
           description: "Create and share your favorite recipes with your family. You'll be able to add them to your weekly menu."
           count: "Recipe(s) saved"
-    invite:
-      title: "Invite someone to your family"
-      form_title: "Enter the email of whom you want to invite. If she/he doesn't have an account, she/he will be invited to create one."
