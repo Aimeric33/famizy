@@ -30,6 +30,7 @@ class FamiliesController < ApplicationController
   end
 
   def edit
+    @user = User.new
     authorize @family
   end
 
@@ -47,12 +48,6 @@ class FamiliesController < ApplicationController
     authorize @family
     @family.destroy
     redirect_to families_url, notice: 'Family was successfully destroyed.'
-  end
-
-  def invite
-    @user = User.new
-    @family = Family.find(session[:current_family_id])
-    authorize @family
   end
 
   private
