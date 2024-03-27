@@ -6,6 +6,7 @@ en:
   lists:
     index:
       title: "Our lists"
+      btn-primary: "Create a list"
       no-lists: "You don't have any lists yet."
       item:
         last-modified: "Last modified on"

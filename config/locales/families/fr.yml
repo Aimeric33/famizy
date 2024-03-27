@@ -2,7 +2,7 @@ fr:
   families:
     index:
       title: "Mes familles"
-      btn-primary: "Créer une nouvelle famille"
+      btn-primary: "Créer une famille"
       members: "%{count} membre(s)"
       and_more: "et plus"
       no-families:
