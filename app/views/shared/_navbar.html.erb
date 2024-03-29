@@ -1,4 +1,4 @@
-<nav class="fixed w-full z-30 bg-secondary-200" data-controller="menu">
+<nav class="fixed w-full z-30 bg-primary-500" data-controller="menu">
   <div class="container py-4 md:flex md:justify-between md:items-center">
     <div class="flex items-center justify-between">
       <a href="/">
@@ -7,7 +7,7 @@
 
       <!-- Mobile menu button -->
       <div class="flex md:hidden">
-        <button data-action="click->menu#toggle" type="button" class="text-gray-800 focus:outline-none" aria-label="toggle menu">
+        <button data-action="click->menu#toggle" type="button" class="text-white focus:outline-none" aria-label="toggle menu">
           <svg data-menu-target="burger" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
           </svg>
@@ -22,12 +22,12 @@
   <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     <div data-menu-target="menu" class="hidden absolute shadow inset-x-0 z-20 w-full p-4 bg-secondary-200 text-center md:p-0 md:relative md:bg-transparent md:shadow-none md:w-auto md:flex md:items-center">
       <div class="flex flex-col md:flex-row md:mx-6">
-        <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-primary-500 md:mx-4 md:my-0" href="#features"><%= t('navbar.links.features') %></a>
-        <a class="my-2 text-gray-800 transition-colors duration-300 transform hover:text-primary-500 md:mx-4 md:my-0" href="#pricing"><%= t('navbar.links.pricing') %></a>
+        <a class="my-2 text-white transition-colors duration-300 transform hover:text-secondary-500 md:mx-4 md:my-0" href="#features"><%= t('navbar.links.features') %></a>
+        <a class="my-2 text-white transition-colors duration-300 transform hover:text-secondary-500 md:mx-4 md:my-0" href="#pricing"><%= t('navbar.links.pricing') %></a>
         <%= render 'shared/locale_switch' %>
       </div>
       <div class="flex flex-col items-center md:flex-row">
-        <a class="inline-block my-2 px-4 py-2 md:my-0 text-white transition-colors duration-300 transform bg-primary-500 rounded-md hover:bg-primary-400 focus:outline-none focus:ring focus:ring-primary-300 focus:ring-opacity-80" href="<%= families_path %>">
+        <a class="inline-block my-2 px-4 py-2 md:my-0 text-primary-500 transition-colors duration-300 transform bg-secondary-500 rounded-md hover:bg-secondary-400 focus:outline-none focus:ring focus:ring-secondary-300 focus:ring-opacity-80" href="<%= families_path %>">
           <%= t('navbar.cta') %>
         </a>
       </div>

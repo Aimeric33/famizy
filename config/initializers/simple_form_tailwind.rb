@@ -273,7 +273,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :label, class: 'hidden'
 
-    b.use :input, class: 'block w-full mx-4 p-0 text-gray-800 outline-none border-0 focus:ring-0 focus:border-0 focus:outline-none'
+    b.use :input, class: 'block w-full mx-4 p-0 bg-transparent text-gray-800 outline-none border-0 focus:ring-0 focus:border-0 focus:outline-none'
     b.use :error, wrap_with: { class: 'invalid-feedback' }
     b.optional :hint, wrap_with: { class: 'form-text' }
   end

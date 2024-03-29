@@ -9,10 +9,10 @@
 <div class="mt-8 grid grid-cols-1 gap-y-4 auto-rows-fr md:grid-cols-3">
   <% @lists.each do |list| %>
     <%= link_to list_path(list) do %>
-      <div class="w-full p-4 bg-secondary-200 rounded-md">
+      <div class="w-full p-4 bg-secondary-500 rounded-md">
         <h2 class="mb-4 text-xl font-bold text-gray-800 leading-none"><%= list.name %></h2>
         <div class="mb-2">
-          <span class="px-3 py-1 text-sm text-primary-500 bg-primary-50 rounded-full">
+          <span class="px-3 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
             <%= List.human_attribute_name("list_type.#{list.list_type}") %>
           </span>
         </div>
@@ -22,7 +22,7 @@
   <% end %>
 
   <% if @lists.empty? %>
-    <div class="md:col-span-3 p-4 bg-secondary-200 rounded-md">
+    <div class="md:col-span-3 p-4 bg-secondary-500 rounded-md">
       <p class="text-gray-500">
         <%= t('.no-lists') %>
       </p>

@@ -6,6 +6,8 @@ en:
   recipes:
     index:
       title: "Our recipes"
+      btn-primary: "Create a recipe"
+      nb_ingredients: "%{count} ingredient(s)"
       no-recipes: "You don't have any recipes yet."
     new:
       title: "Create a new recipe"
