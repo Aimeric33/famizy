@@ -1,6 +1,6 @@
-<header class="fixed z-30 w-full bg-secondary-200 border-b border-primary-50">
+<header class="fixed z-30 w-full bg-primary-500">
   <div class="p-4 h-full flex items-center gap-4">
-    <button data-action="click->menu#toggle" type="button" class="text-gray-800 md:hidden focus:outline-none" aria-label="toggle menu">
+    <button data-action="click->menu#toggle" type="button" class="text-white md:hidden focus:outline-none" aria-label="toggle menu">
       <svg data-menu-target="burger" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
       </svg>
@@ -16,8 +16,8 @@
       <div class="flex items-center" data-controller="dropdown">
         <div class="cursor-pointer relative flex items-center" data-action="click->dropdown#toggle click@window->dropdown#hide">
           <div>
-            <p class="hidden md:block mr-2 text-xs"><%= current_user.name %></p>
-            <p class="hidden md:block mr-2 text-gray-500 text-xs"><%= current_user.email %></p>
+            <p class="hidden md:block mr-2 text-xs text-secondary-500"><%= current_user.name %></p>
+            <p class="hidden md:block mr-2 text-xs text-white"><%= current_user.email %></p>
           </div>
           <div role="button" tabindex="0" data-dropdown-target="button" class="select-none">
             <div class="w-8 h-8 rounded-full overflow-hidden">
@@ -31,14 +31,16 @@
                 data-transition-leave="transition ease-in duration-150"
                 data-transition-leave-from="opacity-100 translate-y-0"
                 data-transition-leave-to="opacity-0 translate-y-1"
-                class="hidden absolute top-4 right-0 z-10 mt-5 flex max-w-max">
-            <div class="bg-secondary-50 overflow-hidden">
-              <%= link_to t('dashboard-navbar.links.logout'), destroy_user_session_path, data: { turbo_method: :delete }, class: "block px-4 py-2 text-gray-800 hover:bg-secondary-100" %>
+                class="hidden absolute top-4 right-0 z-10 mt-5 flex w-max">
+            <div class="bg-primary-50 rounded-md overflow-hidden">
+              <%= link_to t('dashboard-navbar.links.logout'), destroy_user_session_path, data: { turbo_method: :delete }, class: "block px-4 py-2 text-gray-800 hover:bg-primary-100" %>
+              <% if I18n.locale == I18n.default_locale %>
+                <%= link_to "Switch to English", ({ locale: 'en' }), class: "block px-4 py-2 text-gray-800 border-t border-primary-100 hover:bg-primary-100" %>
+              <% else %>
+                <%= link_to "Passer en Français", ({ locale: 'fr' }), class: "block px-4 py-2 text-gray-800 border-t border-primary-100 hover:bg-primary-100" %>
+              <% end %>
             </div>
           </div>
-        </div>
-        <div class="ml-2 md:ml-0">
-          <%= render 'shared/locale_switch' %>
         </div>
       </div>
 

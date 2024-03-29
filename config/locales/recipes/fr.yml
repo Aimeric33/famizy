@@ -6,6 +6,8 @@ fr:
   recipes:
     index:
       title: "Nos recettes"
+      btn-primary: "Créer une recette"
+      nb_ingredients: "%{count} ingrédient(s)"
       no-recipes: "Vous n'avez pas encore de recettes."
     new:
       title: "Créer une nouvelle recette"
@@ -13,7 +15,7 @@ fr:
       add_ingredient_text: "Ajouter des ingrédients (facultatif)"
       add_ingredient_button: "Ajouter un autre ingrédient"
     show:
-      edit_btn: "Modifier cette recette"
+      btn-primary: "Modifier cette recette"
       meal_type: "Type de repas"
       ingredients: "Ingrédients"
       no_ingredients: "Pas encore d'ingrédients."
