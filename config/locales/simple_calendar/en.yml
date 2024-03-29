@@ -1,0 +1,6 @@
+en:
+  simple_calendar:
+    week: "%{start} to %{end}"
+    previous: "Previous week"
+    next: "Next week"
+    today: "Today"

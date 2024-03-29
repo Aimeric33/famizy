@@ -1,0 +1,6 @@
+fr:
+  simple_calendar:
+    week: "Du %{start} au %{end}"
+    previous: "Précédente"
+    next: "Suivante"
+    today: "Aujourd'hui"
