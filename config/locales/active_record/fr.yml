@@ -33,8 +33,8 @@ fr:
         name: Nom
         description: Description
         photo: Photo
-        meal_type: Type de repas
-      recipe/meal_type:
+        recipe_type: Type de repas
+      recipe/recipe_type:
         starter: Entrée
         main_course: Plat principal
         dessert: Dessert

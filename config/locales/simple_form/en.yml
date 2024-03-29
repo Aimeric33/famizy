@@ -22,7 +22,7 @@ en:
           groceries: 'Groceries'
           to_do: 'To Do'
       recipe:
-        meal_type:
+        recipe_type:
           starter: 'Starter'
           main_course: 'Main Course'
           dessert: 'Dessert'
