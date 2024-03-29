@@ -29,8 +29,8 @@ en:
         quantity: Quantity
         unit: Unit
       meal:
-        date: Date
-        recipe: Recipe
+        start_time: For which day?
+        recipe: Choose a recipe
         meal_type: For which meal?
       meal/meal_type:
         lunch: Lunch

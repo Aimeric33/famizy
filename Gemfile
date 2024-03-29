@@ -53,6 +53,7 @@ gem "sassc-rails"
 gem "cloudinary"
 gem "devise_invitable", "~> 2.0"
 gem "active_storage_validations"
+gem "simple_calendar"
 
 group :development, :test do
   gem "dotenv-rails"

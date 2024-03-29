@@ -4,3 +4,5 @@ en:
       title: "Our meals"
       no-meals:
         text: "No meals planned."
+    new:
+      title: "Plan a meal"
