@@ -15,5 +15,5 @@ en:
     edit:
       title: "Edit list"
     show:
-      btn-primary: "Settings"
+      btn-primary: "Delete this list"
       add-placeholder: "Add a new item"

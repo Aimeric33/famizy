@@ -31,14 +31,16 @@
                 data-transition-leave="transition ease-in duration-150"
                 data-transition-leave-from="opacity-100 translate-y-0"
                 data-transition-leave-to="opacity-0 translate-y-1"
-                class="hidden absolute top-4 right-0 z-10 mt-5 flex max-w-max">
+                class="hidden absolute top-4 right-0 z-10 mt-5 flex w-max">
             <div class="bg-primary-50 rounded-md overflow-hidden">
               <%= link_to t('dashboard-navbar.links.logout'), destroy_user_session_path, data: { turbo_method: :delete }, class: "block px-4 py-2 text-gray-800 hover:bg-primary-100" %>
+              <% if I18n.locale == I18n.default_locale %>
+                <%= link_to "Switch to English", ({ locale: 'en' }), class: "block px-4 py-2 text-gray-800 border-t border-primary-100 hover:bg-primary-100" %>
+              <% else %>
+                <%= link_to "Passer en Français", ({ locale: 'fr' }), class: "block px-4 py-2 text-gray-800 border-t border-primary-100 hover:bg-primary-100" %>
+              <% end %>
             </div>
           </div>
-        </div>
-        <div class="ml-2 md:ml-0">
-          <%= render 'shared/locale_switch' %>
         </div>
       </div>
 

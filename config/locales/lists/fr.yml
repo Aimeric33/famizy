@@ -15,5 +15,5 @@ fr:
     edit:
       title: "Modifier la liste"
     show:
-      btn-primary: "Paramètres"
+      btn-primary: "Supprimer cette liste"
       add-placeholder: "Ajouter un nouvel élément"

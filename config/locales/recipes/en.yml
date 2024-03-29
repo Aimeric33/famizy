@@ -15,7 +15,7 @@ en:
       add_ingredient_text: "Add ingredients (optional)"
       add_ingredient_button: "Add another ingredient"
     show:
-      edit_btn: "Edit this recipe"
+      btn-primary: "Edit this recipe"
       meal-type: "Meal type"
       ingredients: "Ingredients"
       no_ingredients: "No ingredients yet."
