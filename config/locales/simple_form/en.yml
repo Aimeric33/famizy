@@ -22,10 +22,14 @@ en:
           groceries: 'Groceries'
           to_do: 'To Do'
       recipe:
-        meal_type:
+        recipe_type:
           starter: 'Starter'
           main_course: 'Main Course'
           dessert: 'Dessert'
+      meal:
+        meal_type:
+          lunch: 'Lunch'
+          dinner: 'Dinner'
   helpers:
     submit:
       family:
@@ -39,4 +43,7 @@ en:
       recipe:
         create: 'Create recipe'
         update: 'Update recipe'
+        submit: 'Save changes'
+      meal:
+        create: 'Plan this meal'
         submit: 'Save changes'

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       get '/invite', to: 'families#invite'
       resources :lists, only: %i[index new create]
       resources :recipes, only: %i[index new create edit update]
+      resources :meals, only: %i[index new create]
     end
 
     resources :lists, only: %i[show destroy] do
@@ -20,8 +21,8 @@ Rails.application.routes.draw do
     end
     resources :list_items, only: %i[update destroy]
 
-    resources :recipes, only: %i[show destroy] do
-      resources :categories, only: %i[new create]
-    end
+    resources :recipes, only: %i[show destroy]
+
+    resources :meals, only: %i[destroy]
   end
 end

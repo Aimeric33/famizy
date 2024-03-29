@@ -1,7 +1,7 @@
 <div class="max-w-2xl p-5 bg-secondary-500 rounded-md">
   <%= simple_form_for [@recipe.family, @recipe] do |f| %>
     <%= f.input :name %>
-    <%= f.input :meal_type, as: :radio_buttons, collection: [:starter, :main_course, :dessert] %>
+    <%= f.input :recipe_type, as: :radio_buttons, collection: [:starter, :main_course, :dessert] %>
     <%= f.input :description %>
     <%= f.input :photo, as: :file, hint: t('recipes.new.photo_hint') %>
 

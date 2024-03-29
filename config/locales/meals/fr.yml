@@ -1,0 +1,8 @@
+fr:
+  meals:
+    index:
+      title: "Nos repas"
+      no-meals:
+        text: "Aucun repas prévu."
+    new:
+      title: "Planifier un repas"

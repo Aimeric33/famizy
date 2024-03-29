@@ -23,7 +23,7 @@
           <div class="space-y-2">
             <p>
               <span class="px-3 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
-                <%= Recipe.human_attribute_name("meal_type.#{recipe.meal_type}") %>
+                <%= Recipe.human_attribute_name("recipe_type.#{recipe.recipe_type}") %>
               </span>
             </p>
             <p class="text-xs text-gray-500"><%= t('.nb_ingredients', count: recipe.ingredients.count) %></p>

@@ -19,8 +19,8 @@ en:
         name: Name
         description: Description
         photo: Photo
-        meal_type: Meal type
-      recipe/meal_type:
+        recipe_type: Meal type
+      recipe/recipe_type:
         starter: Starter
         main_course: Main course
         dessert: Dessert
@@ -28,3 +28,10 @@ en:
         name: Name
         quantity: Quantity
         unit: Unit
+      meal:
+        start_time: For which day?
+        recipe: Choose a recipe
+        meal_type: For which meal?
+      meal/meal_type:
+        lunch: Lunch
+        dinner: Dinner

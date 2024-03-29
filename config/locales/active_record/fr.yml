@@ -33,8 +33,8 @@ fr:
         name: Nom
         description: Description
         photo: Photo
-        meal_type: Type de repas
-      recipe/meal_type:
+        recipe_type: Type de repas
+      recipe/recipe_type:
         starter: Entrée
         main_course: Plat principal
         dessert: Dessert
@@ -42,6 +42,13 @@ fr:
         name: Nom
         quantity: Quantité
         unit: Unité
+      meal:
+        start_time: Pour quel jour ?
+        recipe: Choisir une recette
+        meal_type: Pour quel repas ?
+      meal/meal_type:
+        lunch: Déjeuner
+        dinner: Dîner
   date:
     abbr_day_names:
     - dim
@@ -66,31 +73,31 @@ fr:
     - nov.
     - déc.
     day_names:
-    - dimanche
-    - lundi
-    - mardi
-    - mercredi
-    - jeudi
-    - vendredi
-    - samedi
+    - Dimanche
+    - Lundi
+    - Mardi
+    - Mercredi
+    - Jeudi
+    - Vendredi
+    - Samedi
     formats:
       default: "%d/%m/%Y"
       long: "%-d %B %Y"
       short: "%-d %b"
     month_names:
     -
-    - janvier
-    - février
-    - mars
-    - avril
-    - mai
-    - juin
-    - juillet
-    - août
-    - septembre
-    - octobre
-    - novembre
-    - décembre
+    - Janvier
+    - Février
+    - Mars
+    - Avril
+    - Mai
+    - Juin
+    - Juillet
+    - Août
+    - Septembre
+    - Octobre
+    - Novembre
+    - Décembre
     order:
     - :day
     - :month

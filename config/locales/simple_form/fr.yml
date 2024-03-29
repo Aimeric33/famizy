@@ -22,10 +22,14 @@ fr:
           groceries: 'Courses'
           to_do: 'To Do'
       recipe:
-        meal_type:
+        recipe_type:
           starter: 'Entrée'
           main_course: 'Plat principal'
           dessert: 'Dessert'
+      meal:
+        meal_type:
+          lunch: 'Déjeuner'
+          dinner: 'Dîner'
   helpers:
     submit:
       family:
@@ -39,4 +43,7 @@ fr:
       recipe:
         create: 'Créer une recette'
         update: 'Mettre à jour la recette'
+        submit: 'Enregistrer les modifications'
+      meal:
+        create: 'Planifier ce repas'
         submit: 'Enregistrer les modifications'

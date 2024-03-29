@@ -16,7 +16,7 @@ fr:
       add_ingredient_button: "Ajouter un autre ingrédient"
     show:
       btn-primary: "Modifier cette recette"
-      meal_type: "Type de repas"
+      recipe_type: "Type de repas"
       ingredients: "Ingrédients"
       no_ingredients: "Pas encore d'ingrédients."
       description: "Description"
