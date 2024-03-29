@@ -42,6 +42,13 @@ fr:
         name: Nom
         quantity: Quantité
         unit: Unité
+      meal:
+        date: Date
+        recipe: Recette
+        meal_type: Pour quel repas ?
+      meal/meal_type:
+        lunch: Déjeuner
+        dinner: Dîner
   date:
     abbr_day_names:
     - dim

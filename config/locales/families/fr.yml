@@ -24,9 +24,10 @@ fr:
         btn: "Tout voir"
         lists:
           title: "Listes"
-          description: "Créez des listes de courses ou des listes de tâches pour vous ou votre famille."
           count: "Liste(s) en cours"
         recipes:
           title: "Recettes"
-          description: "Créez et partagez vos recettes préférées avec votre famille. Vous pourrez les ajouter à votre menu hebdomadaire."
           count: "Recette(s) enregistrée(s)"
+        meals:
+          title: "Repas"
+          count: "Repas planifié(s) cette semaine"

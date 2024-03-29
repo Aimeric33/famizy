@@ -1,0 +1,6 @@
+en:
+  meals:
+    index:
+      title: "Our meals"
+      no-meals:
+        text: "No meals planned."
