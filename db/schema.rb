@@ -99,7 +99,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_29_130802) do
   create_table "meals", force: :cascade do |t|
     t.bigint "family_id", null: false
     t.bigint "recipe_id", null: false
-    t.datetime "start_time"
+    t.date "start_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "meal_type"

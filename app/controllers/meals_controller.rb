@@ -3,6 +3,7 @@ class MealsController < ApplicationController
 
   def index
     @meals = policy_scope(Meal).where(family_id: params[:family_id])
+    @meals = @meals.where(start_time: )
   end
 
   def new
