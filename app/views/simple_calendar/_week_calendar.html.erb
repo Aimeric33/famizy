@@ -31,13 +31,13 @@
         <div class="border-2 border-violet-500 rounded-md">
           <p class="inline-block absolute px-2 rounded-tl rounded-br bg-violet-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.lunch") %></p>
           <div class="mt-6 pl-2 pb-1">
-            <% instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
+            <%# instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
           </div>
         </div>
         <div class="border-2 border-amber-500 rounded-md">
           <p class="inline-block absolute px-2 rounded-tl rounded-br bg-amber-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.dinner") %></p>
           <div class="mt-6 pl-2 pb-1">
-            <% instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
+            <%# instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
           </div>
         </div>
       </div>

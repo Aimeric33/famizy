@@ -43,7 +43,7 @@ fr:
         quantity: Quantité
         unit: Unité
       meal:
-        start_date: Pour quel jour ?
+        date: Pour quel jour ?
         recipe: Choisir une recette
         meal_type: Pour quel repas ?
       meal/meal_type:

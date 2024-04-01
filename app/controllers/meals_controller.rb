@@ -4,7 +4,7 @@ class MealsController < ApplicationController
   def index
     @meals = policy_scope(Meal).where(family_id: params[:family_id])
     start_date = params[:start_date].present? ? params[:start_date].to_date : Date.today
-    @meals = @meals.where(start_date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+    @meals = @meals.where(date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
   end
 
   def new
@@ -15,7 +15,7 @@ class MealsController < ApplicationController
   end
 
   def create
-    @meal = Meal.new(start_date: params[:meal][:start_date], meal_type: params[:meal][:meal_type])
+    @meal = Meal.new(date: params[:meal][:date], meal_type: params[:meal][:meal_type])
     @meal.recipe = Recipe.find(params[:meal][:recipe])
     @meal.family = Family.find(params[:family_id])
 
@@ -39,6 +39,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:start_date, :recipe, :meal_type)
+    params.require(:meal).permit(:date, :recipe, :meal_type)
   end
 end
