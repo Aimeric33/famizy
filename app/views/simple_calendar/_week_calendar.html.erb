@@ -24,15 +24,21 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2">
     <% date_range.each do |day| %>
-      <div class="p-4 border-b border-secondary-500">
+      <div class="p-4 border-b border-secondary-500 space-y-2">
         <h2 class="font-bold text-primary-500">
           <%= t('date.day_names')[day.wday] %> <%= day.day %> <%= t('date.month_names')[day.month] %>
         </h2>
-        <div>
-          <h3 class="text-gray-800"><%= Meal.human_attribute_name("meal_type.lunch") %></h3>
+        <div class="border-2 border-violet-500 rounded-md">
+          <p class="inline-block absolute px-2 rounded-tl rounded-br bg-violet-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.lunch") %></p>
+          <div class="mt-6 pl-2 pb-1">
+            <% instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
+          </div>
         </div>
-        <div>
-          <h3 class="text-gray-800"><%= Meal.human_attribute_name("meal_type.dinner") %></h3>
+        <div class="border-2 border-amber-500 rounded-md">
+          <p class="inline-block absolute px-2 rounded-tl rounded-br bg-amber-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.dinner") %></p>
+          <div class="mt-6 pl-2 pb-1">
+            <% instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
+          </div>
         </div>
       </div>
     <% end %>
