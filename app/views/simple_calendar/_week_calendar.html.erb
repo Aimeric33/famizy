@@ -32,15 +32,22 @@
         <% lunch_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "lunch" } %>
         <div class="border-2 border-violet-500 rounded-md">
           <p class="inline-block absolute px-2 rounded-tl rounded-br bg-violet-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.lunch") %></p>
-          <div class="mt-6 pl-2 pb-1 space-y-2">
+          <div class="mt-6 px-2 pb-1 space-y-2">
             <% if lunch_meals.any? %>
               <% lunch_meals.each do |meal| %>
-                <p>
-                  <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
-                    <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
-                  </span>
-                  <%= meal.recipe.name %>
-                </p>
+                <div class="flex justify-between gap-4">
+                  <p>
+                    <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
+                      <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
+                    </span>
+                    <%= meal.recipe.name %>
+                  </p>
+                  <%= link_to meal_path(meal), data: {turbo_method: :delete} do %>
+                    <svg data-slot="icon" class="w-6 h-6 text-gray-500" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"></path>
+                    </svg>
+                  <% end %>
+                </div>
               <% end %>
             <% else %>
               <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
@@ -51,16 +58,23 @@
         <% dinner_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "dinner" } %>
         <div class="border-2 border-amber-500 rounded-md">
           <p class="inline-block absolute px-2 rounded-tl rounded-br bg-amber-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.dinner") %></p>
-          <div class="mt-6 pl-2 pb-1 space-y-2">
+          <div class="mt-6 px-2 pb-1 space-y-2">
 
             <% if dinner_meals.any? %>
               <% dinner_meals.each do |meal| %>
+              <div class="flex justify-between gap-4">
                 <p>
                   <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
                     <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
                   </span>
                   <%= meal.recipe.name %>
                 </p>
+                <%= link_to meal_path(meal), data: {turbo_method: :delete} do %>
+                  <svg data-slot="icon" class="w-6 h-6 text-gray-500" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"></path>
+                  </svg>
+                <% end %>
+              </div>
               <% end %>
             <% else %>
               <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
@@ -71,26 +85,4 @@
       </div>
     <% end %>
   </div>
-
-  <!--<table class="table table-striped">
-    <thead>
-      <tr>
-        <% date_range.slice(0, 7).each do |day| %>
-          <th><%= t('date.day_names')[day.wday] %> <%= day.day %> <%= t('date.month_names')[day.month] %></th>
-        <% end %>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% date_range.each_slice(7) do |week| %>
-        <tr>
-          <% week.each do |day| %>
-            <%= content_tag :td, class: calendar.td_classes_for(day) do %>
-              <% instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
-            <% end %>
-          <% end %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>-->
 </div>

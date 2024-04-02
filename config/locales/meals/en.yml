@@ -1,4 +1,7 @@
 en:
+  meal:
+    created: "Meal was successfully created."
+    destroyed: "Meal was successfully destroyed."
   meals:
     index:
       title: "Our meals"

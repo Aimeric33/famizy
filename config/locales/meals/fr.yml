@@ -1,4 +1,7 @@
 fr:
+  meal:
+    created: "Le repas a été créé avec succès."
+    destroyed: "Le repas a été supprimé avec succès."
   meals:
     index:
       title: "Nos repas"
