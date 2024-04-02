@@ -25,26 +25,26 @@ fr:
     mailer:
       confirmation_instructions:
         action: Confirmer mon email
-        greeting: Bienvenue %{recipient} !
+        greeting: Bienvenue sur Famizy %{recipient} !
         instruction: 'Vous pouvez confirmer votre email grâce au lien ci-dessous :'
         button: Confirmer mon email
-        subject: Instructions de confirmation
+        subject: Instructions de confirmation - Famizy
       email_changed:
         greeting: Bonjour %{recipient} !
         message: Nous vous contactons pour vous informer que votre email a été changé en %{email}.
         message_unconfirmed: Nous vous contactons pour vous informer que votre email est en train d'être changé par %{email}.
-        subject: Email modifié
+        subject: Email modifié - Famizy
       invitation_instructions:
-        subject: 'Vous avez reçu une invitation'
+        subject: 'Vous avez reçu une invitation - Famizy'
         greeting: 'Bonjour %{recipient}'
-        someone_invited_you: "Vous avez été invité à rejoindre %{url}, vous pouvez accepter cette invitation via le lien ci-dessous."
+        someone_invited_you: "Vous avez été invité à rejoindre Famizy (%{url}), vous pouvez accepter cette invitation via le lien ci-dessous."
         accept: "Accepter l'invitation"
         accept_until: "Cette invitation sera valable jusqu'au %{due_date}."
         ignore: "Si vous ne souhaitez pas accepter cette invitation, veuillez ignorer cet e-mail. Votre compte ne sera pas créé tant que vous n'aurez pas cliqué sur le lien ci-dessous et défini votre mot de passe."
       password_change:
         greeting: Bonjour %{recipient} !
         message: Nous vous contactons pour vous notifier que votre mot de passe a été modifié.
-        subject: Mot de passe modifié
+        subject: Mot de passe modifié - Famizy
       reset_password_instructions:
         action: Changer mon mot de passe
         greeting: Bonjour %{recipient} !
@@ -52,7 +52,7 @@ fr:
         instruction: "Quelqu'un a demandé un lien pour changer votre mot de passe. Vous pouvez le faire grâce au lien ci-dessous."
         instruction_2: Si vous n'avez pas émis cette demande, merci d'ignorer cet email.
         instruction_3: Votre mot de passe ne changera pas tant que vous n'aurez pas cliqué sur ce lien et renseigné un nouveau mot de passe.
-        subject: Instructions pour changer le mot de passe
+        subject: Instructions pour changer le mot de passe - Famizy
     omniauth_callbacks:
       failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
       success: "Authentifié avec succès via %{kind}."
