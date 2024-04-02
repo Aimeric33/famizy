@@ -3,15 +3,7 @@
 </div>
 
 <div class="mt-8">
-  <%= week_calendar(events: @meals) do |date, meals| %>
+  <%= week_calendar(attribute: :date, events: @meals) do |date, meals| %>
     <%# date.day %>
-
-    <% meals.each do |meal| %>
-      <% if meal.date == date %>
-        <h3 class="text-gray-800"><%= meal.recipe.name %></h3>
-      <% else %>
-        <p class="text-gray-800">No meal</p>
-      <% end %>
-    <% end %>
   <% end %>
 </div>

@@ -28,16 +28,34 @@
         <h2 class="font-bold text-primary-500">
           <%= t('date.day_names')[day.wday] %> <%= day.day %> <%= t('date.month_names')[day.month] %>
         </h2>
+
+        <% lunch_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "lunch" } %>
         <div class="border-2 border-violet-500 rounded-md">
           <p class="inline-block absolute px-2 rounded-tl rounded-br bg-violet-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.lunch") %></p>
           <div class="mt-6 pl-2 pb-1">
-            <%# instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
+            <% if lunch_meals.any? %>
+              <% lunch_meals.each do |meal| %>
+                <p><%= meal.recipe.name %></p>
+              <% end %>
+            <% else %>
+              <p class="text-gray-500"><%= t('.no_meals') %></p>
+            <% end %>
           </div>
         </div>
+
+        <% dinner_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "dinner" } %>
         <div class="border-2 border-amber-500 rounded-md">
           <p class="inline-block absolute px-2 rounded-tl rounded-br bg-amber-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.dinner") %></p>
           <div class="mt-6 pl-2 pb-1">
-            <%# instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
+
+            <% if dinner_meals.any? %>
+              <% dinner_meals.each do |meal| %>
+                <p><%= meal.recipe.name %></p>
+              <% end %>
+            <% else %>
+              <p class="text-gray-500"><%= t('.no_meals') %></p>
+            <% end %>
+
           </div>
         </div>
       </div>
