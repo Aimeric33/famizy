@@ -17,6 +17,9 @@
                   html5: true,
                   required: true,
                   input_html: { autocomplete: "birth_date" } %>
+      <%= f.input :avatar,
+                  as: :file,
+                  hint: t('.photo_hint') %>
       <%= f.input :email,
                   placeholder: "johndoe@example.com",
                   required: true,

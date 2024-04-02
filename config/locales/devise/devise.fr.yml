@@ -82,6 +82,7 @@ fr:
       updated_but_not_signed_in: "Votre compte a été modifié avec succès. Merci de vous reconnecter."
       new:
         title: "Inscrivez-vous pour continuer"
+        photo_hint: "Formats acceptés : jpg, jpeg, webp. Taille maximale : 5Mo."
         min_password_length: "caractères minimum"
         btn: "Inscription"
       edit:
