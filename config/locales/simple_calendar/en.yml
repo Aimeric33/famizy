@@ -4,3 +4,5 @@ en:
     previous: "Previous week"
     next: "Next week"
     today: "Today"
+    week_calendar:
+      no_meals: "No meals planned"

@@ -5,6 +5,8 @@ class MealsController < ApplicationController
     @meals = policy_scope(Meal).where(family_id: params[:family_id])
     start_date = params[:start_date].present? ? params[:start_date].to_date : Date.today
     @meals = @meals.where(date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
+                    .joins(:recipe)
+                    .order(:recipe_type)
   end
 
   def new

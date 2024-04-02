@@ -2,7 +2,6 @@ en:
   meals:
     index:
       title: "Our meals"
-      no-meals:
-        text: "No meals planned."
+      btn-primary: "Plan a meal"
     new:
       title: "Plan a meal"
