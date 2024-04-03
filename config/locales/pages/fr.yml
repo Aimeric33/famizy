@@ -2,9 +2,9 @@ fr:
   pages:
     home:
       hero:
-        title: "Organiser sa famille avec Famizy : c'est un jeu d'enfant !"
+        title: "Organiser sa famille avec Famizy\_: c'est un jeu d'enfant !"
         subtitle: "Invitez les membres de votre famille et commencez à organiser votre famille.
-        Créez des listes de courses, suivez vos dépenses, sauvegarder vos recettes favorites, et bien plus !"
+        Créez des listes de courses, sauvegardez vos recettes favorites, planifiez vos repas de la semaine et bien plus\_!"
         cta: "Créez un compte gratuitement"
         hint: "Aucune carte de crédit requise"
       features:

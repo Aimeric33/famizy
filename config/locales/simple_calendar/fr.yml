@@ -4,3 +4,5 @@ fr:
     previous: "Précédente"
     next: "Suivante"
     today: "Aujourd'hui"
+    week_calendar:
+      no_meals: "Aucun repas planifié"

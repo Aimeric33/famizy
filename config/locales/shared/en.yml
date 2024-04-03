@@ -23,7 +23,6 @@ en:
       change_family: "Change Family"
       overview: "Overview"
       lists: "Lists"
-      expenses: "Expenses"
       recipes: "Recipes"
-  dashboard-footer:
-    text: "Made with love by Aimeric Marchau."
+      meals: "Meals planner"
+      expenses: "Expenses"

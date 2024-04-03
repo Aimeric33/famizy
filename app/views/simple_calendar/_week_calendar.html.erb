@@ -22,17 +22,51 @@
     </span>
   </div>
 
-  <div class="flex flex-col">
+  <div class="grid grid-cols-1 md:grid-cols-2">
     <% date_range.each do |day| %>
-      <div class="p-4 border-b border-secondary-500">
+      <div class="p-4 border-b border-secondary-500 space-y-2">
         <h2 class="font-bold text-primary-500">
           <%= t('date.day_names')[day.wday] %> <%= day.day %> <%= t('date.month_names')[day.month] %>
         </h2>
-        <div>
-          <h3 class="text-gray-800"><%= Meal.human_attribute_name("meal_type.lunch") %></h3>
+
+        <% lunch_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "lunch" } %>
+        <div class="border-2 border-violet-500 rounded-md">
+          <p class="inline-block absolute px-2 rounded-tl rounded-br bg-violet-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.lunch") %></p>
+          <div class="mt-6 pl-2 pb-1 space-y-2">
+            <% if lunch_meals.any? %>
+              <% lunch_meals.each do |meal| %>
+                <p>
+                  <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
+                    <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
+                  </span>
+                  <%= meal.recipe.name %>
+                </p>
+              <% end %>
+            <% else %>
+              <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
+            <% end %>
+          </div>
         </div>
-        <div>
-          <h3 class="text-gray-800"><%= Meal.human_attribute_name("meal_type.dinner") %></h3>
+
+        <% dinner_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "dinner" } %>
+        <div class="border-2 border-amber-500 rounded-md">
+          <p class="inline-block absolute px-2 rounded-tl rounded-br bg-amber-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.dinner") %></p>
+          <div class="mt-6 pl-2 pb-1 space-y-2">
+
+            <% if dinner_meals.any? %>
+              <% dinner_meals.each do |meal| %>
+                <p>
+                  <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
+                    <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
+                  </span>
+                  <%= meal.recipe.name %>
+                </p>
+              <% end %>
+            <% else %>
+              <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
+            <% end %>
+
+          </div>
         </div>
       </div>
     <% end %>
