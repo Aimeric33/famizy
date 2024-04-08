@@ -25,7 +25,7 @@ class MealsController < ApplicationController
     authorize @meal
 
     if @meal.save
-      redirect_to family_meals_path(@meal.family), notice: t('meal.created')
+      redirect_to family_meals_path(@meal.family, start_date: @meal.date), notice: t('meal.created')
     else
       render :new, status: :unprocessable_entity
     end
@@ -36,7 +36,7 @@ class MealsController < ApplicationController
     authorize @meal
 
     @meal.destroy
-    redirect_to family_meals_path(@meal.family), notice: t('meal.destroyed')
+    redirect_to family_meals_path(@meal.family, start_date: @meal.date), notice: t('meal.destroyed')
   end
 
   private
