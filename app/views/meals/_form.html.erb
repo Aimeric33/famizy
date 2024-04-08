@@ -1,7 +1,7 @@
 <div class="max-w-2xl p-5 bg-secondary-500 rounded-md">
   <%= simple_form_for [@meal.family, @meal] do |f| %>
     <%= f.input :recipe, as: :select, collection: @meal.family.recipes %>
-    <%= f.input :date, as: :date, html5: true %>
+    <%= f.input :date, as: :date, html5: true, input_html: { value: @meal_date } %>
     <%= f.input :meal_type, as: :radio_buttons, collection: [:lunch, :dinner] %>
     <%= f.button :submit %>
   <% end %>

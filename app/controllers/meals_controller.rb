@@ -11,6 +11,7 @@ class MealsController < ApplicationController
 
   def new
     @meal = Meal.new
+    @meal_date = params[:meal_date]
     @meal.family = Family.find(params[:family_id])
 
     authorize @meal
