@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-1 gap-4 auto-rows-fr md:grid-cols-4">
+<div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-1 gap-4 md:grid-cols-4">
   <% @recipes.each do |recipe| %>
     <%= link_to recipe_path(recipe) do %>
       <div class="w-full h-full p-4 bg-slate-100 rounded-md flex flex-row gap-4 md:flex-col">
