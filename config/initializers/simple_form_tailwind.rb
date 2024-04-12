@@ -15,7 +15,7 @@ SimpleForm.setup do |config|
   config.form_class = ''
 
   # Default class for buttons
-  config.button_class = 'inline-block px-4 py-2 text-white bg-primary-500 rounded-md transition-colors duration-300 transform hover:bg-primary-400 focus:outline-none focus:ring focus:ring-primary-300 focus:ring-opacity-80'
+  config.button_class = 'cursor-pointer inline-block px-4 py-2 text-white bg-primary-500 rounded-md transition-colors duration-300 transform hover:bg-primary-400 focus:outline-none focus:ring focus:ring-primary-300 focus:ring-opacity-80'
 
   # Define the default class of the input wrapper of the boolean input.
   config.boolean_label_class = ''
@@ -58,7 +58,7 @@ SimpleForm.setup do |config|
     b.optional :min_max
     b.optional :readonly
     b.use :label, class: 'block font-bold text-primary-500'
-    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 bg-primary-50 border border-primary-500 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
     b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
@@ -68,7 +68,7 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.wrapper :form_check_wrapper, class: 'relative flex gap-x-3 items-center' do |bb|
-      bb.use :input, class: 'h-4 w-4 rounded border-primary-500 text-gray-800 focus:ring-orange-500', error_class: 'border-red-500', valid_class: 'border-green-500'
+      bb.use :input, class: 'h-4 w-4 rounded border-primary-200 text-gray-800 focus:ring-orange-500', error_class: 'border-red-500', valid_class: 'border-green-500'
       bb.use :label, class: 'block text-primary-500', error_class: 'text-red-500', valid_class: 'text-green-500'
       bb.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
       bb.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
@@ -82,7 +82,7 @@ SimpleForm.setup do |config|
     b.wrapper :legend_tag, tag: 'legend', class: 'block mb-2 font-bold text-primary-500' do |ba|
       ba.use :label_text
     end
-    b.use :input, class: 'bg-primary-50 border-primary-500 text-primary-500 focus:ring focus:ring-primary-300 focus:ring-opacity-40', error_class: 'border-red-500'
+    b.use :input, class: 'border-primary-200 text-primary-500 focus:ring focus:ring-primary-300 focus:ring-opacity-40', error_class: 'border-red-500'
     b.use :full_error, wrap_with: { class: 'mt-2 block text-sm text-red-500' }
     b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
@@ -107,7 +107,7 @@ SimpleForm.setup do |config|
     b.optional :minlength
     b.optional :readonly
     b.use :label, class: 'block font-bold text-primary-500'
-    b.use :input, class: 'block w-full mt-2 text-sm text-gray-800 file:cursor-pointer file:mr-4 file:px-4 file:py-2 file:rounded-md file:border-0 file:text-sm file:font-bold file:bg-primary-50 file:text-primary-500', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :input, class: 'block w-full mt-2 text-sm text-gray-800 file:cursor-pointer file:mr-4 file:px-4 file:py-2 file:rounded-md file:border-0 file:text-sm file:font-bold file file:text-primary-500', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
     b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
@@ -117,7 +117,7 @@ SimpleForm.setup do |config|
     b.use :html5
     b.optional :readonly
     b.use :label, class: 'block font-bold text-primary-500'
-    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 bg-primary-50 border border-primary-500 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
     b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
@@ -128,7 +128,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.use :label, class: 'block font-bold text-primary-500'
     b.wrapper class: 'd-flex flex-row justify-content-between align-items-center' do |ba|
-      ba.use :input, class: 'block mt-2 px-4 py-2 text-gray-800 bg-primary-50 border border-primary-500 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+      ba.use :input, class: 'block mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     end
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
     b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
@@ -141,7 +141,7 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.optional :step
     b.use :label, class: 'block font-bold text-primary-500'
-    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 bg-primary-50 border border-primary-500 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
     b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
