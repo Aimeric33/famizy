@@ -1,4 +1,4 @@
-<div class="max-w-2xl p-5 bg-secondary-500 rounded-md">
+<div class="max-w-2xl p-5 bg-slate-100 rounded-md">
   <%= simple_form_for [@list.family, @list] do |f| %>
     <%= f.input :name %>
     <%= f.input :list_type, as: :radio_buttons, collection: [:groceries, :to_do] %>

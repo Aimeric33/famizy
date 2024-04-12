@@ -11,16 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-controller="menu">
-    <%= render "shared/dashboard_navbar" %>
-    <div class="flex pt-16 min-h-screen bg-white">
-      <%= render "shared/dashboard_sidebar" %>
-      <div class="w-full flex flex-col">
-        <main class="relative flex-1 p-4 pb-16 md:p-6">
-          <%= render "shared/flashes" %>
-          <%= yield %>
-        </main>
-      </div>
+  <body class="flex" data-controller="menu">
+    <%= render "shared/dashboard_sidebar" %>
+    <div class="min-h-screen w-full bg-white flex-1">
+      <%= render "shared/dashboard_navbar" %>
+      <main class="relative">
+        <%= render "shared/flashes" %>
+        <%= yield %>
+      </main>
     </div>
   </body>
 </html>

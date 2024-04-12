@@ -1,5 +1,5 @@
-<div class="simple-calendar rounded-md overflow-hidden">
-  <div class="p-4 flex items-center justify-between bg-secondary-500">
+<div class="simple-calendar overflow-hidden">
+  <div class="p-4 flex items-center justify-between bg-slate-100 rounded-md">
     <span>
       <%= link_to calendar.url_for_previous_view, class: "text-primary-500" do %>
         <svg class="w-6 h-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -24,7 +24,7 @@
 
   <div class="grid grid-cols-1 md:grid-cols-2">
     <% date_range.each do |day| %>
-      <div class="p-4 border-b border-secondary-500 space-y-2">
+      <div class="p-4 space-y-2">
         <div class="flex justify-between items-center gap-4">
           <h2 class="font-bold text-primary-500">
             <%= t('date.day_names')[day.wday] %> <%= day.day %> <%= t('date.month_names')[day.month] %>
@@ -38,9 +38,9 @@
         </div>
 
         <% lunch_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "lunch" } %>
-        <div class="border-2 border-violet-500 rounded-md">
-          <p class="inline-block absolute px-2 rounded-tl rounded-br bg-violet-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.lunch") %></p>
-          <div class="mt-6 px-2 pb-1 space-y-2">
+        <div class="">
+          <p class="text-gray-800 text-sm">☀️ <%= Meal.human_attribute_name("meal_type.lunch") %></p>
+          <div class="py-2 space-y-2">
             <% if lunch_meals.any? %>
               <% lunch_meals.each do |meal| %>
                 <div class="flex justify-between gap-4">
@@ -66,9 +66,9 @@
         </div>
 
         <% dinner_meals = @meals.select { |meal| meal.date.to_date == day && meal.meal_type == "dinner" } %>
-        <div class="border-2 border-amber-500 rounded-md">
-          <p class="inline-block absolute px-2 rounded-tl rounded-br bg-amber-500 text-white text-sm"><%= Meal.human_attribute_name("meal_type.dinner") %></p>
-          <div class="mt-6 px-2 pb-1 space-y-2">
+        <div class="">
+          <p class="text-gray-800 text-sm">🌅 <%= Meal.human_attribute_name("meal_type.dinner") %></p>
+          <div class="py-2 space-y-2">
 
             <% if dinner_meals.any? %>
               <% dinner_meals.each do |meal| %>

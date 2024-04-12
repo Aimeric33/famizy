@@ -1,4 +1,4 @@
-<header class="fixed z-30 w-full bg-primary-500">
+<header class="w-full bg-primary-500">
   <div class="p-4 h-full flex items-center gap-4">
     <button data-action="click->menu#toggle" type="button" class="text-white md:hidden focus:outline-none" aria-label="toggle menu">
       <svg data-menu-target="burger" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -10,13 +10,11 @@
       </svg>
     </button>
 
-    <div class="flex items-center justify-between w-full">
-      <img class="w-auto h-6" src="<%= image_path("famizy-logo.svg") %>" alt="Logo Famizy">
-
+    <div class="flex items-center justify-end w-full">
       <div class="flex items-center" data-controller="dropdown">
         <div class="cursor-pointer relative flex items-center" data-action="click->dropdown#toggle click@window->dropdown#hide">
           <div>
-            <p class="hidden md:block mr-2 text-xs text-secondary-500"><%= current_user.name %></p>
+            <p class="hidden md:block mr-2 text-xs text-white"><%= current_user.name %></p>
             <p class="hidden md:block mr-2 text-xs text-white"><%= current_user.email %></p>
           </div>
           <div role="button" tabindex="0" data-dropdown-target="button" class="select-none">
