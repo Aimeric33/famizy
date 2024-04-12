@@ -44,7 +44,7 @@
             <% if lunch_meals.any? %>
               <% lunch_meals.each do |meal| %>
                 <div class="flex justify-between gap-4">
-                  <div class="flex items-start">
+                  <div class="flex items-center">
                     <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
                       <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
                     </span>
@@ -73,7 +73,7 @@
             <% if dinner_meals.any? %>
               <% dinner_meals.each do |meal| %>
               <div class="flex justify-between gap-4">
-                <div class="flex items-start">
+                <div class="flex items-center">
                   <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
                     <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
                   </span>
