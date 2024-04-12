@@ -22,12 +22,12 @@
   <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
     <div data-menu-target="menu" class="hidden absolute shadow inset-x-0 z-20 w-full p-4 bg-primary-500 text-center md:p-0 md:relative md:bg-transparent md:shadow-none md:w-auto md:flex md:items-center">
       <div class="flex flex-col md:flex-row md:mx-6">
-        <a class="my-2 text-white transition-colors duration-300 transform hover:text-secondary-500 md:mx-4 md:my-0" href="#features"><%= t('navbar.links.features') %></a>
-        <a class="my-2 text-white transition-colors duration-300 transform hover:text-secondary-500 md:mx-4 md:my-0" href="#pricing"><%= t('navbar.links.pricing') %></a>
+        <a class="my-2 text-white transition-colors duration-300 transform hover:text-slate-200 md:mx-4 md:my-0" href="#features"><%= t('navbar.links.features') %></a>
+        <a class="my-2 text-white transition-colors duration-300 transform hover:text-slate-200 md:mx-4 md:my-0" href="#pricing"><%= t('navbar.links.pricing') %></a>
         <%= render 'shared/locale_switch' %>
       </div>
       <div class="flex flex-col items-center md:flex-row">
-        <a class="inline-block my-2 px-4 py-2 md:my-0 text-primary-500 transition-colors duration-300 transform bg-secondary-500 rounded-md hover:bg-secondary-400 focus:outline-none focus:ring focus:ring-secondary-300 focus:ring-opacity-80" href="<%= families_path %>">
+        <a class="inline-block my-2 px-4 py-2 md:my-0 text-primary-500 transition-colors duration-300 transform bg-slate-100 rounded-md hover:bg-slate-200 focus:outline-none focus:ring focus:ring-slate-200 focus:ring-opacity-80" href="<%= families_path %>">
           <%= t('navbar.cta') %>
         </a>
       </div>
