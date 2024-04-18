@@ -2,20 +2,19 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = { host: "https://famizy-d00e2858d8fe.herokuapp.com/" }
+  config.action_mailer.default_url_options = { host: "https://www.famizy.com/" }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
+    address: "smtp.sendgrid.net",
     port: 587,
-    domain: "gmail.com",
-    user_name: "noreply.famizy@gmail.com",
-    password: ENV["GMAIL_PASSWORD"],
-    authentication: "plain",
-    enable_starttls_auto: true
+    domain: "famizy.com",
+    authentication: :plain,
+    user_name: "apikey",
+    password: ENV["SENDGRID_API_KEY"],
   }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_options = { from: "noreply.famizy@gmail.com" }
+  config.action_mailer.default_options = { from: "hello@famizy.com" }
 
   # Code is not reloaded between requests.
   config.enable_reloading = false

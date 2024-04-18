@@ -15,14 +15,14 @@ class Users::InvitationsController < Devise::InvitationsController
         respond_with resource, location: after_invite_path_for(current_inviter, resource)
       end
     else
-      render 'families/invite', layout: 'dashboard', status: :unprocessable_entity
+      render 'families/edit', layout: 'dashboard', status: :unprocessable_entity
     end
   end
 
   private
 
   def after_invite_path_for(resource)
-    family_invite_path(params[:locale])
+    edit_family_path(params[:locale])
   end
 
   def after_accept_path_for(resource)

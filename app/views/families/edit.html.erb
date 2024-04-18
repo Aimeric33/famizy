@@ -2,7 +2,7 @@
   <%= render partial: 'shared/page_name', locals: { title: t('.title') } %>
 </div>
 
-<div class="mt-8">
+<div class="p-4 relative -top-8 rounded-[24px] bg-white">
   <div class="max-w-2xl p-5 bg-slate-100 rounded-md">
     <p class="mb-4 font-bold text-lg text-gray-800"><%= t('.edit_form_title') %></p>
     <%= render "form", family: @family %>
