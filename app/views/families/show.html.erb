@@ -62,7 +62,7 @@
       </h3>
       <div>
         <p class="text-sm text-gray-500">
-          <span class="mr-2 text-green-500 text-base"><%= @family.meals.count %></span>
+          <span class="mr-2 text-green-500 text-base"><%= Meal.meals_this_week(@family).count %></span>
           <%= t('.cards.meals.count') %>
         </p>
       </div>

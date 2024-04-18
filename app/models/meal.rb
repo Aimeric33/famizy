@@ -7,4 +7,8 @@ class Meal < ApplicationRecord
   validates :date, presence: true
   validates :recipe, presence: true
   validates :meal_type, presence: true
+
+  def self.meals_this_week(family)
+    where(family: family, date: Date.today.beginning_of_week..Date.today.end_of_week)
+  end
 end
