@@ -8,11 +8,13 @@
 
 <div class="p-4 relative -top-8 rounded-[24px] bg-white">
   <div class="overflow-hidden">
-    <div class="flex items-center mb-4 px-4 py-3 bg-slate-100 rounded-md">
-      <svg data-slot="icon" class="w-6 h-6" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
-      </svg>
-      <%= simple_form_for [@list, @list_item] do |f| %>
+    <div class="mb-4 px-4 py-3 bg-slate-100 rounded-md">
+      <%= simple_form_for [@list, @list_item], html: { class: "flex items-center" } do |f| %>
+        <button type="submit">
+          <svg data-slot="icon" class="w-6 h-6" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
+          </svg>
+        </button>
         <%= f.input :name, label: false, wrapper: :inline_form, placeholder: t('.add-placeholder') %>
       <% end %>
     </div>

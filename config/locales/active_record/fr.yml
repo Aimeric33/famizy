@@ -29,6 +29,8 @@ fr:
       list/list_type:
         groceries: Courses
         to_do: À faire
+      list_item:
+        name: Nom
       recipe:
         name: Nom
         description: Description

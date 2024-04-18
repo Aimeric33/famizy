@@ -263,7 +263,7 @@ SimpleForm.setup do |config|
   # inline forms
   #
   # inline default_wrapper
-  config.wrappers :inline_form, class: 'col-12' do |b|
+  config.wrappers :inline_form do |b|
     b.use :html5
     b.use :placeholder
     b.optional :maxlength
@@ -274,8 +274,8 @@ SimpleForm.setup do |config|
     b.use :label, class: 'hidden'
 
     b.use :input, class: 'block w-full mx-4 p-0 bg-transparent text-gray-800 outline-none border-0 focus:ring-0 focus:border-0 focus:outline-none'
-    b.use :error, wrap_with: { class: 'invalid-feedback' }
-    b.optional :hint, wrap_with: { class: 'form-text' }
+    b.use :error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
+    b.optional :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
 
   # inline input for boolean
