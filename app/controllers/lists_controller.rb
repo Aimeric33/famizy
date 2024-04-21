@@ -2,7 +2,7 @@ class ListsController < ApplicationController
   layout 'dashboard'
 
   def index
-    @lists = policy_scope(List).where(family_id: params[:family_id])
+    @lists = policy_scope(List).where(family_id: Family.find(params[:family_id]))
   end
 
   def show
