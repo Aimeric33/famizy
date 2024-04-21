@@ -54,6 +54,7 @@ gem "cloudinary"
 gem "devise_invitable", "~> 2.0"
 gem "active_storage_validations"
 gem "simple_calendar"
+gem "friendly_id", "~> 5.5"
 
 group :development, :test do
   gem "dotenv-rails"

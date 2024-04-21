@@ -7,4 +7,11 @@ class Family < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 5, maximum: 50 }
   validates :description, presence: true, length: { maximum: 250 }
+
+  extend FriendlyId
+  friendly_id :name
+
+  def should_generate_new_friendly_id?
+    name_changed?
+  end
 end
