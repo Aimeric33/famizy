@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
   end
 
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Family.find(session[:current_family]).recipes.find(params[:id])
     authorize @recipe
   end
 
@@ -31,13 +31,13 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    @recipe = Recipe.find(params[:id])
+    @recipe = Family.find(session[:current_family]).recipes.find(params[:id])
     @recipe.ingredients.build if @recipe.ingredients.empty?
     authorize @recipe
   end
 
   def update
-    @recipe = Recipe.find(params[:id])
+    @recipe = Family.find(session[:current_family]).recipes.find(params[:id])
     authorize @recipe
 
 
@@ -50,7 +50,7 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    @recipe = Recipe.find(params[:id])
+    @recipe = Family.find(session[:current_family]).recipes.find(params[:id])
     authorize @recipe
 
     @recipe.destroy

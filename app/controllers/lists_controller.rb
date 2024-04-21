@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   end
 
   def show
-    @list = List.find(params[:id])
+    @list = Family.find(session[:current_family]).lists.find(params[:id])
     @list_item = ListItem.new
     authorize @list
   end
@@ -30,7 +30,7 @@ class ListsController < ApplicationController
   end
 
   def destroy
-    @list = List.find(params[:id])
+    @list = Family.find(session[:current_family]).lists.find(params[:id])
     authorize @list
 
     @list.destroy

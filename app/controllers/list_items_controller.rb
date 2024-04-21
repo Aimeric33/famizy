@@ -2,7 +2,7 @@ class ListItemsController < ApplicationController
   layout 'dashboard'
 
   def create
-    @list = List.find(params[:list_id])
+    @list = Family.find(session[:current_family]).lists.find(params[:list_id])
     @list_item = @list.list_items.new(list_item_params)
     authorize @list_item
 

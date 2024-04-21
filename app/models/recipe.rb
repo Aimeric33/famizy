@@ -11,4 +11,11 @@ class Recipe < ApplicationRecord
   validates :photo, content_type: ['image/jpg', 'image/jpeg', 'image/webp'], size: { less_than: 5.megabytes }
 
   accepts_nested_attributes_for :ingredients, reject_if: ->(attributes) { attributes['name'].blank? }, allow_destroy: true
+
+  extend FriendlyId
+  friendly_id :name, use: :scoped, scope: :family
+
+  def should_generate_new_friendly_id?
+    name_changed? || super
+  end
 end
