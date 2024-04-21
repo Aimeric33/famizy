@@ -8,7 +8,7 @@ class FamiliesController < ApplicationController
   end
 
   def show
-    session[:current_family_id] = @family.id
+    session[:current_family] = @family.slug
     authorize @family
   end
 
