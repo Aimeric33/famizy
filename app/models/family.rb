@@ -12,6 +12,6 @@ class Family < ApplicationRecord
   friendly_id :name
 
   def should_generate_new_friendly_id?
-    name_changed?
+    name_changed? || super
   end
 end
