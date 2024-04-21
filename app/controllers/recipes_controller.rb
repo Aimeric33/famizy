@@ -2,7 +2,7 @@ class RecipesController < ApplicationController
   layout 'dashboard'
 
   def index
-    @recipes = policy_scope(Recipe).where(family_id: params[:family_id])
+    @recipes = policy_scope(Recipe).where(family_id: Family.find(params[:family_id]))
   end
 
   def show
