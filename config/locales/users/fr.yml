@@ -1,0 +1,5 @@
+fr:
+  users:
+    edit:
+      title: "Mon profil"
+      btn-primary: "Enregistrer les modifications"

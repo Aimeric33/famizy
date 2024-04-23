@@ -1,0 +1,11 @@
+<div class="max-w-2xl p-5 bg-slate-100 rounded-md">
+  <%= simple_form_for @user do |f| %>
+    <div class="mb-4 w-16 h-16 rounded-full overflow-hidden">
+      <%= user_avatar(current_user) %>
+    </div>
+    <%= f.input :photo, as: :file %>
+    <%= f.input :name %>
+    <%= f.input :birth_date, as: :date, html5: true %>
+    <%= f.button :submit %>
+  <% end %>
+</div>

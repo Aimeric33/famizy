@@ -47,3 +47,6 @@ en:
       meal:
         create: 'Plan this meal'
         submit: 'Save changes'
+      user:
+        update: 'Update my profile'
+        submit: 'Save changes'

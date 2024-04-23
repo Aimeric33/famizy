@@ -47,3 +47,6 @@ fr:
       meal:
         create: 'Planifier ce repas'
         submit: 'Enregistrer les modifications'
+      user:
+        update: 'Mettre à jour mon profil'
+        submit: 'Enregistrer les modifications'

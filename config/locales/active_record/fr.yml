@@ -21,6 +21,7 @@ fr:
         current_password: Mot de passe actuel
         name: Nom
         birth_date: Date de naissance
+        photo: Uploader une nouvelle photo
       family:
         name: Nom
       list:

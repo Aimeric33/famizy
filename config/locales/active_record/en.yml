@@ -7,6 +7,7 @@ en:
         password_confirmation: Confirm password
         name: Name
         birth_date: Birth date
+        photo: Upload a new photo
       family:
         name: Name
       list:

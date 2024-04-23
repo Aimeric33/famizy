@@ -1,0 +1,15 @@
+<div class="flex flex-row justify-between items-start px-4 pt-4 pb-12 bg-primary-500">
+  <%= render partial: 'shared/page_name', locals: { title: t('.title') } %>
+</div>
+
+<div class="p-4 relative -top-8 rounded-[24px] bg-white">
+  <%= render partial: "form" %>
+  <div class="mt-4 max-w-2xl p-5 bg-slate-100 rounded-md">
+    <%= link_to t('dashboard-navbar.links.logout'), destroy_user_session_path, data: { turbo_method: :delete }, class: "block px-4 py-2 text-gray-800 hover:bg-primary-100" %>
+    <% if I18n.locale == I18n.default_locale %>
+      <%= link_to "Switch to English", ({ locale: 'en' }), class: "block px-4 py-2 text-gray-800 border-t border-primary-100 hover:bg-primary-100" %>
+    <% else %>
+      <%= link_to "Passer en Français", ({ locale: 'fr' }), class: "block px-4 py-2 text-gray-800 border-t border-primary-100 hover:bg-primary-100" %>
+    <% end %>
+  </div>
+</div>
