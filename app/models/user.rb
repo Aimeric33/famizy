@@ -11,7 +11,7 @@ class User < ApplicationRecord
 
   validates :name, presence: true, length: { minimum: 5 }
   validates :email, presence: true, uniqueness: true
-  validates :password, presence: true, length: { minimum: 8 }
+  # validates :password, presence: true, length: { minimum: 8 }
   validates :birth_date, presence: true
   validates :avatar, content_type: ['image/jpg', 'image/jpeg', 'image/webp'], size: { less_than: 5.megabytes }
 
@@ -19,12 +19,13 @@ class User < ApplicationRecord
   after_invitation_accepted :generate_color
 
   COLORS = %w[red orange yellow green teal blue indigo purple]
-  # extend FriendlyId
-  # friendly_id :name
 
-  # def should_generate_new_friendly_id?
-  #   name_changed? || super
-  # end
+  extend FriendlyId
+  friendly_id :name
+
+  def should_generate_new_friendly_id?
+    name_changed? || super
+  end
 
   private
 
