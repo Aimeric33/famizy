@@ -5,9 +5,9 @@
 <div class="p-4 relative -top-8 rounded-[24px] bg-white">
   <%= render partial: "form" %>
   <div class="mt-4 max-w-2xl p-5 bg-slate-100 rounded-md">
-    <p class="mb-4 font-bold text-lg text-gray-800"><%= 'Préférences' %></p>
+    <p class="mb-4 font-bold text-lg text-gray-800"><%= t('.preferences') %></p>
     <div class="flex items-center justify-between gap-4">
-      <p class="text-gray-800"><%= "Modifier la langue de l'interface" %></p>
+      <p class="text-gray-800"><%= t('.edit_language') %></p>
       <% if I18n.locale == I18n.default_locale %>
         <%= link_to "Switch to English", ({ locale: 'en' }), class: "text-sm text-primary-500 hover:text-primary-200" %>
       <% else %>

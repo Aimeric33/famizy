@@ -2,4 +2,5 @@ fr:
   users:
     edit:
       title: "Mon profil"
-      btn-primary: "Enregistrer les modifications"
+      preferences: "Préférences"
+      edit_language: "Modifier la langue de l'interface"

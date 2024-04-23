@@ -2,4 +2,5 @@ en:
   users:
     edit:
       title: "My profile"
-      btn-primary: "Save changes"
+      preferences: "Preferences"
+      edit_language: "Edit language of the interface"
