@@ -22,5 +22,6 @@ en:
       lists: "Lists"
       recipes: "Recipes"
       meals: "Meals planner"
+      events: "Calendar"
       expenses: "Expenses"
       logout: "Logout"

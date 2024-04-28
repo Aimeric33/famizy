@@ -22,5 +22,6 @@ fr:
       lists: "Listes"
       recipes: "Recettes"
       meals: "Planning repas"
+      events: "Calendrier"
       expenses: "Dépenses"
       logout: "Déconnexion"

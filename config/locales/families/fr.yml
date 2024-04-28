@@ -31,3 +31,6 @@ fr:
         meals:
           title: "Repas"
           count: "Repas planifié(s) cette semaine"
+        events:
+          title: "Calendrier"
+          count: "Événement(s) cette semaine"
