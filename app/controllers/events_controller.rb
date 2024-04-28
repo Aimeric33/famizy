@@ -3,12 +3,14 @@ class EventsController < ApplicationController
 
   def index
     @events = policy_scope(Event).where(family_id: Family.find(params[:family_id]))
-    date = params[:date].present? ? params[:date].to_date : Date.today
-    @events = @events.where(start_date: date).order(:start_date)
+    @current_date = params[:start_date].present? ? params[:start_date].to_date : Date.today
+    @events = @events.where(start_date: @current_date).order(:start_date)
   end
 
   def new
     @event = Event.new
+    @event.family = Family.find(params[:family_id])
+    @event_date = params[:start_date].to_date
     authorize @event
   end
 

@@ -1,0 +1,38 @@
+<div class="flex flex-row justify-between items-start px-4 pt-4 pb-12 bg-primary-500">
+  <%= render partial: 'shared/page_name', locals: { title: t('.title') } %>
+</div>
+
+<div class="p-4 relative -top-8 rounded-[24px] bg-white">
+  <%= month_calendar(events: @events) do |date, events| %>
+    <%= date.day %>
+  <% end %>
+
+  <div class="mt-4">
+    <div class="mb-4 flex justify-between items-center gap-4">
+      <h2 class="font-bold">
+        <%= l(@current_date || Date.today, format: "%A %d %B %Y") %>
+      </h2>
+      <%= link_to new_family_event_path(params[:family_id], meal_date: params[:start_date]), class:"flex gap-1 text-primary-500" do %>
+        <p class="leading-none"><%= t('.add_event') %></p>
+        <svg class="w-4 h-4" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+        </svg>
+      <% end %>
+    </div>
+
+    <% @events.each do |event| %>
+      <div class="p-4 bg-slate-100 rounded-md">
+        <h3><%= event.name %></h3>
+        <p><%= event.place %></p>
+      </div>
+    <% end %>
+
+    <% if @events.empty? %>
+      <div class="p-4 bg-slate-100 rounded-md">
+        <p class="text-gray-500">
+          <%= t('.no_events') %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
