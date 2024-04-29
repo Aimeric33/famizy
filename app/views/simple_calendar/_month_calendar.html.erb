@@ -34,29 +34,37 @@
         <div class="grid grid-cols-7">
           <% week.each do |day| %>
             <% if day == Date.today && @current_date != Date.today %>
-              <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-slate-100">
-                <div class="p-2 leading-none">
-                  <%= day.day %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-slate-100">
+                  <div class="p-2 leading-none">
+                    <%= day.day %>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             <% elsif day == start_date %>
-              <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-primary-500">
-                <div class="p-2 leading-none text-white">
-                  <%= day.day %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-primary-500">
+                  <div class="p-2 leading-none text-white">
+                    <%= day.day %>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             <% elsif start_date.month != day.month %>
-              <div class="mx-auto w-10 h-10 flex items-center justify-center">
-                <div class="p-2 leading-none text-gray-500">
-                  <%= day.day %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center">
+                  <div class="p-2 leading-none text-gray-500">
+                    <%= day.day %>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             <% else %>
-              <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full">
-                <div class="p-2 leading-none">
-                  <%= day.day %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full">
+                  <div class="p-2 leading-none">
+                    <%= day.day %>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             <% end %>
           <% end %>
         </div>
