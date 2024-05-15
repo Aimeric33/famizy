@@ -4,5 +4,10 @@ fr:
       title: "Calendrier"
       add_event: "Créer"
       no_events: "Aucun événement pour cette date"
+      no_place: "Aucun lieu défini"
     new:
       title: "Nouvel événement"
+    show:
+      no_description: "Modifiez l'événement pour ajouter une description"
+    edit:
+      title: "Modifier l'événement"

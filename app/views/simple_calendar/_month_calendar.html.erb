@@ -36,32 +36,44 @@
             <% if day == Date.today && @current_date != Date.today %>
               <%= link_to family_events_path(session[:current_family], start_date: day) do %>
                 <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-slate-100">
-                  <div class="p-2 leading-none">
-                    <%= day.day %>
+                  <div class="relative p-2 leading-none flex justify-center">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-primary-500 rounded-full"></span>
+                    <% end %>
                   </div>
                 </div>
               <% end %>
             <% elsif day == start_date %>
               <%= link_to family_events_path(session[:current_family], start_date: day) do %>
                 <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-primary-500">
-                  <div class="p-2 leading-none text-white">
-                    <%= day.day %>
+                  <div class="relative p-2 leading-none flex justify-center text-white">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-white rounded-full"></span>
+                    <% end %>
                   </div>
                 </div>
               <% end %>
             <% elsif start_date.month != day.month %>
               <%= link_to family_events_path(session[:current_family], start_date: day) do %>
                 <div class="mx-auto w-10 h-10 flex items-center justify-center">
-                  <div class="p-2 leading-none text-gray-500">
-                    <%= day.day %>
+                  <div class="relative p-2 leading-none flex justify-center text-gray-500">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-primary-500 rounded-full"></span>
+                    <% end %>
                   </div>
                 </div>
               <% end %>
             <% else %>
               <%= link_to family_events_path(session[:current_family], start_date: day) do %>
                 <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full">
-                  <div class="p-2 leading-none">
-                    <%= day.day %>
+                  <div class="relative p-2 leading-none flex justify-center">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-primary-500 rounded-full"></span>
+                    <% end %>
                   </div>
                 </div>
               <% end %>
