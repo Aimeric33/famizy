@@ -32,6 +32,10 @@ en:
           dinner: 'Dinner'
   helpers:
     submit:
+      event:
+        create: 'Create event'
+        update: 'Update event'
+        submit: 'Save changes'
       family:
         create: 'Create family'
         update: 'Update family'

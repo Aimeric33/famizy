@@ -4,3 +4,5 @@ en:
       title: "Calendar"
       add_event: "Create"
       no_events: "No events for this date"
+    new:
+      title: "New event"
