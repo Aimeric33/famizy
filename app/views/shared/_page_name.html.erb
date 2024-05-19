@@ -1,9 +1,13 @@
-<div class="flex gap-4">
-  <!-- <% link_to link do %>
-    <svg class="w-6 h-6 md:w-10 md:h-10" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"></path>
-    </svg>
-  <% end %> -->
+<div class="flex items-center gap-2">
+
+  <% if local_assigns[:link] %>
+    <%= link_to link do %>
+      <svg class="w-6 h-6 md:w-10 md:h-10 text-white" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"></path>
+      </svg>
+    <% end %>
+  <% end %>
+
   <div>
     <h1 class="text-2xl text-white font-extrabold lg:text-3xl"><%= title %></h1>
   </div>
