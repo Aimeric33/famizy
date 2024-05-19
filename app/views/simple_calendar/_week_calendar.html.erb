@@ -58,7 +58,7 @@
                 </div>
               <% end %>
             <% else %>
-              <%= link_to new_family_meal_path(params[:family_id], meal_date: day), class:"flex gap-2" do %>
+              <%= link_to new_family_meal_path(params[:family_id], meal_date: day, meal_type: :lunch), class:"flex gap-2" do %>
                 <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
               <% end %>
             <% end %>
@@ -87,7 +87,7 @@
               </div>
               <% end %>
             <% else %>
-              <%= link_to new_family_meal_path(params[:family_id], meal_date: day), class:"flex gap-2" do %>
+              <%= link_to new_family_meal_path(params[:family_id], meal_date: day, meal_type: :dinner), class:"flex gap-2" do %>
                 <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
               <% end %>
             <% end %>
