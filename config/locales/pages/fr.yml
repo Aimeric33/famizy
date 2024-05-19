@@ -35,7 +35,8 @@ fr:
           cta: "Commencez maintenant"
           included:
             title: "Ce qui est inclus :"
-            families: "Familles illimitées"
-            members: "Membres illimités"
+            families: "Familles et membres illimités"
             lists: "Listes illimitées"
+            recipes: "Recettes illimitées et semainier"
+            calendar: "Calendrier partagé avec votre famille"
             coming_soon: "Futures fonctionnalités"

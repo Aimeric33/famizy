@@ -1,33 +1,85 @@
-<div class="simple-calendar">
-  <div class="calendar-heading">
-    <time datetime="<%= start_date.strftime('%Y-%m') %>" class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></time>
+<div class="simple-calendar overflow-hidden">
+  <div class="p-2 flex items-center justify-between bg-slate-100 rounded-md">
+    <span>
+      <%= link_to calendar.url_for_previous_view, class: "text-primary-500" do %>
+        <svg class="w-6 h-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061A1.125 1.125 0 0 1 21 8.689v8.122ZM11.25 16.811c0 .864-.933 1.406-1.683.977l-7.108-4.061a1.125 1.125 0 0 1 0-1.954l7.108-4.061a1.125 1.125 0 0 1 1.683.977v8.122Z"></path>
+        </svg>
+      <% end %>
+    </span>
 
-    <nav>
-      <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view %>
-      <%= link_to t('simple_calendar.today', default: 'Today'), calendar.url_for_today_view %>
-      <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
-    </nav>
+    <span class="text-primary-500 leading-none">
+      <time datetime="<%= start_date.strftime('%Y-%m') %>" class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></time>
+    </span>
+
+    <span>
+      <%= link_to calendar.url_for_next_view, class: "text-primary-500" do %>
+        <svg class="w-6 h-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061A1.125 1.125 0 0 1 3 16.811V8.69ZM12.75 8.689c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 0 1 0 1.954l-7.108 4.061a1.125 1.125 0 0 1-1.683-.977V8.69Z"></path>
+        </svg>
+      <% end %>
+    </span>
   </div>
 
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <% date_range.slice(0, 7).each do |day| %>
-          <th><%= t('date.abbr_day_names')[day.wday] %></th>
-        <% end %>
-      </tr>
-    </thead>
+  <div class="mt-4 grid grid-cols-7">
+    <% date_range.slice(0, 7).each do |day| %>
+      <div class="mx-auto text-primary-500">
+        <%= t('date.abbr_day_names')[day.wday] %>
+      </div>
+    <% end %>
+  </div>
 
-    <tbody>
-      <% date_range.each_slice(7) do |week| %>
-        <tr>
+  <div>
+    <% date_range.each_slice(7) do |week| %>
+        <div class="grid grid-cols-7">
           <% week.each do |day| %>
-            <%= content_tag :td, class: calendar.td_classes_for(day) do %>
-              <% instance_exec(day, calendar.sorted_events_for(day), &passed_block) %>
+            <% if day == Date.today && @current_date != Date.today %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-slate-100">
+                  <div class="relative p-2 leading-none flex justify-center">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-primary-500 rounded-full"></span>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            <% elsif day == start_date %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full bg-primary-500">
+                  <div class="relative p-2 leading-none flex justify-center text-white">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-white rounded-full"></span>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            <% elsif start_date.month != day.month %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center">
+                  <div class="relative p-2 leading-none flex justify-center text-gray-500">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-primary-500 rounded-full"></span>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
+            <% else %>
+              <%= link_to family_events_path(session[:current_family], start_date: day) do %>
+                <div class="mx-auto w-10 h-10 flex items-center justify-center rounded-full">
+                  <div class="relative p-2 leading-none flex justify-center">
+                    <button><%= day.day %></button>
+                    <% if Event.any_on?(day) %>
+                      <span class="absolute bottom-1 w-1 h-1 bg-primary-500 rounded-full"></span>
+                    <% end %>
+                  </div>
+                </div>
+              <% end %>
             <% end %>
           <% end %>
-        </tr>
+        </div>
       <% end %>
-    </tbody>
-  </table>
+  </div>
 </div>

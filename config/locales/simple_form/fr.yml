@@ -7,7 +7,7 @@ fr:
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
-      html: '<span title="required">(obligatoire)</span>'
+      html: '<span title="required">*</span>'
     error_notification:
       default_message: "Veuillez vérifier les erreurs ci-dessous :"
     placeholders:
@@ -32,6 +32,10 @@ fr:
           dinner: 'Dîner'
   helpers:
     submit:
+      event:
+        create: 'Créer un événement'
+        update: "Mettre à jour l'événement"
+        submit: 'Enregistrer les modifications'
       family:
         create: 'Créer une famille'
         update: 'Mettre à jour la famille'

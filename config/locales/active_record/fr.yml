@@ -13,6 +13,9 @@ fr:
       family: Famille
       list: Liste
       recipe: Recette
+      meal: Repas
+      ingredient: Ingrédient
+      event: Événement
     attributes:
       user:
         email: Adresse email
@@ -22,6 +25,12 @@ fr:
         name: Nom
         birth_date: Date de naissance
         photo: Uploader une nouvelle photo
+      event:
+        name: Nom
+        start_date: Date et heure de début
+        end_date: Date et heure de fin
+        place: Lieu
+        description: Description
       family:
         name: Nom
       list:
@@ -254,4 +263,6 @@ fr:
       default: "%d %B %Y %Hh %Mmin %Ss"
       long: "%A %d %B %Y %Hh%M"
       short: "%d %b %Hh%M"
+      date: "%A %d %B %Y"
+      time: "%H:%M"
     pm: pm

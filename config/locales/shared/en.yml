@@ -5,15 +5,15 @@ en:
       features: "Features"
       pricing: "Pricing"
       about: "About"
-    cta: "Get started"
+    cta: "Log in"
   footer:
     subtext: "Invite your family members and start organizing your daily life."
-    cta: "Get started"
-    copyright: "Made with love by Aimeric Marchau."
+    cta: "Log in"
+    copyright: "Made with ❤️ by Aimeric Marchau."
     links:
       home: "Home"
-      features: "Features"
-      about: "About"
+      contact: "Contact us"
+      roadmap: "Roadmap & News"
       terms: "Terms & Privacy"
   dashboard-sidebar:
     links:
@@ -22,5 +22,6 @@ en:
       lists: "Lists"
       recipes: "Recipes"
       meals: "Meals planner"
+      events: "Calendar"
       expenses: "Expenses"
       logout: "Logout"

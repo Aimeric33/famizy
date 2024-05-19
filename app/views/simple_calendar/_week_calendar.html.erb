@@ -1,5 +1,5 @@
 <div class="simple-calendar overflow-hidden">
-  <div class="p-4 flex items-center justify-between bg-slate-100 rounded-md">
+  <div class="p-2 flex items-center justify-between bg-slate-100 rounded-md">
     <span>
       <%= link_to calendar.url_for_previous_view, class: "text-primary-500" do %>
         <svg class="w-6 h-6" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -58,7 +58,7 @@
                 </div>
               <% end %>
             <% else %>
-              <%= link_to new_family_meal_path(params[:family_id], meal_date: day), class:"flex gap-2" do %>
+              <%= link_to new_family_meal_path(params[:family_id], meal_date: day, meal_type: :lunch), class:"flex gap-2" do %>
                 <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
               <% end %>
             <% end %>
@@ -87,7 +87,7 @@
               </div>
               <% end %>
             <% else %>
-              <%= link_to new_family_meal_path(params[:family_id], meal_date: day), class:"flex gap-2" do %>
+              <%= link_to new_family_meal_path(params[:family_id], meal_date: day, meal_type: :dinner), class:"flex gap-2" do %>
                 <p class="text-gray-500 text-sm"><%= t('.no_meals') %></p>
               <% end %>
             <% end %>

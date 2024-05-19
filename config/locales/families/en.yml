@@ -31,3 +31,6 @@ en:
         meals:
           title: "Meals"
           count: "Meal(s) planned this week"
+        events:
+          title: "Calendar"
+          count: "Event(s) this week"

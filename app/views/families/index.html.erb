@@ -9,7 +9,7 @@
 <div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-1 gap-y-4 auto-rows-fr md:grid-cols-3 md:gap-8">
   <% @families.each do |family| %>
     <%= link_to family_path(family) do %>
-      <div class="p-5 bg-slate-100 rounded-md flex flex-col">
+      <div class="p-4 bg-slate-100 rounded-md flex flex-col">
         <div class="relative">
           <h3 class="pr-8 text-xl text-gray-800 md:text-2xl">
             <%= family.name %>
@@ -45,7 +45,7 @@
   <% end %>
 
   <% if @families.empty? %>
-    <div class="p-5 bg-slate-100 rounded-md">
+    <div class="p-4 bg-slate-100 rounded-md">
       <p class="text-gray-500">
         <%= t('.no-families.text') %>
       </p>
