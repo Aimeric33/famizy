@@ -12,4 +12,8 @@ class Event < ApplicationRecord
   def self.any_on?(date)
     where(start_date: (date.to_datetime...date.to_datetime.change(hour: 24))).any?
   end
+
+  def self.events_this_week(family)
+    where(family: family, start_date: (Date.today.beginning_of_week..Date.today.end_of_week))
+  end
 end
