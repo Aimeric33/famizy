@@ -35,7 +35,8 @@ en:
           cta: "Start now"
           included:
             title: "What's included:"
-            families: "Unlimited families"
-            members: "Unlimited members"
+            families: "Unlimited families and members"
             lists: "Unlimited lists"
+            recipes: "Unlimited recipes and weekly meals"
+            calendar: "Shared calendar with your family"
             coming_soon: "More features coming soon"

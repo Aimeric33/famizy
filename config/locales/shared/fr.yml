@@ -5,15 +5,15 @@ fr:
       features: "Fonctionnalités"
       pricing: "Tarifs"
       about: "À propos"
-    cta: "Commencer"
+    cta: "Se connecter"
   footer:
     subtext: "Invite les membres de votre famille et commencez à organiser votre quotidien"
-    cta: "Commencer"
-    copyright: "Fait avec amour par Aimeric Marchau."
+    cta: "Se connecter"
+    copyright: "Fait avec ❤️ par Aimeric Marchau."
     links:
       home: "Accueil"
-      features: "Fonctionnalités"
-      about: "À propos"
+      contact: "Contactez-nous"
+      roadmap: "Roadmap & Nouveautés"
       terms: "Mentions légales & Confidentialité"
   dashboard-sidebar:
     links:
