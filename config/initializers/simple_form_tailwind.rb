@@ -107,7 +107,7 @@ SimpleForm.setup do |config|
     b.optional :minlength
     b.optional :readonly
     b.use :label, class: 'block font-bold text-primary-500'
-    b.use :input, class: 'block w-full mt-2 text-sm text-gray-800 file:cursor-pointer file:mr-4 file:px-4 file:py-2 file:rounded-md file:border-0 file:text-sm file:font-bold file file:text-primary-500', error_class: 'border-red-500', valid_class: 'border-green-500'
+    b.use :input, class: 'block mt-2 text-sm text-gray-800 file:cursor-pointer file:mr-4 file:px-4 file:py-2 file:rounded-md file:border file:border-primary-200 file:text-sm file:font-bold file file:text-primary-500 file:bg-white', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
     b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
