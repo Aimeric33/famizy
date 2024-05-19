@@ -5,6 +5,13 @@ class Event < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
 
+  extend FriendlyId
+  friendly_id :name, use: :scoped, scope: :family
+
+  def should_generate_new_friendly_id?
+    name_changed? || super
+  end
+
   def past?
     end_date < Time.now
   end
