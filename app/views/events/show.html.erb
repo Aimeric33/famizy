@@ -1,5 +1,5 @@
 <div class="flex flex-row justify-between items-start px-4 pt-4 pb-12 bg-primary-500">
-  <%= render partial: 'shared/page_name', locals: { title: @event.name } %>
+  <%= render partial: 'shared/page_name', locals: { title: @event.name, link: family_events_path(session[:current_family]) } %>
 
   <div class="flex justify-center md:relative md:bottom-0 md:ml-0 md:w-auto gap-4">
     <%= link_to edit_family_event_path(@event) do %>

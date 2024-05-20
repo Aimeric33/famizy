@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8">
+<div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-2 gap-4 md:grid-cols-3">
   <!-- Lists: start -->
   <%= link_to family_lists_path(@family), class: "block space-y-2" do %>
     <div class="h-full p-4 bg-orange-200 rounded-md">
@@ -20,7 +20,7 @@
       </h3>
       <div>
         <p class="text-sm text-gray-500">
-          <span class="mr-2 text-orange-500 text-base"><%= @family.lists.count %></span>
+          <span class="mr-1 text-orange-500 text-base"><%= @family.lists.count %></span>
           <%= t('.cards.lists.count') %>
         </p>
       </div>
@@ -41,7 +41,7 @@
       </h3>
       <div>
         <p class="text-sm text-gray-500">
-          <span class="mr-2 text-violet-500 text-base"><%= @family.recipes.count %></span>
+          <span class="mr-1 text-violet-500 text-base"><%= @family.recipes.count %></span>
           <%= t('.cards.recipes.count') %>
         </p>
       </div>
@@ -62,7 +62,7 @@
       </h3>
       <div>
         <p class="text-sm text-gray-500">
-          <span class="mr-2 text-green-500 text-base"><%= Meal.meals_this_week(@family).count %></span>
+          <span class="mr-1 text-green-500 text-base"><%= Meal.meals_this_week(@family).count %></span>
           <%= t('.cards.meals.count') %>
         </p>
       </div>
@@ -83,7 +83,7 @@
       </h3>
       <div>
         <p class="text-sm text-gray-500">
-          <span class="mr-2 text-rose-500 text-base"><%= Event.events_this_week(@family).count %></span>
+          <span class="mr-1 text-rose-500 text-base"><%= Event.events_this_week(@family).count %></span>
           <%= t('.cards.events.count') %>
         </p>
       </div>

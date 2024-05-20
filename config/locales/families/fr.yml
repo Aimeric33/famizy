@@ -24,13 +24,13 @@ fr:
         btn: "Tout voir"
         lists:
           title: "Listes"
-          count: "Liste(s) en cours"
+          count: "liste(s) en cours"
         recipes:
           title: "Recettes"
-          count: "Recette(s) enregistrée(s)"
+          count: "recette(s) enregistrée(s)"
         meals:
           title: "Repas"
-          count: "Repas planifié(s) cette semaine"
+          count: "repas planifié(s) cette semaine"
         events:
           title: "Calendrier"
-          count: "Événement(s) cette semaine"
+          count: "événement(s) cette semaine"
