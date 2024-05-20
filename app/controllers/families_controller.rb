@@ -5,6 +5,7 @@ class FamiliesController < ApplicationController
 
   def index
     @families = policy_scope(Family).includes(:users).where.not(users: { name: nil })
+    session[:current_family] = session[:current_family] || @families.first.slug
   end
 
   def show

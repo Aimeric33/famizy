@@ -24,13 +24,13 @@ en:
         btn: "See more"
         lists:
           title: "Lists"
-          count: "List(s) in progress"
+          count: "list(s) in progress"
         recipes:
           title: "Recipes"
-          count: "Recipe(s) saved"
+          count: "recipe(s) saved"
         meals:
           title: "Meals"
-          count: "Meal(s) planned this week"
+          count: "meal(s) planned this week"
         events:
           title: "Calendar"
-          count: "Event(s) this week"
+          count: "event(s) this week"

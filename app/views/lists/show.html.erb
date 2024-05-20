@@ -1,5 +1,5 @@
 <div class="flex flex-row justify-between items-start px-4 pt-4 pb-12 bg-primary-500">
-  <%= render partial: 'shared/page_name', locals: { title: @list.name } %>
+  <%= render partial: 'shared/page_name', locals: { title: @list.name, link: family_lists_path(session[:current_family]) } %>
 
   <div class="flex justify-center md:relative md:bottom-0 md:ml-0 md:w-auto md:flex-col md:items-start md:gap-4">
     <%= link_to list_path(@list), data: { turbo_method: :delete } do %>
