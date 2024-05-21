@@ -19,8 +19,8 @@ class MealsController < ApplicationController
   end
 
   def create
-    @meal = Meal.new(date: params[:meal][:date], meal_type: params[:meal][:meal_type])
-    @meal.recipe = Recipe.find(params[:meal][:recipe])
+    @meal = Meal.new(meal_params)
+    @meal.recipe = Recipe.find(params[:meal][:recipe]) unless params[:meal][:recipe].blank?
     @meal.family = Family.find(params[:family_id])
 
     authorize @meal
@@ -43,6 +43,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:date, :recipe, :meal_type)
+    params.require(:meal).permit(:date, :meal_type, :other_name)
   end
 end

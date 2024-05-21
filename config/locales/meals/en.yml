@@ -8,3 +8,5 @@ en:
       btn-primary: "Plan a meal"
     new:
       title: "Plan a meal"
+    form:
+      or: "or"

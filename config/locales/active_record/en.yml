@@ -32,8 +32,9 @@ en:
         quantity: Quantity
         unit: Unit
       meal:
+        recipe: Choose one of your saved recipes
+        other_name: Enter a custom name for this meal
         date: For which day?
-        recipe: Choose a recipe
         meal_type: For which meal?
       meal/meal_type:
         lunch: Lunch
