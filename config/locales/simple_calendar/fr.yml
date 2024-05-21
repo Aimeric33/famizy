@@ -7,3 +7,4 @@ fr:
     week_calendar:
       no_meals: "Aucun repas planifié"
       add_meal: "Ajouter"
+      custom_meal_badge: "Repas"

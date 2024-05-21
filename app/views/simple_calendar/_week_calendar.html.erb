@@ -45,10 +45,17 @@
               <% lunch_meals.each do |meal| %>
                 <div class="flex justify-between gap-4">
                   <div class="flex items-center">
-                    <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
-                      <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
-                    </span>
-                    <p><%= meal.recipe.name %></p>
+                    <% if meal.recipe.nil? %>
+                      <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
+                        <%= t('.custom_meal_badge') %>
+                      </span>
+                      <p><%= meal.other_name %></p>
+                    <% else %>
+                      <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
+                        <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
+                      </span>
+                      <p><%= meal.recipe.name %></p>
+                    <% end %>
                   </div>
                   <%= link_to meal_path(meal), data: {turbo_method: :delete} do %>
                     <svg data-slot="icon" class="w-6 h-6 text-gray-500" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -74,10 +81,17 @@
               <% dinner_meals.each do |meal| %>
               <div class="flex justify-between gap-4">
                 <div class="flex items-center">
-                  <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
-                    <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
-                  </span>
-                  <p><%= meal.recipe.name %></p>
+                  <% if meal.recipe.nil? %>
+                    <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
+                      <%= t('.custom_meal_badge') %>
+                    </span>
+                    <p><%= meal.other_name %></p>
+                  <% else %>
+                    <span class="mr-2 px-2 py-1 text-sm text-primary-500 bg-primary-50 rounded-md shrink-0">
+                      <%= Recipe.human_attribute_name("recipe_type.#{meal.recipe.recipe_type}") %>
+                    </span>
+                    <p><%= meal.recipe.name %></p>
+                  <% end %>
                 </div>
                 <%= link_to meal_path(meal), data: {turbo_method: :delete} do %>
                   <svg data-slot="icon" class="w-6 h-6 text-gray-500" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
