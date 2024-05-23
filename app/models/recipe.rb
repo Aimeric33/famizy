@@ -3,6 +3,7 @@ class Recipe < ApplicationRecord
   enum recipe_type: { starter: 0, main_course: 1, dessert: 2 }
   has_many :ingredients, dependent: :destroy
   has_many :categories, as: :categorizable, dependent: :destroy
+  has_many :meals, dependent: :destroy
 
   has_one_attached :photo, dependent: :purge
 
