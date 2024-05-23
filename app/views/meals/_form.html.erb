@@ -1,6 +1,12 @@
 <div class="max-w-2xl p-5 bg-slate-100 rounded-md">
   <%= simple_form_for [@meal.family, @meal] do |f| %>
     <%= f.input :recipe, as: :select, collection: @meal.family.recipes %>
+    <div class="mb-2 flex items-center justify-center gap-4">
+      <span class="w-1/5 border-b border-primary-200"></span>
+      <span class="text-sm text-center text-primary-500 uppercase"><%= t('meals.form.or') %></span>
+      <span class="w-1/5 border-b border-primary-200"></span>
+    </div>
+    <%= f.input :other_name %>
     <%= f.input :date, as: :date, html5: true, input_html: { value: @meal_date } %>
     <%= f.input :meal_type, as: :radio_buttons, collection: [:lunch, :dinner], checked: @meal_type %>
     <%= f.button :submit %>

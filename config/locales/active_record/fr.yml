@@ -55,8 +55,9 @@ fr:
         quantity: Quantité
         unit: Unité
       meal:
+        recipe: Choisir l'une de vos recettes enregistrées
+        other_name: Entrer un nom personnalisé pour ce repas
         date: Pour quel jour ?
-        recipe: Choisir une recette
         meal_type: Pour quel repas ?
       meal/meal_type:
         lunch: Déjeuner

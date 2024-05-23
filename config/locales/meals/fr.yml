@@ -8,3 +8,5 @@ fr:
       btn-primary: "Planifier un repas"
     new:
       title: "Planifier un repas"
+    form:
+      or: "ou"

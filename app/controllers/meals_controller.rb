@@ -5,8 +5,7 @@ class MealsController < ApplicationController
     @meals = policy_scope(Meal).where(family_id: Family.find(params[:family_id]))
     start_date = params[:start_date].present? ? params[:start_date].to_date : Date.today
     @meals = @meals.where(date: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
-                    .joins(:recipe)
-                    .order(:recipe_type)
+                    .includes(:recipe)
   end
 
   def new
@@ -19,8 +18,8 @@ class MealsController < ApplicationController
   end
 
   def create
-    @meal = Meal.new(date: params[:meal][:date], meal_type: params[:meal][:meal_type])
-    @meal.recipe = Recipe.find(params[:meal][:recipe])
+    @meal = Meal.new(meal_params)
+    @meal.recipe = Recipe.find(params[:meal][:recipe]) unless params[:meal][:recipe].blank?
     @meal.family = Family.find(params[:family_id])
 
     authorize @meal
@@ -43,6 +42,6 @@ class MealsController < ApplicationController
   private
 
   def meal_params
-    params.require(:meal).permit(:date, :recipe, :meal_type)
+    params.require(:meal).permit(:date, :meal_type, :other_name)
   end
 end

@@ -1,11 +1,12 @@
 class Meal < ApplicationRecord
   belongs_to :family
-  belongs_to :recipe
+  belongs_to :recipe, optional: true
 
   enum meal_type: { lunch: 0, dinner: 1}
 
   validates :date, presence: true
-  validates :recipe, presence: true
+  validates :recipe, presence: true, unless: -> { other_name.present? }
+  validates :other_name, presence: true, unless: -> { recipe.present? }
   validates :meal_type, presence: true
 
   def self.meals_this_week(family)
