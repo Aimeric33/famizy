@@ -2,26 +2,32 @@ require 'rails_helper'
 
 RSpec.describe Meal, type: :model do
   describe "validations" do
-    it "is valid with recipe reference" do
-      meal = build(:meal, other_name: nil)
+    context "with recipe reference" do
+      it "is valid" do
+        meal = build(:meal, other_name: nil)
 
-      expect(meal).to be_valid
+        expect(meal).to be_valid
+      end
     end
 
-    it "is valid with other_name" do
-      meal = build(:meal, recipe: nil, other_name: "Other")
+    context "with other_name" do
+      it "is valid" do
+        meal = build(:meal, recipe: nil, other_name: "Other")
 
-      expect(meal).to be_valid
+        expect(meal).to be_valid
+      end
     end
 
-    it "is invalid without recipe reference or other_name" do
-      meal = build(:meal, recipe: nil, other_name: nil)
+    context "without recipe reference or other_name" do
+      it "is invalid" do
+        meal = build(:meal, recipe: nil, other_name: nil)
 
-      expect(meal).to be_invalid
+        expect(meal).to be_invalid
+      end
     end
   end
 
-  describe "#meals_this_week" do
+  describe ".meals_this_week" do
     it "returns meals for the current week only" do
       family = create(:family)
       meal1 = create(:meal, family: family, date: Date.today.beginning_of_week)
