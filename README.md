@@ -4,5 +4,5 @@ Organizing your family : it's now child's play!
 
 [Website](https://www.famizy.com) 
 •
-[Roadmap](https://www.famizy.featurebase.app)
+[Roadmap](https://famizy.featurebase.app/fr)
 ##
