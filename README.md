@@ -1,1 +1,8 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+![logo_famizy_black](https://github.com/Aimeric33/famizy/assets/107474450/513eefca-716e-40ac-9865-50dfbe6b3a6a)
+
+Organizing your family : it's now child's play!
+
+[Website](https://www.famizy.com) 
+•
+[Roadmap](https://www.famizy.featurebase.app)
+##
