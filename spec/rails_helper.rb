@@ -31,6 +31,11 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
+  config.before(:each, type: :system) do
+    driven_by :selenium_chrome_headless
+  end
+  config.include Devise::Test::IntegrationHelpers, type: :system
+  config.include Warden::Test::Helpers, type: :system
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
     Rails.root.join('spec/fixtures')

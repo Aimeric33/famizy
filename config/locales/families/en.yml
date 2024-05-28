@@ -1,4 +1,8 @@
 en:
+  family:
+    created: "The family has been successfully created."
+    updated: "The family has been successfully updated."
+    destroyed: "The family has been successfully deleted."
   families:
     index:
       title: "My families"
