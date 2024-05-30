@@ -10,6 +10,8 @@
     <br />
     <a href="https://famizy.featurebase.app/">Roadmap</a>
     ·
+    <a href="https://famizy.featurebase.app/changelog">Changelog</a>
+    ·
     <a href="mailto:hello@famizy.com">Contact</a>
   </p>
 </div>
