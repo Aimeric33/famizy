@@ -5,14 +5,14 @@
   <p align="center">
     A family organizer to create groceries lists, save your recipes, plan your weekly meals and more...
     <br />
-    <a href="https://www.famizy.com"><strong>See website</strong></a>
+    <a target="_blank" href="https://www.famizy.com"><strong>See website</strong></a>
     <br />
     <br />
-    <a href="https://famizy.featurebase.app/">Roadmap</a>
+    <a target="_blank" href="https://famizy.featurebase.app/">Roadmap</a>
     ·
-    <a href="https://famizy.featurebase.app/changelog">Changelog</a>
+    <a target="_blank" href="https://famizy.featurebase.app/changelog">Changelog</a>
     ·
-    <a href="mailto:hello@famizy.com">Contact</a>
+    <a target="_blank" href="mailto:hello@famizy.com">Contact</a>
   </p>
 </div>
 
