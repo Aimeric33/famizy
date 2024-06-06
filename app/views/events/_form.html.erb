@@ -1,8 +1,10 @@
 <div class="max-w-2xl p-5 bg-slate-100 rounded-md">
   <%= simple_form_for [@event.family, @event] do |f| %>
     <%= f.input :name %>
-    <%= f.input :start_date, as: :datetime, html5: true, input_html: { value: @start_date } %>
-    <%= f.input :end_date, as: :datetime, html5: true, input_html: { value: @end_date } %>
+    <div class="flex gap-8">
+      <%= f.input :start_date, as: :datetime, html5: true, input_html: { value: @start_date } %>
+      <%= f.input :end_date, as: :datetime, html5: true, input_html: { value: @end_date } %>
+    </div>
     <%= f.input :place %>
     <%= f.input :description %>
     <%= f.button :submit %>
