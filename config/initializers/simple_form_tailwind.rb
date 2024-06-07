@@ -88,15 +88,15 @@ SimpleForm.setup do |config|
   end
 
   # vertical input for inline radio buttons and check boxes
-  config.wrappers :vertical_collection_inline, item_wrapper_class: 'form-check form-check-inline', item_label_class: 'form-check-label', tag: 'fieldset', class: 'mb-3' do |b|
+  config.wrappers :vertical_collection_inline, item_wrapper_class: 'mr-4 inline-flex items-center', item_label_class: 'cursor-pointer text-gray-800 rounded-[50rem] px-2 border border-primary-200 bg-white peer-checked:border-primary-500 peer-checked:bg-primary-500 peer-checked:text-white', tag: 'fieldset', class: 'mb-6' do |b|
     b.use :html5
     b.optional :readonly
-    b.wrapper :legend_tag, tag: 'legend', class: 'col-form-label pt-0' do |ba|
+    b.wrapper :legend_tag, tag: 'legend', class: 'block mb-2 font-bold text-primary-500' do |ba|
       ba.use :label_text
     end
-    b.use :input, class: 'form-check-input', error_class: 'is-invalid', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { class: 'invalid-feedback d-block' }
-    b.use :hint, wrap_with: { class: 'form-text' }
+    b.use :input, class: 'absolute scale-0 peer', error_class: 'border-red-500', valid_class: 'is-valid'
+    b.use :full_error, wrap_with: { class: 'mt-2 block text-sm text-red-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
   end
 
   # vertical file input

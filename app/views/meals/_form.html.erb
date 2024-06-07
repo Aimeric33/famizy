@@ -8,7 +8,7 @@
     </div>
     <%= f.input :other_name %>
     <%= f.input :date, as: :date, html5: true, input_html: { value: @meal_date } %>
-    <%= f.input :meal_type, as: :radio_buttons, collection: [:lunch, :dinner], checked: @meal_type %>
+    <%= f.input :meal_type, as: :radio_buttons, wrapper: :vertical_collection_inline, collection: [:lunch, :dinner], checked: @meal_type %>
     <%= f.button :submit %>
   <% end %>
 </div>
