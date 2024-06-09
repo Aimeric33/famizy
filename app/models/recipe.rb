@@ -19,4 +19,13 @@ class Recipe < ApplicationRecord
   def should_generate_new_friendly_id?
     name_changed? || super
   end
+
+  def self.filters
+    [
+      [I18n.t('recipes.index.filters.all'), 'all'],
+      [I18n.t('recipes.index.filters.starter'), 'starter'],
+      [I18n.t('recipes.index.filters.main_course'), 'main_course'],
+      [I18n.t('recipes.index.filters.dessert'), 'dessert']
+    ]
+  end
 end

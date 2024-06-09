@@ -3,6 +3,11 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = policy_scope(Recipe).where(family_id: Family.find(params[:family_id]))
+    if !params[:type].present? || (params[:type].present? && params[:type] == 'all')
+      @recipes
+    else
+      @recipes = @recipes.where(recipe_type: params[:type])
+    end
   end
 
   def show

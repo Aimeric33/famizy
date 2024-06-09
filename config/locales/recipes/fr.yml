@@ -9,6 +9,11 @@ fr:
       btn-primary: "Créer une recette"
       nb_ingredients: "%{count} ingrédient(s)"
       no-recipes: "Vous n'avez pas encore de recettes."
+      filters:
+        all: "Toutes les recettes"
+        starter: "Entrées"
+        main_course: "Plats principaux"
+        dessert: "Desserts"
     new:
       title: "Créer une nouvelle recette"
       photo_hint: "Formats acceptés : jpg, jpeg, webp. Taille maximale : 5 Mo."

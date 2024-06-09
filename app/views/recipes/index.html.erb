@@ -6,38 +6,52 @@
   </div>
 </div>
 
-<div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-1 gap-4 md:grid-cols-4">
-  <% @recipes.each do |recipe| %>
-    <%= link_to recipe_path(recipe) do %>
-      <div class="w-full h-full p-4 bg-slate-100 rounded-md flex flex-row gap-4 md:flex-col">
-        <div>
-          <% if recipe.photo.attached? %>
-            <%= cl_image_tag recipe.photo, class: "w-24 h-full md:w-full md:h-40 object-cover rounded-md" %>
-          <% else %>
-            <%= image_tag "image-placeholder.svg", class: "w-24 h-full md:w-full md:h-40 object-cover rounded-md" %>
-          <% end %>
-        </div>
+<div class="p-4 relative -top-8 rounded-[24px] bg-white">
+  <div class="flex gap-4">
+    <form data-controller="auto-submit" novalidate="novalidate" action="/fr/families/la-maison-du-bonheur/recipes" accept-charset="UTF-8" method="get">
+      <fieldset class="mb-6 radio_buttons required">
+        <% Recipe.filters.each do |type| %>
+          <div class="mr-4 inline-flex items-center">
+            <input class="absolute scale-0 peer radio_buttons required" data-action="auto-submit#submit" type="radio" value="<%= "#{type[1]}" %>" name="type" id="<%= "type_#{type[1]}" %>" <%= "checked" if params[:type] == type[1] %>>
+            <label class="cursor-pointer text-gray-800 rounded-[50rem] px-2 border border-primary-200 bg-white peer-checked:border-primary-500 peer-checked:bg-primary-500 peer-checked:text-white collection_radio_buttons" for="<%= "type_#{type[1]}" %>"><%= type[0] %></label>
+          </div>
+        <% end %>
+      </fieldset>
+    </form>
+  </div>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+    <% @recipes.each do |recipe| %>
+      <%= link_to recipe_path(recipe) do %>
+        <div class="w-full h-full p-4 bg-slate-100 rounded-md flex flex-row gap-4 md:flex-col">
+          <div>
+            <% if recipe.photo.attached? %>
+              <%= cl_image_tag recipe.photo, class: "w-24 h-full md:w-full md:h-40 object-cover rounded-md" %>
+            <% else %>
+              <%= image_tag "image-placeholder.svg", class: "w-24 h-full md:w-full md:h-40 object-cover rounded-md" %>
+            <% end %>
+          </div>
 
-        <div class="flex flex-col gap-4 flex-1">
-          <h2 class="text-lg md:text-xl text-gray-800 flex-1"><%= recipe.name %></h2>
-          <div class="space-y-2">
-            <p>
-              <span class="px-3 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
-                <%= Recipe.human_attribute_name("recipe_type.#{recipe.recipe_type}") %>
-              </span>
-            </p>
-            <p class="text-xs text-gray-500"><%= t('.nb_ingredients', count: recipe.ingredients.count) %></p>
+          <div class="flex flex-col gap-4 flex-1">
+            <h2 class="text-lg md:text-xl text-gray-800 flex-1"><%= recipe.name %></h2>
+            <div class="space-y-2">
+              <p>
+                <span class="px-3 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
+                  <%= Recipe.human_attribute_name("recipe_type.#{recipe.recipe_type}") %>
+                </span>
+              </p>
+              <p class="text-xs text-gray-500"><%= t('.nb_ingredients', count: recipe.ingredients.count) %></p>
+            </div>
           </div>
         </div>
+      <% end %>
+    <% end %>
+
+    <% if @recipes.empty? %>
+      <div class="p-4 bg-slate-100 rounded-md">
+        <p class="text-gray-500">
+          <%= t('.no-recipes') %>
+        </p>
       </div>
     <% end %>
-  <% end %>
-
-  <% if @recipes.empty? %>
-    <div class="p-4 bg-slate-100 rounded-md">
-      <p class="text-gray-500">
-        <%= t('.no-recipes') %>
-      </p>
-    </div>
-  <% end %>
+  </div>
 </div>
