@@ -8,9 +8,16 @@
 
 <div class="p-4 relative -top-8 rounded-[24px] bg-white">
   <div class="flex gap-4">
-    <%= simple_form_for session[:current_family], url: family_recipes_path(session[:current_family]), method: :get do |f| %>
-      <%= f.input :filter, as: :radio_buttons, wrapper: :vertical_collection_inline, legend_tag: false, collection: [:all, :starter, :main_course, :dessert] %>
-    <% end %>
+    <form data-controller="auto-submit" novalidate="novalidate" action="/fr/families/la-maison-du-bonheur/recipes" accept-charset="UTF-8" method="get">
+      <fieldset class="mb-6 radio_buttons required">
+        <% Recipe.filters.each do |type| %>
+          <div class="mr-4 inline-flex items-center">
+            <input class="absolute scale-0 peer radio_buttons required" data-action="auto-submit#submit" type="radio" value="<%= "#{type[1]}" %>" name="type" id="<%= "type_#{type[1]}" %>" <%= "checked" if params[:type] == type[1] %>>
+            <label class="cursor-pointer text-gray-800 rounded-[50rem] px-2 border border-primary-200 bg-white peer-checked:border-primary-500 peer-checked:bg-primary-500 peer-checked:text-white collection_radio_buttons" for="<%= "type_#{type[1]}" %>"><%= type[0] %></label>
+          </div>
+        <% end %>
+      </fieldset>
+    </form>
   </div>
   <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
     <% @recipes.each do |recipe| %>
