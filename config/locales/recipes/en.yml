@@ -10,7 +10,7 @@ en:
       nb_ingredients: "%{count} ingredient(s)"
       no-recipes: "You don't have any recipes yet."
       filters:
-        all: "All recipes"
+        all: "All"
         starter: "Starters"
         main_course: "Main courses"
         dessert: "Desserts"

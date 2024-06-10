@@ -10,7 +10,7 @@ fr:
       nb_ingredients: "%{count} ingrédient(s)"
       no-recipes: "Vous n'avez pas encore de recettes."
       filters:
-        all: "Toutes les recettes"
+        all: "Toutes"
         starter: "Entrées"
         main_course: "Plats principaux"
         dessert: "Desserts"

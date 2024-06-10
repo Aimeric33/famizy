@@ -1,7 +1,7 @@
 fr:
   events:
     index:
-      title: "Calendrier"
+      title: "Notre calendrier"
       add_event: "Créer"
       no_events: "Aucun événement pour cette date"
       no_place: "Aucun lieu défini"
