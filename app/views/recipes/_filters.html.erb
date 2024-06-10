@@ -1,0 +1,10 @@
+<form data-controller="auto-submit" novalidate="novalidate" action="<%= family_recipes_path(family) %>" accept-charset="UTF-8" method="get">
+  <fieldset class="mb-6 radio_buttons required w-max">
+    <% Recipe.filters.each do |type| %>
+      <div class="mr-2 inline-flex items-center">
+        <input class="absolute scale-0 peer radio_buttons required" data-action="auto-submit#submit" type="radio" value="<%= "#{type[1]}" %>" name="type" id="<%= "type_#{type[1]}" %>" <%= "checked" if params[:type] == type[1] %>>
+        <label class="cursor-pointer text-gray-800 rounded-md px-3 py-1 border border-primary-200 bg-white peer-checked:border-primary-500 peer-checked:bg-primary-500 peer-checked:text-white collection_radio_buttons" for="<%= "type_#{type[1]}" %>"><%= type[0] %></label>
+      </div>
+    <% end %>
+  </fieldset>
+</form>

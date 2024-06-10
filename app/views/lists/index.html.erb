@@ -8,17 +8,7 @@
 
 <div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-1 gap-4 auto-rows-fr md:grid-cols-3">
   <% @lists.each do |list| %>
-    <%= link_to list_path(list) do %>
-      <div class="w-full p-4 bg-slate-100 rounded-md">
-        <h2 class="mb-4 text-lg md:text-xl text-gray-800"><%= list.name %></h2>
-        <div class="mb-2">
-          <span class="px-3 py-1 text-sm text-primary-500 bg-primary-50 rounded-md">
-            <%= List.human_attribute_name("list_type.#{list.list_type}") %>
-          </span>
-        </div>
-        <p class="text-gray-500"><%= l(list.updated_at, format: '%d %B %Y') %></p>
-      </div>
-    <% end %>
+    <%= render partial: 'list', locals: { list: list } %>
   <% end %>
 
   <% if @lists.empty? %>

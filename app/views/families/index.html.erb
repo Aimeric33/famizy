@@ -8,40 +8,7 @@
 
 <div class="p-4 relative -top-8 rounded-[24px] bg-white grid grid-cols-1 gap-y-4 auto-rows-fr md:grid-cols-3 md:gap-8">
   <% @families.each do |family| %>
-    <%= link_to family_path(family) do %>
-      <div class="p-4 bg-slate-100 rounded-md flex flex-col">
-        <div class="relative">
-          <h3 class="pr-8 text-xl text-gray-800 md:text-2xl">
-            <%= family.name %>
-          </h3>
-        </div>
-
-        <div class="mt-4">
-          <p class="text-primary-500">
-            <%= t('.members', count: family.users.count) %>
-          </p>
-          <div class="mt-2 flex items-center">
-            <% family.users.first(5).each do |user| %>
-              <% if user.avatar.attached? %>
-                <%= cl_image_tag user.avatar.key, class: "object-cover w-8 h-8 -mr-1 overflow-hidden rounded-full" %>
-              <% else %>
-                <div class="object-cover w-8 h-8 -mr-3 overflow-hidden rounded-full">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 40 40">
-                    <rect width="100%" height="100%" fill="<%= user.color %>"/>
-                    <text fill="#fff" font-family="Helvetica,Arial,sans-serif" font-size="24" font-weight="500" x="50%" y="55%" dominant-baseline="middle" text-anchor="middle">
-                      <%= user.name[0].upcase %>
-                    </text>
-                  </svg>
-                </div>
-              <% end %>
-            <% end %>
-            <% if family.users.count > 5 %>
-              <span class="ml-2 text-gray-500"><%= t('.and_more') %></span>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    <% end %>
+    <%= render partial: 'family', locals: { family: family } %>
   <% end %>
 
   <% if @families.empty? %>

@@ -1,0 +1,17 @@
+<% if recipe.ingredients.any? %>
+  <ul class="list-disc list-inside">
+    <% recipe.ingredients.each do |ingredient| %>
+      <li class="text-gray-800">
+        <% if ingredient.quantity && ingredient.unit %>
+          <%= "#{ingredient.name} - #{ingredient.quantity.round == ingredient.quantity ? ingredient.quantity.round : ingredient.quantity} #{ingredient.unit}" %>
+        <% elsif ingredient.quantity %>
+          <%= "#{ingredient.name} - #{ingredient.quantity.round == ingredient.quantity ? ingredient.quantity.round : ingredient.quantity}" %>
+        <% else %>
+          <%= ingredient.name %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p class="text-gray-500"><%= t('recipes.show.no_ingredients') %></p>
+<% end %>

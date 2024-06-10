@@ -37,23 +37,7 @@
       <div class="space-y-2">
         <h2 class="text-xl font-bold text-gray-800"><%= t('.ingredients') %></h2>
         <div class="flex gap-2">
-          <% if @recipe.ingredients.any? %>
-            <ul class="list-disc list-inside">
-              <% @recipe.ingredients.each do |ingredient| %>
-                <li class="text-gray-800">
-                  <% if ingredient.quantity && ingredient.unit %>
-                    <%= "#{ingredient.name} - #{ingredient.quantity.round == ingredient.quantity ? ingredient.quantity.round : ingredient.quantity} #{ingredient.unit}" %>
-                  <% elsif ingredient.quantity %>
-                    <%= "#{ingredient.name} - #{ingredient.quantity.round == ingredient.quantity ? ingredient.quantity.round : ingredient.quantity}" %>
-                  <% else %>
-                    <%= ingredient.name %>
-                  <% end %>
-                </li>
-              <% end %>
-            </ul>
-          <% else %>
-            <p class="text-gray-500"><%= t('.no_ingredients') %></p>
-          <% end %>
+          <%= render partial: 'ingredients/list', locals: { recipe: @recipe } %>
         </div>
       </div>
 
