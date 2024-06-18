@@ -1,8 +1,9 @@
 {
-  "background_color": "#284296",
-  "description": "Famizy is a family management app that helps you to organize your family life.",
-  "display": "fullscreen",
   "name": "Famizy",
+  "description": "Famizy is a family management app that helps you to organize your family life.",
+  "background_color": "white",
+  "theme_color": "#284296",
+  "display": "standalone",
   "icons": [
     <% files = Dir.entries(Rails.root.join("app/assets/images/icons/")).select {|f| !File.directory? f} %>
     <% files.each_with_index do |file, index| %>
