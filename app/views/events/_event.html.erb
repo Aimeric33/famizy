@@ -1,7 +1,7 @@
 <%= link_to event_path(event) do %>
   <div class="p-4 bg-slate-100 rounded-md flex gap-4">
     <div class="flex flex-col justify-center items-center">
-      <p class="font-bold"><%= event.start_date.strftime("%H:%M") %></p>
+      <p class="font-bold"><%= l(event.start_date, format: :time) %></p>
       <p><%= l(event.end_date, format: :time) %></p>
     </div>
     <div class="flex flex-col justify-center gap-1">

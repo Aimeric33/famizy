@@ -60,18 +60,20 @@ SimpleForm.setup do |config|
     b.use :label, class: 'block font-bold text-primary-500'
     b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
-    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
   end
 
   # vertical input for boolean
   config.wrappers :vertical_boolean, tag: 'fieldset', class: 'mb-6' do |b|
     b.use :html5
     b.optional :readonly
-    b.wrapper :form_check_wrapper, class: 'relative flex gap-x-3 items-center' do |bb|
-      bb.use :input, class: 'h-4 w-4 rounded border-primary-200 text-gray-800 focus:ring-orange-500', error_class: 'border-red-500', valid_class: 'border-green-500'
-      bb.use :label, class: 'block text-primary-500', error_class: 'text-red-500', valid_class: 'text-green-500'
+    b.wrapper tag: 'label', class: 'inline-flex items-center gap-x-2 cursor-pointer' do |bb|
+      bb.use :input, class: 'sr-only peer', error_class: 'border-red-500', valid_class: 'border-green-500'
+      bb.wrapper tag: 'div', class: 'relative w-9 h-5 bg-gray-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-400 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary-500' do |bbb|
+      end
+      bb.use :label, class: 'inline-flex items-center cursor-pointer', error_class: 'text-red-500', valid_class: 'text-green-500'
       bb.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
-      bb.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+      bb.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
     end
   end
 
@@ -84,7 +86,7 @@ SimpleForm.setup do |config|
     end
     b.use :input, class: 'border-primary-200 text-primary-500 focus:ring focus:ring-primary-300 focus:ring-opacity-40', error_class: 'border-red-500'
     b.use :full_error, wrap_with: { class: 'mt-2 block text-sm text-red-500' }
-    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
   end
 
   # vertical input for inline radio buttons and check boxes
@@ -96,7 +98,7 @@ SimpleForm.setup do |config|
     end
     b.use :input, class: 'absolute scale-0 peer', error_class: 'border-red-500', valid_class: 'is-valid'
     b.use :full_error, wrap_with: { class: 'mt-2 block text-sm text-red-500' }
-    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
   end
 
   # vertical file input
@@ -109,7 +111,7 @@ SimpleForm.setup do |config|
     b.use :label, class: 'block font-bold text-primary-500'
     b.use :input, class: 'block mt-2 text-sm text-gray-800 file:cursor-pointer file:mr-4 file:px-4 file:py-2 file:rounded-md file:border file:border-primary-200 file:text-sm file:font-bold file file:text-primary-500 file:bg-white', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
-    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
   end
 
   # vertical select input
@@ -119,7 +121,7 @@ SimpleForm.setup do |config|
     b.use :label, class: 'block font-bold text-primary-500'
     b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
-    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
   end
 
   # vertical multi select
@@ -131,7 +133,7 @@ SimpleForm.setup do |config|
       ba.use :input, class: 'block mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     end
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
-    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
   end
 
   # vertical range input
@@ -143,7 +145,7 @@ SimpleForm.setup do |config|
     b.use :label, class: 'block font-bold text-primary-500'
     b.use :input, class: 'block w-full mt-2 px-4 py-2 text-gray-800 border border-primary-200 rounded-md focus:ring-primary-300 focus:outline-none focus:ring focus:ring-opacity-40', error_class: 'border-red-500', valid_class: 'border-green-500'
     b.use :full_error, wrap_with: { class: 'mt-2 text-sm text-red-500' }
-    b.use :hint, wrap_with: { class: 'mt-2 text-sm text-gray-500' }
+    b.use :hint, wrap_with: { class: 'mt-2 text-sm italic text-gray-500' }
   end
 
 
