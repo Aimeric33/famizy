@@ -100,11 +100,14 @@ en:
       new:
         title: "Log in to continue"
         btn: "Log in"
+        remember_me: "Remember me"
     shared:
       links:
         log_in: "Already have an account? Log in"
         forgot_your_password: "Have you forgotten your password?"
         sign_up: "Don't have an account? Sign up"
+        confirm_instructions: "Didn't receive confirmation instructions?"
+        unlock_instructions: "Didn't receive unlock instructions?"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."

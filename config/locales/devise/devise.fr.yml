@@ -98,11 +98,14 @@ fr:
       new:
         title: "Connectez-vous pour continuer"
         btn: "Connexion"
+        remember_me: "Se souvenir de moi"
     shared:
       links:
         log_in: "Vous avez déjà un compte ? Connectez-vous"
         forgot_your_password: "Mot de passe oublié ?"
         sign_up: "Vous n'avez pas de compte ? Inscrivez-vous"
+        confirm_instructions: "Vous n'avez pas reçu l'e-mail pour confirmer votre email ?"
+        unlock_instructions: "Vous n'avez pas reçu l'e-mail pour déverrouiller votre compte ?"
     unlocks:
       send_instructions: "Vous allez recevoir les instructions nécessaires au déverrouillage de votre compte dans quelques instants."
       send_paranoid_instructions: "Si votre compte existe, vous allez bientôt recevoir un email contenant les instructions pour le déverrouiller."
